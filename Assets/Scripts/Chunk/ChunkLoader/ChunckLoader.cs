@@ -5,11 +5,13 @@ public class ChunckLoader : TiledMapLoader {
 
 	public Chunk chunk;
 	public GameObject parent;
+	private Transform tilesParent;
 	public Linker linker;
 	
 	public ChunckLoader(GameObject parent){
 		this.parent = parent;
-		
+		tilesParent = GameObjectExtend.createGameObject("Tiles", parent.transform, Vector3.zero).transform;
+	
 		findOrCreateLinker();
 	}
 
@@ -32,8 +34,17 @@ public class ChunckLoader : TiledMapLoader {
 	protected override void addLayer(string layerName, int width, int height, System.Collections.Generic.Dictionary<string, string> properties){}
 	
 	protected override void addTile(int x, int y, int id){
-		if(linker.prefabs.Count > id){
-			Debug.LogError("Il manque des prefab dans le linker. Quesque tu as fais OLI!");
+		if(id > linker.prefabs.Count){
+			Debug.LogError("Il manque des prefab dans le linker."+ " : je ne connais pas id " + id + ". Quesque tu as fais OLI!");
+		}else if (id != 0){
+			GameObject prefab = linker.prefabs[id];
+			if(prefab == null){
+				Debug.LogWarning("Erreur au block " + x + "," + y + " : je ne connais pas id " + id + ". Quesque ta faite Õli!!");
+			}else{
+				Vector3 position = new Vector3(x,y,0);
+				GameObjectExtend.createClone(prefab, prefab.name, tilesParent, position);
+			}
+			
 		}
 	}
 	
