@@ -15,13 +15,17 @@ public class RunnerGrounded : State {
 			return;
 		}
 		
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, 2, new LayerMask().AddToMask("Runner").Inverse());
+		RaycastHit2D hitLeft = Physics2D.Raycast(transform.position - transform.right, -transform.up, 2, new LayerMask().AddToMask("Runner").Inverse());
+		RaycastHit2D hitCenter = Physics2D.Raycast(transform.position, -transform.up, 2, new LayerMask().AddToMask("Runner").Inverse());
+		RaycastHit2D hitRight = Physics2D.Raycast(transform.position + transform.right, -transform.up, 2, new LayerMask().AddToMask("Runner").Inverse());
 		
 		if (Layer.debug) {
+			Debug.DrawRay(transform.position - transform.right, -transform.up * 2, Color.green);
 			Debug.DrawRay(transform.position, -transform.up * 2, Color.green);
+			Debug.DrawRay(transform.position + transform.right, -transform.up * 2, Color.green);
 		}
 		
-		if (hit.collider == null) {
+		if (hitLeft.collider == null && hitCenter.collider == null && hitRight.collider == null) {
 			SwitchState<RunnerInAir>(1);
 			return;
 		}
