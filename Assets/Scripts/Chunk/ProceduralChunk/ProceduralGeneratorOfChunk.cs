@@ -54,8 +54,8 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		foreach (var chunkFlowToRemove in chunkFlowsToRemove) {
 			chunkFlows.Remove(chunkFlowToRemove);
 		}
-		
 		chunkFlowsToRemove.Clear();
+		
 		foreach (var chunkFlowToAdd in chunkFlowsToAdd) {
 			chunkFlows.Add(chunkFlowToAdd);
 		}
@@ -71,7 +71,12 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		}
 		
 		foreach (var chunkToRemove in chunksToRemove) {
-			Object.Destroy(chunkToRemove.gameObject);
+			if(chunkToRemove != null & chunkToRemove.gameObject != null){
+				Debug.Log("Removing a flow");
+				this.chunkFlowsToRemove.Add(chunkToRemove.flow);
+				Object.Destroy(chunkToRemove.gameObject);
+			}
+			
 			chunks.Remove(chunkToRemove);
 		}
 		chunksToRemove.Clear();

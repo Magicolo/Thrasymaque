@@ -80,6 +80,7 @@ public class ChunkFlow {
 		}
 		
 		if(newChunk.rightExitY == -1){
+			Debug.Log("Dommage on tue");
 			proceduralGeneratorOfChunk.chunkFlowsToRemove.Add(this);
 		}
 		return newChunk;
