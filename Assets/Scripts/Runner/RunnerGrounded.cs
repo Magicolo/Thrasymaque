@@ -17,7 +17,7 @@ public class RunnerGrounded : State {
 		
 		LayerMask layerMask = new LayerMask().AddToMask("Runner", "Chunk").Inverse();
 		Vector2 direction = -transform.up;
-		float distance = 2;
+		const float distance = 3;
 		RaycastHit2D hitLeft = Physics2D.Raycast(transform.position - transform.right * 0.9F, direction, distance, layerMask);
 		RaycastHit2D hitCenter = Physics2D.Raycast(transform.position, direction, distance, layerMask);
 		RaycastHit2D hitRight = Physics2D.Raycast(transform.position + transform.right * 0.9F, direction, distance, layerMask);
