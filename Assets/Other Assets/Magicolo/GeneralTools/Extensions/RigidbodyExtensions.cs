@@ -15,7 +15,7 @@ namespace Magicolo {
 			rigidbody.SetPosition(new Vector3(position, position, position), axis);
 		}
 		
-		public static void Translate(this Rigidbody rigidbody, Vector3 translation, string axis) {
+		public static void Translate(this Rigidbody rigidbody, Vector3 translation, string axis = "XYZ") {
 			rigidbody.SetPosition(rigidbody.transform.position + translation, axis);
 		}
 		
@@ -72,7 +72,7 @@ namespace Magicolo {
 			rigidbody.SetEulerAngles(new Vector3(angle, angle, angle), axis);
 		}
 		
-		public static void Rotate(this Rigidbody rigidbody, Vector3 rotation, string axis) {
+		public static void Rotate(this Rigidbody rigidbody, Vector3 rotation, string axis = "XYZ") {
 			rigidbody.SetEulerAngles(rigidbody.transform.eulerAngles + rotation, axis);
 		}
 		

@@ -12,11 +12,11 @@ public class RunnerCamera : MonoBehaviour {
 		transform.RotateTowards(References.Runner.orientation, 5, "Z");
 		
 		if (References.Runner.rigidbody2D.velocity.magnitude >= 50) {
-			rigidbody2D.TranslateTowards(References.Runner.transform.position + offset, translateSpeed);
+			transform.TranslateTowards(References.Runner.transform.position + offset, translateSpeed);
 		}
-		else {
-			Logger.Log(transform.right * translateSpeed * Time.fixedDeltaTime);
+//		else {
+//			Logger.Log(transform.right * translateSpeed * Time.fixedDeltaTime);
 //			rigidbody2D.Translate(transform.right * translateSpeed * Time.fixedDeltaTime);
-		}
+//		}
 	}
 }
