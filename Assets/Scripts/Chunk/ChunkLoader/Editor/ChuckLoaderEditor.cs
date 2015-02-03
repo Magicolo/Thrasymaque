@@ -2,6 +2,8 @@
 using UnityEngine;
 using System.Collections;
 using System.IO;
+using Magicolo.EditorTools;
+using Magicolo;
 
 
 [System.Serializable]
@@ -12,6 +14,7 @@ public class ChuckLoaderEditor : EditorWindow {
 	
 	void OnGUI(){	
 		
+		LevelName = EditorGUILayout.TextField("YO BITCH" , LevelName);
 		addFileLine();
 		if (GUILayout.Button ("Load Map")) {
 			string chunkName = Path.GetFileName(filePath).Split(new char[]{'.'})[0];
@@ -32,7 +35,7 @@ public class ChuckLoaderEditor : EditorWindow {
 		}else{
 			rootFolder = "Corner/";
 		}
-		PrefabUtility.CreatePrefab("Assets/Resources/Chunks/" + rootFolder + chunkName+".prefab", chunkGameObject);
+		PrefabUtility.CreatePrefab("Assets/Resources/Chunks/" + LevelName + "/" + rootFolder + chunkName+".prefab", chunkGameObject);
 		Object.DestroyImmediate(chunkGameObject);
 	}
 	

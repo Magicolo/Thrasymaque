@@ -6,6 +6,7 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 
 	public Transform playersTransform;
 	
+	public string levelName;
 	public int currentChunkId = 0;
 	public Chunk currentChunk;
 
@@ -20,7 +21,7 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	public List<ChunkFlow> chunkFlows = new List<ChunkFlow>();
 	
 	void Awake(){
-		chunkBag = new ChunkBag(random);
+		chunkBag = new ChunkBag(random, levelName);
 		ChunkFlow chunkFlow = new ChunkFlow(this,chunkBag,random, 1, Vector3.zero, 0);
 		chunkFlows.Add(chunkFlow);
 		chunkFlow.loadNextChunk();
