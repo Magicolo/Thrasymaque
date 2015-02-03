@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 495648}
   - 212: {fileID: 21295648}
   - 114: {fileID: 11495634}
-  - 61: {fileID: 6195648}
+  - 58: {fileID: 5869540}
   - 50: {fileID: 5095648}
   - 114: {fileID: 11495636}
   - 114: {fileID: 11495638}
@@ -33,7 +33,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 100, z: 0}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53,8 +53,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6195648
-BoxCollider2D:
+--- !u!58 &5869540
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -62,11 +62,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: f2fd8a73d5d7657418aa5d691db1a66f, type: 2}
   m_IsTrigger: 0
-  m_Size: {x: 1, y: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0}
 --- !u!114 &11480344
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -95,7 +95,7 @@ MonoBehaviour:
   - {fileID: 11495636}
 --- !u!114 &11495636
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -121,7 +121,7 @@ MonoBehaviour:
   debug: 1
 --- !u!114 &11495638
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -134,7 +134,7 @@ MonoBehaviour:
   machine: {fileID: 11495634}
 --- !u!114 &11495640
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -149,7 +149,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
 --- !u!114 &11495642
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -169,7 +169,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 65}
 --- !u!114 &11495646
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -182,7 +182,7 @@ MonoBehaviour:
   machine: {fileID: 11495634}
 --- !u!114 &11495648
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}

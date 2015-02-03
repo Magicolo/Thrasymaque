@@ -21,7 +21,7 @@ public class Constructor : MonoBehaviourExtended {
 		SpriteRenderer sprite = obj.GetComponentInChildren<SpriteRenderer>();
 		
 		if (activate && sprite != null) {
-			GameObject particleFX = Instantiate(References.DestructionParticleFX, obj.transform.position, Quaternion.identity) as GameObject;
+			GameObject particleFX = Instantiate(References.CreationParticleFX, obj.transform.position, Quaternion.identity) as GameObject;
 			particleFX.transform.parent = obj.transform;
 			particleFX.transform.position = obj.transform.position - new Vector3(0, 0, 1);
 			ParticleSystem particles = particleFX.GetComponent<ParticleSystem>();

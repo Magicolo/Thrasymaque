@@ -10,7 +10,7 @@ public class Destructor : MonoBehaviourExtended {
 	}
 	
 	IEnumerator DestroyObject(GameObject obj) {
-		GameObject particleFX = Instantiate(References.CreationParticleFX, obj.transform.position, Quaternion.identity) as GameObject;
+		GameObject particleFX = Instantiate(References.DestructionParticleFX, obj.transform.position, Quaternion.identity) as GameObject;
 		particleFX.transform.parent = obj.transform;
 		particleFX.transform.position = obj.transform.position - new Vector3(0, 0, 1);
 		ParticleSystem particles = particleFX.GetComponent<ParticleSystem>();
