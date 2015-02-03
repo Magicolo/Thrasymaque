@@ -55,6 +55,10 @@ public class ChunkFlow {
 
 	void makeCornerChunk(){
 		GameObject nextChunkPrefab = chunkBag.getRandomChunkFrom(chunkBag.cornerChunkPrefab);
+		if(nextChunkPrefab == null){
+			return;
+		}
+		
 		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab,nextChunkId);
 		nextChunkId++;
 		

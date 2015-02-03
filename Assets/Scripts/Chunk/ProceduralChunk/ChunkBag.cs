@@ -31,6 +31,7 @@ public class ChunkBag {
 	}
 	
 	public GameObject getRandomChunkFrom(List<GameObject> list){
+		if(list.Count == 0) return null;
 		int index = (int)(random.NextDouble() * list.Count);
 		return list[index];
 		

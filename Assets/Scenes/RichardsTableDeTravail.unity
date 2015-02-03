@@ -102,11 +102,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 1169131147}
-  currentRoom: 0
+  currentChunkId: 5
+  currentChunk: {fileID: 0}
   chunckInAdvanceOfPlayer: 5
   chunkBag:
     linearChunkPrefab: []
     cornerChunkPrefab: []
+  chunkFlowsToAdd: []
+  chunkFlowsToRemove: []
   chunkFlows: []
 --- !u!4 &112937256
 Transform:
@@ -504,6 +507,7 @@ MonoBehaviour:
   creationParticleFX: {fileID: 124646, guid: 2f07f0e2873817a4f9e6dd97b96127ec, type: 2}
   destructionParticleFX: {fileID: 185504, guid: 35c07301f9a299e4c8698a6a914f8574,
     type: 2}
+  proceduralGeneratorOfChunk: {fileID: 112937255}
 --- !u!4 &1050845311
 Transform:
   m_ObjectHideFlags: 0
@@ -564,7 +568,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translateSpeed: 7.5
   rotateSpeed: 5
+  pressureSpeed: 10
+  recoverSpeed: 2
   offset: {x: 0, y: 0, z: -50}
+  lastPosition: {x: 0, y: 0, z: 0}
 --- !u!81 &1169131149
 AudioListener:
   m_ObjectHideFlags: 0
