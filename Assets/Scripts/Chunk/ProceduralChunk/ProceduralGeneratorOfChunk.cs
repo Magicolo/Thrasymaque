@@ -12,8 +12,8 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 
 	public int chunckInAdvanceOfPlayer = 4;
 	
-	public static int seed = 1337;
-	public System.Random random = new System.Random(seed);
+	public int seed = 1337;
+	public System.Random random;
 	
 	public ChunkBag chunkBag;
 	public List<ChunkFlow> chunkFlowsToAdd = new List<ChunkFlow>();
@@ -21,6 +21,7 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	public List<ChunkFlow> chunkFlows = new List<ChunkFlow>();
 	
 	void Awake(){
+		random = new System.Random(seed);
 		chunkBag = new ChunkBag(random, levelName);
 		ChunkFlow chunkFlow = new ChunkFlow(this,chunkBag,random, 1, Vector3.zero, 0);
 		chunkFlows.Add(chunkFlow);

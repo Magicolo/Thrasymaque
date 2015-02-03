@@ -11,6 +11,7 @@ public class Chunk : MonoBehaviour {
 	
 	public int rightExitY;
 	public int upExitX;
+	public int downExitX;
 	
 	public float orientation;
 	
