@@ -34,19 +34,19 @@ public class References : MonoBehaviourExtended {
 		}
 	}
     
-    public GameObject creationParticleFX;
-    public static GameObject CreationParticleFX {
-    	get {
-    		return Instance.creationParticleFX;
-    	}
-    }
+	public GameObject creationParticleFX;
+	public static GameObject CreationParticleFX {
+		get {
+			return Instance.creationParticleFX;
+		}
+	}
     
-    public GameObject destructionParticleFX;
-    public static GameObject DestructionParticleFX {
-    	get {
-    		return Instance.destructionParticleFX;
-    	}
-    }
+	public GameObject destructionParticleFX;
+	public static GameObject DestructionParticleFX {
+		get {
+			return Instance.destructionParticleFX;
+		}
+	}
     
 }
 
