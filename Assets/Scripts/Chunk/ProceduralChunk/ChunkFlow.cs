@@ -65,17 +65,37 @@ public class ChunkFlow {
 		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab,nextChunkId);
 		nextChunkId++;
 		
-		if(newChunk.upExitX != 0){
+		if(newChunk.upExitX != -1){
 			Vector3 movement = new Vector3(-newChunk.upExitX, newChunk.height,0);
-			movement = movement.Rotate(rotation, Vector3.back);
-			Vector3 startinPosition = lastRoomEndPosition + movement;
-			float newAngle = rotation + 90;
-			newAngle %= 360;
-			ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk,chunkBag,random,nextChunkId,startinPosition,newAngle);
-			proceduralGeneratorOfChunk.chunkFlowsToAdd.Add(newFlow);
+			float newAngle = (rotation + 90) % 360;
+			
+			makeFlow(movement, newAngle,nextChunkId);
+		}
+		
+		if(newChunk.downExitX != -1){
+			Vector3 movement = new Vector3(-newChunk.width + newChunk.downExitX, 0,0);
+			float newAngle = (rotation - 90) % 360;
+			
+			makeFlow(movement, newAngle,nextChunkId);
+		}
+		
+		if(newChunk.rightExitY == -1){
 			proceduralGeneratorOfChunk.chunkFlowsToRemove.Add(this);
 		}
 		return newChunk;
+	}
+
+	void makeFlow(Vector3 movement, float newAngle, int chunkId){
+		Vector3 startingPosition = moveRelative(lastRoomEndPosition, movement, rotation);
+		
+		ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk,chunkBag,random,chunkId,startingPosition,newAngle);
+		proceduralGeneratorOfChunk.chunkFlowsToAdd.Add(newFlow);
+	}
+	
+	
+	Vector3 moveRelative(Vector3 target, Vector3 translation, float rotationToDo){
+		Vector3 movement = translation.Rotate(rotationToDo, Vector3.back);
+		return target + movement;
 	}
 
 	Chunk makeStraightChunk(){
