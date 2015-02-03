@@ -61,7 +61,7 @@ public class ChunkFlow {
 			Vector3 startinPosition = lastRoomEndPosition += new Vector3(newChunk.width - newChunk.upExitX, newChunk.height,0);
 			Vector3 newDirection = direction.Rotate(90);
 			ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk,chunkBag,random,nextChunkId,startinPosition,newDirection);
-			proceduralGeneratorOfChunk.chunkFlows.Add(newFlow);
+			proceduralGeneratorOfChunk.chunkFlowsToAdd.Add(newFlow);
 		}
 	}
 

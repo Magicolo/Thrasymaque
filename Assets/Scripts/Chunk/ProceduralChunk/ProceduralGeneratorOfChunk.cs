@@ -14,6 +14,8 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	public System.Random random = new System.Random(seed);
 	
 	public ChunkBag chunkBag;
+	public List<ChunkFlow> chunkFlowsToAdd = new List<ChunkFlow>();
+	public List<ChunkFlow> chunkFlowsToRemove = new List<ChunkFlow>();
 	public List<ChunkFlow> chunkFlows = new List<ChunkFlow>();
 	
 	void Awake(){
@@ -36,6 +38,16 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		foreach (var chunk in chunkFlows) {
 			chunk.update();
 		}
+		
+		foreach (var chunkFlowToRemove in chunkFlowsToRemove) {
+			chunkFlows.Remove(chunkFlowToRemove);
+		}
+		
+		chunkFlowsToRemove.Clear();
+		foreach (var chunkFlowToAdd in chunkFlowsToAdd) {
+			chunkFlows.Add(chunkFlowToAdd);
+		}
+		chunkFlowsToAdd.Clear();
 	}
 	
 	public int getChunkIdToGenerate(){
