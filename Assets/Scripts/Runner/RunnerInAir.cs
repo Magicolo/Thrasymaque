@@ -16,7 +16,7 @@ public class RunnerInAir : State {
 		
 		if (Layer.debug) {
 			Debug.DrawRay(transform.position - transform.right, -transform.up * 2, Color.green);
-			Debug.DrawRay(transform.position, -transform.up * 2, Color.green);
+			Debug.DrawRay(transform.position, -transform.up * 2, Color.cyan);
 			Debug.DrawRay(transform.position + transform.right, -transform.up * 2, Color.green);
 		}
 		
