@@ -17,13 +17,19 @@ public class FlashTrigger : MonoBehaviourExtended {
 		Color initColor = sprite.color;
 		
 		float distance = Vector3.Distance(sprite.transform.position, References.Runner.transform.position);
-		while (distance < 6) {
-			sprite.color = new Color(Random.value, Random.value, Random.value, 1);
+		while (sprite != null && distance < 15) {
+			float brightness = 0.2F;
+			float randomness = 1 - (distance / 40);
+			float r = initColor.r + Random.Range(-initColor.r, initColor.r) * randomness + brightness;
+			float g = initColor.g + Random.Range(-initColor.g, initColor.g) * randomness + brightness;
+			float b = initColor.b + Random.Range(-initColor.b, initColor.b) * randomness + brightness;
+			
+			sprite.color = new Color(r, g, b, 1);
 			distance = Vector3.Distance(sprite.transform.position, References.Runner.transform.position);
 			yield return new WaitForSeconds(0);
 		}
 		
-		sprite.color = initColor;
+//		sprite.color = initColor;
 	}
 }
 
