@@ -26,10 +26,10 @@ namespace Magicolo {
 		public static void TranslateTowards(this Rigidbody rigidbody, Vector3 targetPosition, float speed, InterpolationModes interpolation, string axis = "XYZ") {
 			switch (interpolation) {
 				case InterpolationModes.Lerp:
-					rigidbody.SetPosition(rigidbody.transform.position.Lerp(targetPosition, Time.deltaTime * speed, axis), axis);
+					rigidbody.SetPosition(rigidbody.transform.position.Lerp(targetPosition, Time.fixedDeltaTime * speed, axis), axis);
 					break;
 				case InterpolationModes.Linear:
-					rigidbody.SetPosition(rigidbody.transform.position.LerpLinear(targetPosition, Time.deltaTime * speed, axis), axis);
+					rigidbody.SetPosition(rigidbody.transform.position.LerpLinear(targetPosition, Time.fixedDeltaTime * speed, axis), axis);
 					break;
 			}
 		}
@@ -83,10 +83,10 @@ namespace Magicolo {
 		public static void RotateTowards(this Rigidbody rigidbody, Vector3 targetAngles, float speed, InterpolationModes interpolation, string axis = "XYZ") {
 			switch (interpolation) {
 				case InterpolationModes.Lerp:
-					rigidbody.SetEulerAngles(rigidbody.transform.eulerAngles.LerpAngles(targetAngles, Time.deltaTime * speed, axis), axis);
+					rigidbody.SetEulerAngles(rigidbody.transform.eulerAngles.LerpAngles(targetAngles, Time.fixedDeltaTime * speed, axis), axis);
 					break;
 				case InterpolationModes.Linear:
-					rigidbody.SetEulerAngles(rigidbody.transform.eulerAngles.LerpAnglesLinear(targetAngles, Time.deltaTime * speed, axis), axis);
+					rigidbody.SetEulerAngles(rigidbody.transform.eulerAngles.LerpAnglesLinear(targetAngles, Time.fixedDeltaTime * speed, axis), axis);
 					break;
 			}
 		}
@@ -108,7 +108,7 @@ namespace Magicolo {
 		}
 		
 		public static void OscillateEulerAngles(this Rigidbody rigidbody, Vector3 frequency, Vector3 amplitude, string axis = "XYZ") {
-			rigidbody.OscillateEulerAngles(frequency, amplitude, Vector3.one, axis);
+			rigidbody.OscillateEulerAngles(frequency, amplitude, Vector3.zero, axis);
 		}
 
 		public static void OscillateEulerAngles(this Rigidbody rigidbody, float frequency, float amplitude, float center, string axis = "XYZ") {
@@ -116,7 +116,7 @@ namespace Magicolo {
 		}
 		
 		public static void OscillateEulerAngles(this Rigidbody rigidbody, float frequency, float amplitude, string axis = "XYZ") {
-			rigidbody.OscillateEulerAngles(new Vector3(frequency, frequency, frequency), new Vector3(amplitude, amplitude, amplitude), Vector3.one, axis);
+			rigidbody.OscillateEulerAngles(new Vector3(frequency, frequency, frequency), new Vector3(amplitude, amplitude, amplitude), Vector3.zero, axis);
 		}
 		#endregion
 	}

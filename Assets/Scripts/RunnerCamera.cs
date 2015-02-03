@@ -10,6 +10,13 @@ public class RunnerCamera : MonoBehaviour {
 	
 	void FixedUpdate() {
 		transform.RotateTowards(References.Runner.orientation, 5, "Z");
-		transform.TranslateTowards(References.Runner.transform.position + offset, translateSpeed);
+		
+		if (References.Runner.rigidbody2D.velocity.magnitude >= 50) {
+			rigidbody2D.TranslateTowards(References.Runner.transform.position + offset, translateSpeed);
+		}
+		else {
+			Logger.Log(transform.right * translateSpeed * Time.fixedDeltaTime);
+			rigidbody2D.Translate(transform.right * translateSpeed * Time.fixedDeltaTime);
+		}
 	}
 }
