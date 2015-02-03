@@ -22,7 +22,7 @@ public class Runner : BaseObject {
 	}
 	
 	public void ChangeOrientation(float newOrientation) {
-		orientation = (References.ProceduralGeneratorOfChunk.currentChunk.rotation + newOrientation) % 360;
+		orientation = (References.ProceduralGeneratorOfChunk.currentChunk.orientation + newOrientation) % 360;
 		transform.SetEulerAngles(orientation, "Z");
 	}
 }

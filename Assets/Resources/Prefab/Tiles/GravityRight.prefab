@@ -85,7 +85,7 @@ MonoBehaviour:
   targetRotation: 90
 --- !u!198 &19851056
 ParticleSystem:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148870}
@@ -1137,7 +1137,7 @@ ParticleSystem:
     subEmitterDeath1: {fileID: 0}
 --- !u!199 &19951056
 ParticleSystemRenderer:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148870}

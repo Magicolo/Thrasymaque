@@ -5,8 +5,12 @@ using Magicolo;
 
 public class ChunkDestructor : MonoBehaviourExtended {
 
-	void OnTriggerEnter2D(Collider2D collider) {
-		collider.gameObject.Remove();
+	void OnTriggerEnter2D(Collider2D collision) {
+		Chunk chunk = collision.gameObject.GetComponent<Chunk>();
+		
+		if (chunk != null && chunk.chunkId < References.ProceduralGeneratorOfChunk.currentChunkId) {
+			collision.gameObject.Remove();
+		}
 	}
 }
 
