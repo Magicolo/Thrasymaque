@@ -41,7 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 0}
   currentRoom: 0
-  chunckInAdvanceOfPlayer: 1
+  chunckInAdvanceOfPlayer: 5
   chunkFlow:
     lastRoomEndPosition: {x: 0, y: 0, z: 0}
     lastRoomRightExitY: 0
