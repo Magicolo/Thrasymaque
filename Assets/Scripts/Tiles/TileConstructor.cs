@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Magicolo;
 
-public class Constructor : MonoBehaviourExtended {
+public class TileConstructor : MonoBehaviourExtended {
 
 	void OnTriggerEnter2D(Collider2D collision) {
 		ActivateObject(collision.gameObject);

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Magicolo;
 
-public class Destructor : MonoBehaviourExtended {
+public class TileDestructor : MonoBehaviourExtended {
 
 	void OnTriggerEnter2D(Collider2D collision) {
 		DestroyObject(collision.gameObject);
