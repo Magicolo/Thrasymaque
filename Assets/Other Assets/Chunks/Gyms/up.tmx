@@ -3,7 +3,6 @@
  <properties>
   <property name="DownExitMaxX" value=""/>
   <property name="MaxY" value="11"/>
-  <property name="RightExitMaxY" value=""/>
   <property name="UpExitMaxX" value="10"/>
  </properties>
  <tileset firstgid="1" name="Tileset" tilewidth="32" tileheight="32">
