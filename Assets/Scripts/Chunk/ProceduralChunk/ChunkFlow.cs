@@ -100,7 +100,6 @@ public class ChunkFlow {
 		
 		Vector3 movementX = new Vector3(prefabChunk.width,0,0);
 		movementX = movementX.Rotate(rotation, Vector3.back);
-		Debug.Log(lastRoomEndPosition + " - " + movementX);
 		lastRoomEndPosition += movementX;
 		lastRoomRightExitY = prefabChunk.rightExitY;
 		return newChunk;
