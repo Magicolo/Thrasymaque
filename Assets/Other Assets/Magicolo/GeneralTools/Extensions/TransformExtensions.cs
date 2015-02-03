@@ -163,7 +163,7 @@ namespace Magicolo {
 		}
 		
 		public static void OscillateEulerAngles(this Transform transform, Vector3 frequency, Vector3 amplitude, string axis = "XYZ") {
-			transform.OscillateEulerAngles(frequency, amplitude, Vector3.one, axis);
+			transform.OscillateEulerAngles(frequency, amplitude, Vector3.zero, axis);
 		}
 
 		public static void OscillateEulerAngles(this Transform transform, float frequency, float amplitude, float center, string axis = "XYZ") {
@@ -171,7 +171,7 @@ namespace Magicolo {
 		}
 		
 		public static void OscillateEulerAngles(this Transform transform, float frequency, float amplitude, string axis = "XYZ") {
-			transform.OscillateEulerAngles(new Vector3(frequency, frequency, frequency), new Vector3(amplitude, amplitude, amplitude), Vector3.one, axis);
+			transform.OscillateEulerAngles(new Vector3(frequency, frequency, frequency), new Vector3(amplitude, amplitude, amplitude), Vector3.zero, axis);
 		}
 
 		public static void SetLocalEulerAngles(this Transform transform, Vector3 angles, string axis = "XYZ") {
