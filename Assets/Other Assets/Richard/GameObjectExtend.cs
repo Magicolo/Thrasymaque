@@ -5,6 +5,13 @@ using System.Collections;
 public static class GameObjectExtend{
 
 	
+	public static GameObject createClone(GameObject original){
+		GameObject go = (GameObject)Object.Instantiate(original);
+		go.name = original.name;
+		
+		return go;
+	}
+	
 	public static GameObject createClone(GameObject original, string name, Transform parent, Vector3 position, bool translateToParent = false){
 		GameObject go = (GameObject)Object.Instantiate(original);
 		go.name = name;
