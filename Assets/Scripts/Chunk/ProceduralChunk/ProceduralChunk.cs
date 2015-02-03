@@ -11,9 +11,9 @@ public class ProceduralChunk : MonoBehaviour {
 	[Disable] public System.Random random;
 	
 	public Vector3 lastRoomEndPosition;
-	public int lastRoomYEntreance;
+	public int lastRoomRightExitY;
 	
-	public int chunckWidthInAdvanceOfPlayer = 5;
+	public int chunckWidthInAdvanceOfPlayer = 50;
 	
 	public static int seed = 1337;
 	
@@ -40,10 +40,14 @@ public class ProceduralChunk : MonoBehaviour {
 
 	void loadNextChunk(){
 		GameObject nextChunkGO = getRandomChunk(linearChunkPrefab);
-		GameObjectExtend.createClone(nextChunkGO,"Chunk" + nextChunkId++,this.transform,lastRoomEndPosition);
 		Chunk nextChunk = nextChunkGO.GetComponent<Chunk>();
+		int yDifference = this.lastRoomRightExitY - nextChunk.entreanceY;
+		lastRoomEndPosition += new Vector3(0,yDifference,0);
+		
+		GameObjectExtend.createClone(nextChunkGO,"Chunk" + nextChunkId++,this.transform,lastRoomEndPosition);
 		
 		this.lastRoomEndPosition += new Vector3(nextChunk.width,0,0);
+		lastRoomRightExitY = nextChunk.rightExitY;
 		
 	}
 

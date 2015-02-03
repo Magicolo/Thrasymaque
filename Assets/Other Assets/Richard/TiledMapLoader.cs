@@ -164,7 +164,7 @@ public abstract class TiledMapLoader {
 	
 	
 	void loadMapProperties(){
-		Dictionary<string, string> dictionnary = makePropertiesDictionary(document.Element("properties"));
+		Dictionary<string, string> dictionnary = makePropertiesDictionary(map.Element("properties"));
 		if(dictionnary.Count > 0){
 			loadMapProperty(dictionnary);
 		}

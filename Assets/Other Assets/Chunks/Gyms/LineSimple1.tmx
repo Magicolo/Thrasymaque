@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="left-down" width="10" height="20" tilewidth="32" tileheight="32" nextobjectid="1">
  <properties>
-  <property name="Starting" value=""/>
-  <property name="start X" value=""/>
+  <property name="MaxY" value="11"/>
+  <property name="RightExitMaxY" value="11"/>
  </properties>
  <tileset firstgid="1" name="Tileset" tilewidth="32" tileheight="32">
   <image source="../TiledTileset.png" trans="ff00ff" width="320" height="96"/>
@@ -10,12 +10,12 @@
  <layer name="Tile Layer 1" width="10" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
+0,0,0,3,0,3,0,0,0,0,
+0,0,0,3,0,3,0,0,0,0,
+0,0,0,3,3,0,0,0,0,0,
+0,0,0,3,0,3,0,0,0,0,
+0,0,0,3,0,0,3,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
-2,2,2,2,2,2,2,2,2,2,
-2,2,2,2,2,2,2,2,2,2,
-2,2,2,2,2,2,2,3,3,3,
-2,2,3,3,3,3,3,3,0,0,
-3,3,3,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
