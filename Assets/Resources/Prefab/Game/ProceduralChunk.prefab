@@ -41,6 +41,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 0}
   currentRoom: 0
+  nextChunkId: 1
+  lastRoomEndPosition: {x: 0, y: 0, z: 0}
+  lastRoomYEntreance: 0
+  chunckWidthInAdvanceOfPlayer: 50
+  linearChunkPrefab: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
