@@ -15,7 +15,7 @@ public class ChunkBag {
 	public ChunkBag(System.Random random, string levelName){
 		this.random = random;
 		loadChunksFrom("Chunks/"+ levelName + "/Straight",linearChunkPrefab);
-		loadChunksFrom("Chunks/"+ levelName + "/Chunks/Corner",cornerChunkPrefab);
+		loadChunksFrom("Chunks/"+ levelName + "/Corner",cornerChunkPrefab);
 	}
 	
 
