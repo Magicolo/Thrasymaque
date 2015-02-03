@@ -15,6 +15,8 @@ public class Chunk : MonoBehaviour {
 	
 	public float orientation;
 	
+	[Disable] public ChunkFlow flow;
+	
 	[Disable] public bool isStraight = true;
 	
 	public ProceduralGeneratorOfChunk proceduralGenerator;

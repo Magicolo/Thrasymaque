@@ -11,6 +11,7 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	public Chunk currentChunk;
 
 	public int chunckInAdvanceOfPlayer = 4;
+	public int chunckBackOfPlayer = 4;
 	
 	public int seed = 1337;
 	public System.Random random;
@@ -19,6 +20,10 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	public List<ChunkFlow> chunkFlowsToAdd = new List<ChunkFlow>();
 	public List<ChunkFlow> chunkFlowsToRemove = new List<ChunkFlow>();
 	public List<ChunkFlow> chunkFlows = new List<ChunkFlow>();
+	
+	public List<Chunk> chunksToAdd = new List<Chunk>();
+	public List<Chunk> chunksToRemove = new List<Chunk>();
+	public List<Chunk> chunks = new List<Chunk>();
 	
 	void Awake(){
 		random = new System.Random(seed);
@@ -55,6 +60,26 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 			chunkFlows.Add(chunkFlowToAdd);
 		}
 		chunkFlowsToAdd.Clear();
+		
+		
+		
+		
+		foreach (var chunk in chunks) {
+			if(chunk.chunkId + chunckBackOfPlayer < currentChunkId){
+				chunksToRemove.Add(chunk);
+			}
+		}
+		
+		foreach (var chunkToRemove in chunksToRemove) {
+			Object.Destroy(chunkToRemove.gameObject);
+			chunks.Remove(chunkToRemove);
+		}
+		chunksToRemove.Clear();
+		
+		foreach (var chunkToAdd in chunksToAdd) {
+			chunks.Add(chunkToAdd);
+		}
+		chunksToAdd.Clear();
 	}
 	
 	public int getChunkIdToGenerate(){

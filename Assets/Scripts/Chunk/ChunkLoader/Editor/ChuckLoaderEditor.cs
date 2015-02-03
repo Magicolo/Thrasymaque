@@ -14,16 +14,26 @@ public class ChuckLoaderEditor : EditorWindow {
 	
 	void OnGUI(){	
 		
-		LevelName = EditorGUILayout.TextField("YO BITCH" , LevelName);
+		LevelName = EditorGUILayout.TextField("Level Name" , LevelName);
 		addFileLine();
 		if (GUILayout.Button ("Load Map")) {
-			string chunkName = Path.GetFileName(filePath).Split(new char[]{'.'})[0];
-			GameObject chunkGameObject = new GameObject(chunkName);
 			
-			ChunckLoader loader = new ChunckLoader(chunkGameObject);
-			loader.loadFromFile(filePath);
+			var info = new DirectoryInfo(filePath);
+			var fileInfo = info.GetFiles("*.tmx");
+			int index = 0;
 			
-			makeGameObjectAsPrefab(chunkGameObject, chunkName);
+			foreach (FileInfo file in fileInfo){
+				string chuckname = file.Name .Split(new char[]{'.'})[0];
+				
+				GameObject chunkGameObject = new GameObject(chuckname);
+				ChunckLoader loader = new ChunckLoader(chunkGameObject);
+				
+				loader.loadFromFile(file.FullName);
+				makeGameObjectAsPrefab(chunkGameObject, chuckname);
+				index++;
+				Debug.Log("Yo oli on fait " + chuckname);
+			}
+			Debug.Log("Yo oli on a fini");
 		}
 	}
 
@@ -43,7 +53,7 @@ public class ChuckLoaderEditor : EditorWindow {
 		GUILayout.BeginHorizontal ();
 		filePath = GUILayout.TextField (filePath);
 		if (GUILayout.Button ("Open Map File")) {
-			filePath = EditorUtility.OpenFilePanel("Open Map File","maps","tmx");
+			filePath = EditorUtility.OpenFolderPanel("Open Map File","Other Assets/Chunks","tmx");
 		}
 		GUILayout.EndHorizontal ();
 	}
