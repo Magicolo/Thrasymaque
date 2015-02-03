@@ -6,10 +6,10 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 
 	public Transform playersTransform;
 	
-	public int currentChunkId = 5;
+	public int currentChunkId = 0;
 	public Chunk currentChunk;
 
-	public int chunckInAdvanceOfPlayer = 1;
+	public int chunckInAdvanceOfPlayer = 4;
 	
 	public static int seed = 1337;
 	public System.Random random = new System.Random(seed);
@@ -28,8 +28,11 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	}
 
 	public void setCurrentChunk(Chunk chunk){
-		currentChunk = chunk;
-		currentChunkId = chunk.chunkId;
+		if(chunk.chunkId > this.currentChunkId){
+			currentChunk = chunk;
+			currentChunkId = chunk.chunkId;
+		}
+		
 	}
 
 	void Start () {
