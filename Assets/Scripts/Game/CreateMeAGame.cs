@@ -3,7 +3,11 @@
 [ExecuteInEditMode]
 public class CreateMeAGame : MonoBehaviour {
 
+	public bool hasBeenDone = false;
+	
 	void Update () {
+		if(hasBeenDone) return;
+		hasBeenDone = true;
 		ProceduralGeneratorOfChunk pc 	= getMeOrCreate("ProceduralGeneratorOfChunk","Prefab/Game/ProceduralGeneratorOfChunk").GetComponent<ProceduralGeneratorOfChunk>();
 		RunnerCamera rc = getMeOrCreate("Main Camera","Prefab/Main Camera").GetComponent<RunnerCamera>();
 		Runner ru = getMeOrCreate("Runner","Prefab/Runner").GetComponent<Runner>();
@@ -13,10 +17,7 @@ public class CreateMeAGame : MonoBehaviour {
 		gm.runnerCamera = rc;
 		pc.playersTransform = rc.transform;
 		
-		if(gameObject){
-			Object.DestroyImmediate(gameObject);
-		}
-		
+		Object.DestroyImmediate(gameObject);
 	}
 
 	GameObject getMeOrCreate(string prefabName, string prefabPath){
