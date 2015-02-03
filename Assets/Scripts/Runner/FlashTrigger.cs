@@ -28,8 +28,6 @@ public class FlashTrigger : MonoBehaviourExtended {
 			distance = Vector3.Distance(sprite.transform.position, References.Runner.transform.position);
 			yield return new WaitForSeconds(0);
 		}
-		
-//		sprite.color = initColor;
 	}
 }
 
