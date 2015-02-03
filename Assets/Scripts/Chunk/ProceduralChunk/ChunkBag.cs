@@ -30,7 +30,7 @@ public class ChunkBag {
 		return getRandomChunkFrom(linearChunkPrefab);
 	}
 	
-	GameObject getRandomChunkFrom(List<GameObject> list){
+	public GameObject getRandomChunkFrom(List<GameObject> list){
 		int index = (int)(random.NextDouble() * list.Count);
 		return list[index];
 		
