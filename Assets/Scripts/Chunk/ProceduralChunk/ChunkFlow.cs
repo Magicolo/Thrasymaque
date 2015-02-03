@@ -63,7 +63,9 @@ public class ChunkFlow {
 		nextChunkId++;
 		
 		if(newChunk.upExitX != 0){
-			Vector3 startinPosition = lastRoomEndPosition + new Vector3(-newChunk.upExitX, newChunk.height,0);
+			Vector3 movement = new Vector3(-newChunk.upExitX, newChunk.height,0);
+			movement = movement.Rotate(rotation, Vector3.back);
+			Vector3 startinPosition = lastRoomEndPosition + movement;
 			float newAngle = rotation + 90;
 			newAngle %= 360;
 			ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk,chunkBag,random,nextChunkId,startinPosition,newAngle);
@@ -93,7 +95,7 @@ public class ChunkFlow {
 		
 		Vector3 movementX = new Vector3(prefabChunk.width,0,0);
 		movementX = movementX.Rotate(rotation, Vector3.back);
-		//Debug.Log(movementX);
+		Debug.Log(lastRoomEndPosition + " - " + movementX);
 		lastRoomEndPosition += movementX;
 		lastRoomRightExitY = prefabChunk.rightExitY;
 		return newChunk;
