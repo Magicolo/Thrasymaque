@@ -16,7 +16,7 @@ public class RunnerCamera : MonoBehaviour {
 		}
 		else {
 			Logger.Log(transform.right * translateSpeed * Time.fixedDeltaTime);
-			rigidbody2D.Translate(transform.right * translateSpeed * Time.fixedDeltaTime);
+//			rigidbody2D.Translate(transform.right * translateSpeed * Time.fixedDeltaTime);
 		}
 	}
 }

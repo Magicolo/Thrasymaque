@@ -15,7 +15,7 @@ namespace Magicolo {
 			rigidbody.SetPosition(new Vector2(position, position), axis);
 		}
 		
-		public static void Translate(this Rigidbody2D rigidbody, Vector2 translation, string axis) {
+		public static void Translate(this Rigidbody2D rigidbody, Vector2 translation, string axis = "XY") {
 			rigidbody.SetPosition(rigidbody.transform.position + (Vector3)translation, axis);
 		}
 		
