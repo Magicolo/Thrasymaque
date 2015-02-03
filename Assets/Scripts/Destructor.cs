@@ -11,15 +11,17 @@ public class Destructor : MonoBehaviourExtended {
 	
 	IEnumerator DestroyObject(GameObject obj) {
 		ParticleSystem particles = obj.GetComponentInChildren<ParticleSystem>();
-		SpriteRenderer sprite = obj.GetComponent<SpriteRenderer>();
+		SpriteRenderer sprite = obj.GetComponentInChildren<SpriteRenderer>();
 		
 		if (particles != null) {
 			particles.Play();
 		}
 		
-		while (sprite.color.a > 0) {
-			sprite.SetColor(Color.Lerp(sprite.color, new Color(), 25 * Time.deltaTime), "A");
-			yield return new WaitForSeconds(0);
+		if (sprite != null) {
+			while (sprite.color.a > 0) {
+				sprite.SetColor(sprite.color.a - 10 * Time.deltaTime, "A");
+				yield return new WaitForSeconds(0);
+			}
 		}
 		
 		if (particles != null) {
