@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ChunckLoader : TiledMapLoader {
 
@@ -40,9 +41,9 @@ public class ChunckLoader : TiledMapLoader {
 		b2d.size = new Vector2(this.chunk.width,this.chunk.height);
 	}
 	
-	protected override void addObject(string objectGroupName, int x, int y, System.Collections.Generic.Dictionary<string, string> properties){}
+	protected override void addObject(string objectGroupName, int x, int y, Dictionary<string, string> properties){}
 	
-	protected override void addLayer(string layerName, int width, int height, System.Collections.Generic.Dictionary<string, string> properties){}
+	protected override void addLayer(string layerName, int width, int height, Dictionary<string, string> properties){}
 	
 	protected override void addTile(int x, int y, int id){
 		if(id > linker.prefabs.Count){
@@ -62,15 +63,22 @@ public class ChunckLoader : TiledMapLoader {
 	
 
 
-	protected override void loadMapProperty(System.Collections.Generic.Dictionary<string, string> properties){
+	protected override void loadMapProperty(Dictionary<string, string> properties){
 		this.chunk.entreanceY = this.chunk.height - Int32.Parse(properties["MaxY"]) - 1;
 		if(properties.ContainsKey("RightExitMaxY")){
 			this.chunk.rightExitY = this.chunk.height - Int32.Parse(properties["RightExitMaxY"]) - 1;
 		}
-		if(properties.ContainsKey("UpExitMaxX")){
-			this.chunk.upExitX = Int32.Parse(properties["UpExitMaxX"]);
-			this.chunk.isStraight = false;
+		if(isValide("UpExitMaxX",properties)){
+			chunk.upExitX = Int32.Parse(properties["UpExitMaxX"]) ;
+			chunk.isStraight = false;
 		}
-		
+		if(isValide("DownExitMaxX",properties)){
+			chunk.downExitX = Int32.Parse(properties["DownExitMaxX"]) ;
+			chunk.isStraight = false;
+		}
+	}
+	
+	bool isValide(string key, Dictionary<string, string> properties){
+		return properties.ContainsKey(key) && properties[key].Length > 0 && !properties[key].Equals("-1");
 	}
 }

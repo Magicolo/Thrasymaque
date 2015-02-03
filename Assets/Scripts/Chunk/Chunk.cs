@@ -9,8 +9,9 @@ public class Chunk : MonoBehaviour {
 	public int height;
 	public int entreanceY;
 	
-	public int rightExitY;
-	public int upExitX;
+	public int rightExitY = -1;
+	public int upExitX = -1;
+	public int downExitX = -1;
 	
 	public float orientation;
 	

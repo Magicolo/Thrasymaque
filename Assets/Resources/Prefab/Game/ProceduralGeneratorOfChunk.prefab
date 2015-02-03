@@ -40,9 +40,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 0}
+  levelName: 
   currentChunkId: 0
   currentChunk: {fileID: 0}
-  chunckInAdvanceOfPlayer: 0
+  chunckInAdvanceOfPlayer: 5
+  seed: 13372
   chunkBag:
     linearChunkPrefab: []
     cornerChunkPrefab: []
