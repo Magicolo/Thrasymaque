@@ -66,7 +66,7 @@ public class ChunkFlow {
 		nextChunkId++;
 		
 		if(newChunk.upExitX != -1){
-			Vector3 movement = new Vector3(-newChunk.upExitX, newChunk.height,0);
+			Vector3 movement = new Vector3(-newChunk.width + newChunk.upExitX, newChunk.height,0);
 			float newAngle = (rotation + 90) % 360;
 			
 			makeFlow(movement, newAngle,nextChunkId);

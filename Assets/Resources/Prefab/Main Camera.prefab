@@ -380,7 +380,7 @@ MonoBehaviour:
   translateSpeed: 7.5
   rotateSpeed: 5
   pressureSpeed: 10
-  pressureThreshold: .899999976
+  pressureThreshold: .300000012
   recoverSpeed: 2
   offset: {x: 0, y: 0, z: -50}
   lastPosition: {x: 0, y: 0, z: 0}

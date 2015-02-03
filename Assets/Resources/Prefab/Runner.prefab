@@ -107,7 +107,7 @@ BoxCollider2D:
   m_Center: {x: 0, y: 0}
 --- !u!114 &11480344
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -147,7 +147,7 @@ MonoBehaviour:
   - {fileID: 11495636}
 --- !u!114 &11495636
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -173,7 +173,7 @@ MonoBehaviour:
   debug: 1
 --- !u!114 &11495638
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -186,7 +186,7 @@ MonoBehaviour:
   machine: {fileID: 11495634}
 --- !u!114 &11495640
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -197,11 +197,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 11495636}
   machine: {fileID: 11495634}
-  speed: 50
+  speed: 25
   velocity: {x: 0, y: 0}
 --- !u!114 &11495642
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -221,7 +221,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 65}
 --- !u!114 &11495646
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
@@ -234,7 +234,7 @@ MonoBehaviour:
   machine: {fileID: 11495634}
 --- !u!114 &11495648
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195648}
