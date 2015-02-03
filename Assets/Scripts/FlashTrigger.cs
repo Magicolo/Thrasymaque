@@ -14,7 +14,7 @@ public class FlashTrigger : MonoBehaviourExtended {
 	}
 	
 	IEnumerator Flash(SpriteRenderer sprite) {
-		float distance = Vector2.Distance(sprite.transform.position, References.Runner.transform.position);
+		/*float distance = */Vector2.Distance(sprite.transform.position, References.Runner.transform.position);
 		yield return new WaitForSeconds(0);
 	}
 }

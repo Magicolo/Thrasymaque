@@ -23,7 +23,14 @@ public class ChuckLoaderEditor : EditorWindow {
 	}
 
 	void makeGameObjectAsPrefab(GameObject chunkGameObject, string chunkName){
-		PrefabUtility.CreatePrefab("Assets/Resources/Chunks/"+chunkName+".prefab", chunkGameObject);
+		Chunk chunk = chunkGameObject.GetComponent<Chunk>();
+		string rootFolder = "";
+		if(chunk.isStraight){
+			rootFolder = "Straight/";
+		}else{
+			rootFolder = "Corner/";
+		}
+		PrefabUtility.CreatePrefab("Assets/Resources/Chunks/" + rootFolder + chunkName+".prefab", chunkGameObject);
 		Object.DestroyImmediate(chunkGameObject);
 	}
 	

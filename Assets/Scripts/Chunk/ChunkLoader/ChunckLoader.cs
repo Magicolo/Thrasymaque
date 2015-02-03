@@ -21,7 +21,7 @@ public class ChunckLoader : TiledMapLoader {
 	void findOrCreateLinker(){
 		GameObject linkerObject = GameObject.Find("Linker");
 		if(linkerObject == null){
-			GameObject linkerPrefab = Resources.Load<GameObject>("Prefab/ChunkLoader/Linker");
+			GameObject linkerPrefab = Resources.Load<GameObject>("Prefab/Game/Linker");
 			linkerObject = GameObjectExtend.createClone(linkerPrefab,"Linker", null ,Vector3.zero);
 		}
 		
@@ -64,6 +64,13 @@ public class ChunckLoader : TiledMapLoader {
 
 	protected override void loadMapProperty(System.Collections.Generic.Dictionary<string, string> properties){
 		this.chunk.entreanceY = this.chunk.height - Int32.Parse(properties["MaxY"]) - 1;
-		this.chunk.rightExitY = this.chunk.height - Int32.Parse(properties["RightExitMaxY"]) - 1;
+		if(properties.ContainsKey("RightExitMaxY")){
+			this.chunk.rightExitY = this.chunk.height - Int32.Parse(properties["RightExitMaxY"]) - 1;
+		}
+		if(properties.ContainsKey("UpExitMaxX")){
+			this.chunk.upExitX = Int32.Parse(properties["UpExitMaxX"]);
+			this.chunk.isStraight = false;
+		}
+		
 	}
 }
