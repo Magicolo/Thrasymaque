@@ -34,13 +34,16 @@ public class TileConstructor : MonoBehaviourExtended {
 		particleFX.transform.parent = parent.transform;
 		particleFX.transform.position = parent.transform.position - new Vector3(0, 0, 1);
 		ParticleSystem particles = particleFX.GetComponentInChildren<ParticleSystem>();
-		particles.Play();
 		
-		while (particles != null && particles.isPlaying) {
-			yield return new WaitForSeconds(0);
+		if (particles != null) {
+			particles.Play();
+		
+			while (particles != null && particles.isPlaying) {
+				yield return new WaitForSeconds(0);
+			}
+		
+			particleFX.Remove();
 		}
-		
-		particleFX.Remove();
 	}
 	
 	IEnumerator FadeInAlpha(SpriteRenderer sprite, float speed) {
