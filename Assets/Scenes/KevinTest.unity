@@ -217,13 +217,13 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_Poly:
     m_Paths:
-    - - {x: 14.6243134, y: 54.655014}
-      - {x: 62.3026161, y: 53.9335175}
-      - {x: 14.8331814, y: 37.0014648}
-      - {x: 7.28472137, y: .457912594}
-      - {x: 16.8861809, y: -32.2614212}
-      - {x: 59.3572807, y: -49.5621071}
-      - {x: 2.24645996, y: -45.1297493}
+    - - {x: 11.6379738, y: 83.7718277}
+      - {x: 64.5423737, y: 83.7969208}
+      - {x: 19.3126945, y: 69.8512115}
+      - {x: 4.29838562, y: 1.20449817}
+      - {x: 10.9135017, y: -56.1521416}
+      - {x: 60.1038666, y: -65.240387}
+      - {x: .753292084, y: -68.27388}
       - {x: -7.27083588, y: -13.8162327}
       - {x: -7.56525803, y: 13.9646702}
 --- !u!1 &538597178
@@ -693,11 +693,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 1454776081}
   currentRoom: 0
-  nextChunkId: 1
-  lastRoomEndPosition: {x: 0, y: 0, z: 0}
-  lastRoomRightExitY: 0
-  chunckWidthInAdvanceOfPlayer: 50
-  linearChunkPrefab: []
+  chunckInAdvanceOfPlayer: 1
+  chunkFlow:
+    lastRoomEndPosition: {x: 0, y: 0, z: 0}
+    lastRoomRightExitY: 0
+    nextChunkId: 0
+    chunkBag:
+      linearChunkPrefab: []
+      cornerChunkPrefab: []
+    nextCornerChance: 0
+    baseCornerChance: 0
+    baseCornerChanceIncremental: 0
 --- !u!4 &2056615908
 Transform:
   m_ObjectHideFlags: 0
