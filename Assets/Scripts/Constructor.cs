@@ -10,24 +10,34 @@ public class Constructor : MonoBehaviourExtended {
 	}
 	
 	IEnumerator ActivateObject(GameObject obj) {
+		bool activate = false;
 		foreach (GameObject child in obj.GetChildrenRecursive()) {
-			child.SetActive(true);
+			if (!child.activeSelf) {
+				child.SetActive(true);
+				activate = true;
+			}
 		}
 		
-		ParticleSystem particles = obj.GetComponentInChildren<ParticleSystem>();
 		SpriteRenderer sprite = obj.GetComponentInChildren<SpriteRenderer>();
 		
-		if (particles != null) {
+		if (activate && sprite != null) {
+			GameObject particleFX = Instantiate(References.DestructionParticleFX, obj.transform.position, Quaternion.identity) as GameObject;
+			particleFX.transform.parent = obj.transform;
+			particleFX.transform.position = obj.transform.position - new Vector3(0, 0, 1);
+			ParticleSystem particles = particleFX.GetComponent<ParticleSystem>();
 			particles.Play();
-		}
 		
-		if (sprite != null) {
 			sprite.SetColor(0, "A");
-		
-			while (sprite.color.a < 1) {
+			while (sprite != null && sprite.color.a < 1) {
 				sprite.SetColor(sprite.color.a + 10 * Time.deltaTime, "A");
 				yield return new WaitForSeconds(0);
 			}
+		
+			while (particles != null && particles.isPlaying) {
+				yield return new WaitForSeconds(0);
+			}
+		
+			particleFX.Remove();
 		}
 	}
 }

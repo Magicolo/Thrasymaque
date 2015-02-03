@@ -41,6 +41,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runner: {fileID: 0}
   runnerCamera: {fileID: 0}
+  creationParticleFX: {fileID: 124646, guid: 2f07f0e2873817a4f9e6dd97b96127ec, type: 2}
+  destructionParticleFX: {fileID: 185504, guid: 35c07301f9a299e4c8698a6a914f8574,
+    type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
