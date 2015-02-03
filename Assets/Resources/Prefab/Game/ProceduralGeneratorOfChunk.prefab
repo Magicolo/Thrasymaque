@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 479242}
   - 114: {fileID: 11479242}
   m_Layer: 0
-  m_Name: ProceduralChunk
+  m_Name: ProceduralGeneratorOfChunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,11 +41,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 0}
   currentRoom: 0
-  nextChunkId: 1
-  lastRoomEndPosition: {x: 0, y: 0, z: 0}
-  lastRoomYEntreance: 0
-  chunckWidthInAdvanceOfPlayer: 50
-  linearChunkPrefab: []
+  chunckInAdvanceOfPlayer: 1
+  chunkFlow:
+    lastRoomEndPosition: {x: 0, y: 0, z: 0}
+    lastRoomRightExitY: 0
+    nextChunkId: 0
+    chunkBag:
+      linearChunkPrefab: []
+      cornerChunkPrefab: []
+    nextCornerChance: 0
+    baseCornerChance: 0
+    baseCornerChanceIncremental: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
