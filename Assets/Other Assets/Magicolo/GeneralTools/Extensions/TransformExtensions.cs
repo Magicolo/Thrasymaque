@@ -182,7 +182,7 @@ namespace Magicolo {
 			transform.SetLocalEulerAngles(new Vector3(angle, angle, angle), axis);
 		}
 		
-		public static void RotateLocal(this Transform transform, Vector3 rotation, string axis) {
+		public static void RotateLocal(this Transform transform, Vector3 rotation, string axis = "XYZ") {
 			transform.SetLocalEulerAngles(transform.localEulerAngles + rotation, axis);
 		}
 		
