@@ -11,7 +11,7 @@ public class CreateMeAGame : MonoBehaviour {
 		
 		gm.runner = ru;
 		gm.runnerCamera = rc;
-		pc.playersTransform = ru.transform;
+		pc.playersTransform = rc.transform;
 		
 		Object.DestroyImmediate(this.gameObject);
 	}
