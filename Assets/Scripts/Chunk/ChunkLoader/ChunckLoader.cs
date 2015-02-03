@@ -10,6 +10,7 @@ public class ChunckLoader : TiledMapLoader {
 	
 	public ChunckLoader(GameObject parent){
 		this.parent = parent;
+		this.chunk = parent.AddComponent<Chunk>();
 		tilesParent = GameObjectExtend.createGameObject("Tiles", parent.transform, Vector3.zero).transform;
 	
 		findOrCreateLinker();

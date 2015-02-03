@@ -12,24 +12,20 @@ public class ChuckLoaderEditor : EditorWindow {
 	void OnGUI(){	
 		addFileLine();
 		if (GUILayout.Button ("Load Map")) {
-			string filename = Path.GetFileName(filePath).Split(new char[]{'.'})[0];
-			GameObject tempParent = new GameObject(filename);
+			string chunkName = Path.GetFileName(filePath).Split(new char[]{'.'})[0];
+			GameObject chunkGameObject = new GameObject(chunkName);
 			
-			ChunckLoader loader = new ChunckLoader(tempParent);
+			ChunckLoader loader = new ChunckLoader(chunkGameObject);
 			loader.loadFromFile(filePath);
+			
+			makeGameObjectAsPrefab(chunkGameObject, chunkName);
 		}
 	}
 
-	/*GameObject addOrGetPrefab(){
-		
-		
-		GameObject go = Resources.Load<GameObject>("Chunks/" + filename);
-		
-		Object prefab = EditorUtility.CreateEmptyPrefab("Assets/Temporary/"+t.gameObject.name+".prefab");
-        EditorUtility.ReplacePrefab(t.gameObject, prefab, ReplacePrefabOptions.ConnectToPrefab);
-		
-		return null;
-	}*/
+	void makeGameObjectAsPrefab(GameObject chunkGameObject, string chunkName){
+		PrefabUtility.CreatePrefab("Assets/Resources/Chunks/"+chunkName+".prefab", chunkGameObject);
+		Object.DestroyImmediate(chunkGameObject);
+	}
 	
 	void addFileLine(){
 		GUILayout.BeginHorizontal ();
