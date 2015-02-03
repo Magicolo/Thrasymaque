@@ -12,6 +12,8 @@ public class Chunk : MonoBehaviour {
 	public int rightExitY;
 	public int upExitX;
 	
+	public float orientation;
+	
 	[Disable] public bool isStraight = true;
 	
 	public ProceduralGeneratorOfChunk proceduralGenerator;
