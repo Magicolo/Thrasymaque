@@ -12,10 +12,10 @@ public class ChunkBag {
 	public List<GameObject> linearChunkPrefab = new List<GameObject>();
 	public List<GameObject> cornerChunkPrefab = new List<GameObject>();
 	
-	public ChunkBag(System.Random random){
+	public ChunkBag(System.Random random, string levelName){
 		this.random = random;
-		loadChunksFrom("Chunks/Straight",linearChunkPrefab);
-		loadChunksFrom("Chunks/Corner",cornerChunkPrefab);
+		loadChunksFrom("Chunks/"+ levelName + "/Straight",linearChunkPrefab);
+		loadChunksFrom("Chunks/"+ levelName + "/Chunks/Corner",cornerChunkPrefab);
 	}
 	
 

@@ -40,18 +40,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 0}
-  currentRoom: 0
-  chunckInAdvanceOfPlayer: 5
-  chunkFlow:
-    lastRoomEndPosition: {x: 0, y: 0, z: 0}
-    lastRoomRightExitY: 0
-    nextChunkId: 0
-    chunkBag:
-      linearChunkPrefab: []
-      cornerChunkPrefab: []
-    nextCornerChance: 0
-    baseCornerChance: 0
-    baseCornerChanceIncremental: 0
+  currentChunkId: 0
+  currentChunk: {fileID: 0}
+  chunckInAdvanceOfPlayer: 0
+  chunkBag:
+    linearChunkPrefab: []
+    cornerChunkPrefab: []
+  chunkFlowsToAdd: []
+  chunkFlowsToRemove: []
+  chunkFlows: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
