@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class ChunckLoader : TiledMapLoader {
@@ -61,6 +62,7 @@ public class ChunckLoader : TiledMapLoader {
 
 
 	protected override void loadMapProperty(System.Collections.Generic.Dictionary<string, string> properties){
-		Debug.Log("ASDAS" + properties.Count);
+		this.chunk.entreanceY = this.chunk.height - Int32.Parse(properties["MaxY"]) - 1;
+		this.chunk.rightExitY = this.chunk.height - Int32.Parse(properties["RightExitMaxY"]) - 1;
 	}
 }

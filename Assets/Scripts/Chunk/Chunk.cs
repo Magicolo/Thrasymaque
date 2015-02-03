@@ -6,7 +6,8 @@ public class Chunk : MonoBehaviour {
 	public int width;
 	public int height;
 	public int chunkId;
-	public int yEntreance;
+	public int entreanceY;
+	public int rightExitY;
 	
 	public ProceduralChunk proceduralChunk;
 	
