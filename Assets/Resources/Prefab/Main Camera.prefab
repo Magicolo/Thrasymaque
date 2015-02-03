@@ -327,7 +327,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translateSpeed: 7.5
   rotateSpeed: 5
+  pressureSpeed: 10
+  recoverSpeed: 2
   offset: {x: 0, y: 0, z: -50}
+  lastPosition: {x: 0, y: 0, z: 0}
 --- !u!124 &12449534
 Behaviour:
   m_ObjectHideFlags: 1

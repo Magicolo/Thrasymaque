@@ -33,7 +33,7 @@ public class TileConstructor : MonoBehaviourExtended {
 		GameObject particleFX = Instantiate(References.CreationParticleFX, parent.transform.position, Quaternion.identity) as GameObject;
 		particleFX.transform.parent = parent.transform;
 		particleFX.transform.position = parent.transform.position - new Vector3(0, 0, 1);
-		ParticleSystem particles = particleFX.GetComponent<ParticleSystem>();
+		ParticleSystem particles = particleFX.GetComponentInChildren<ParticleSystem>();
 		particles.Play();
 		
 		while (particles != null && particles.isPlaying) {
