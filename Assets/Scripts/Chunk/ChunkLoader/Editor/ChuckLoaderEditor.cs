@@ -8,8 +8,10 @@ using System.IO;
 public class ChuckLoaderEditor : EditorWindow {
 
 	public string filePath = "";
+	public string LevelName = "";
 	
 	void OnGUI(){	
+		
 		addFileLine();
 		if (GUILayout.Button ("Load Map")) {
 			string chunkName = Path.GetFileName(filePath).Split(new char[]{'.'})[0];
