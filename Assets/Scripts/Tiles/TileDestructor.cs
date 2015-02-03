@@ -10,6 +10,8 @@ public class TileDestructor : MonoBehaviourExtended {
 	}
 	
 	void DestroyObject(GameObject obj) {
+		obj.layer = 19;
+		
 		StartCoroutine(PlayDestructionParticleFX(obj));
 		
 		foreach (SpriteRenderer sprite in obj.GetComponentsInChildren<SpriteRenderer>()) {

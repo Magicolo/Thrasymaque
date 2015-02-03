@@ -11,7 +11,7 @@ GameObject:
   - 61: {fileID: 6167866}
   - 114: {fileID: 11467866}
   - 212: {fileID: 21267866}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: GravityLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 467866}
   - 198: {fileID: 19867866}
   - 199: {fileID: 19967866}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
