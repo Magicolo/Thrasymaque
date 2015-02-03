@@ -6,7 +6,8 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 
 	public Transform playersTransform;
 	
-	public int currentRoom = 5;
+	public int currentChunkId = 5;
+	public Chunk currentChunk;
 
 	public int chunckInAdvanceOfPlayer = 1;
 	
@@ -20,14 +21,15 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	
 	void Awake(){
 		chunkBag = new ChunkBag(random);
-		ChunkFlow chunkFlow = new ChunkFlow(this,chunkBag,random, 1, Vector3.zero, Vector3.zero);
+		ChunkFlow chunkFlow = new ChunkFlow(this,chunkBag,random, 1, Vector3.zero, 0);
 		chunkFlows.Add(chunkFlow);
 		chunkFlow.loadNextChunk();
 		playersTransform.position = new Vector3(0,8,0);
 	}
 
-	public void setCurrentRoom(int chunkId){
-		currentRoom = chunkId;
+	public void setCurrentChunk(Chunk chunk){
+		currentChunk = chunk;
+		currentChunkId = chunk.chunkId;
 	}
 
 	void Start () {
@@ -51,6 +53,6 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	}
 	
 	public int getChunkIdToGenerate(){
-		return this.chunckInAdvanceOfPlayer + currentRoom;
+		return this.chunckInAdvanceOfPlayer + currentChunkId;
 	}
 }

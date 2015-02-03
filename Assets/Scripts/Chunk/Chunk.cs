@@ -18,7 +18,7 @@ public class Chunk : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other) {
 		if ( other.tag == "Player"){
-			proceduralGenerator.setCurrentRoom(chunkId);
+			proceduralGenerator.setCurrentChunk(this);
 		}
 	
 	}

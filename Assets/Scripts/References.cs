@@ -47,6 +47,13 @@ public class References : MonoBehaviourExtended {
 			return Instance.destructionParticleFX;
 		}
 	}
+	
+	public ProceduralGeneratorOfChunk proceduralGeneratorOfChunk;
+	public static ProceduralGeneratorOfChunk ProceduralGeneratorOfChunk {
+		get {
+			return Instance.proceduralGeneratorOfChunk;
+		}
+	}
     
 }
 

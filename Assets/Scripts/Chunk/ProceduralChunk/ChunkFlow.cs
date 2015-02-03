@@ -8,6 +8,7 @@ public class ChunkFlow {
 
 	
 	public Vector3 direction;
+	public float rotation;
 	
 	public Vector3 lastRoomEndPosition;
 	public int lastRoomRightExitY;
@@ -22,14 +23,14 @@ public class ChunkFlow {
 	public float baseCornerChance = 0.1f;
 	public float baseCornerChanceIncremental = 0.1f;
 
-	public ChunkFlow(ProceduralGeneratorOfChunk proceduralGeneratorOfChunk, ChunkBag chunkBag, System.Random random, int startingChunkId, Vector3 startingPosition, Vector3 direction){
+	public ChunkFlow(ProceduralGeneratorOfChunk proceduralGeneratorOfChunk, ChunkBag chunkBag, System.Random random, int startingChunkId, Vector3 startingPosition, float angle){
 		lastRoomEndPosition = startingPosition;
 		this.proceduralGeneratorOfChunk = proceduralGeneratorOfChunk;
 		generationParentTransform = proceduralGeneratorOfChunk.transform;
-		this.direction = direction;
 		this.chunkBag = chunkBag;
 		this.random = random;
 		this.nextChunkId = startingChunkId;
+		rotation = angle;
 	}
 	
 	public void update(){
@@ -58,10 +59,12 @@ public class ChunkFlow {
 		nextChunkId++;
 		
 		if(newChunk.upExitX != 0){
-			Vector3 startinPosition = lastRoomEndPosition += new Vector3(newChunk.width - newChunk.upExitX, newChunk.height,0);
-			Vector3 newDirection = direction.Rotate(90);
-			ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk,chunkBag,random,nextChunkId,startinPosition,newDirection);
+			Vector3 startinPosition = lastRoomEndPosition + new Vector3(-newChunk.upExitX, newChunk.height,0);
+			float newAngle = rotation + 90;
+			newAngle %= 360;
+			ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk,chunkBag,random,nextChunkId,startinPosition,newAngle);
 			proceduralGeneratorOfChunk.chunkFlowsToAdd.Add(newFlow);
+			proceduralGeneratorOfChunk.chunkFlowsToRemove.Add(this);
 		}
 	}
 
@@ -74,15 +77,20 @@ public class ChunkFlow {
 	Chunk createAndPlaceNewChunk(GameObject prefab, int chunkId){
 		Chunk prefabChunk = prefab.GetComponent<Chunk>();
 		int yDifference = this.lastRoomRightExitY - prefabChunk.entreanceY;
-		lastRoomEndPosition += new Vector3(0,yDifference,0);
+		Vector3 movement = new Vector3(0,yDifference,0);
+		movement = movement.Rotate(rotation, Vector3.back);
+		lastRoomEndPosition += movement;
 		
 		GameObject newChunkGO = GameObjectExtend.createClone(prefab,"Chunk" + chunkId, generationParentTransform,lastRoomEndPosition);
-		
+		newChunkGO.transform.Rotate(0,0, rotation);
 		Chunk newChunk = newChunkGO.GetComponent<Chunk>();
 		newChunk.chunkId = chunkId;
 		newChunk.proceduralGenerator = proceduralGeneratorOfChunk;
 		
-		this.lastRoomEndPosition += new Vector3(prefabChunk.width,0,0);
+		Vector3 movementX = new Vector3(prefabChunk.width,0,0);
+		movementX = movementX.Rotate(rotation, Vector3.back);
+		//Debug.Log(movementX);
+		lastRoomEndPosition += movementX;
 		lastRoomRightExitY = prefabChunk.rightExitY;
 		return newChunk;
 	}
