@@ -18,7 +18,7 @@ public class Destructor : MonoBehaviourExtended {
 		}
 		
 		while (sprite.color.a > 0) {
-			sprite.SetColor(Color.Lerp(sprite.color, new Color(), 10 * Time.deltaTime), "A");
+			sprite.SetColor(Color.Lerp(sprite.color, new Color(), 25 * Time.deltaTime), "A");
 			yield return new WaitForSeconds(0);
 		}
 		
