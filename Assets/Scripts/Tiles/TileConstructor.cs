@@ -10,22 +10,17 @@ public class TileConstructor : MonoBehaviourExtended {
 	}
 	
 	void ActivateObject(GameObject obj) {
-		bool activate = false;
+		obj.layer = 12;
+		
 		foreach (GameObject child in obj.GetChildrenRecursive()) {
-			if (!child.activeSelf) {
-				child.SetActive(true);
-				activate = true;
-			}
+			child.SetActive(true);
+			child.layer = 12;
 		}
 		
-		SpriteRenderer[] sprites = obj.GetComponentsInChildren<SpriteRenderer>();
+		StartCoroutine(PlayCreationParticleFX(obj));
 		
-		if (activate) {
-			StartCoroutine(PlayCreationParticleFX(obj));
-		
-			foreach (SpriteRenderer sprite in sprites) {
-				StartCoroutine(FadeInAlpha(sprite, 10));
-			}
+		foreach (SpriteRenderer sprite in obj.GetComponentsInChildren<SpriteRenderer>()) {
+			StartCoroutine(FadeInAlpha(sprite, 10));
 		}
 	}
 	

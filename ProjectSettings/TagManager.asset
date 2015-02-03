@@ -15,15 +15,15 @@ TagManager:
   User Layer 8: 
   User Layer 9: 
   User Layer 10: Runner
-  User Layer 11: 
-  User Layer 12: Block
+  User Layer 11: ToConstruct
+  User Layer 12: ToDestroy
   User Layer 13: Chunk
   User Layer 14: 
-  User Layer 15: GravityZone
+  User Layer 15: 
   User Layer 16: ChunkDestructor
-  User Layer 17: TileConstructorDestructor
-  User Layer 18: 
-  User Layer 19: 
+  User Layer 17: TileConstructor
+  User Layer 18: TileDestructor
+  User Layer 19: Destroyed
   User Layer 20: FlashTrigger
   User Layer 21: 
   User Layer 22: 

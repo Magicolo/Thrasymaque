@@ -11,7 +11,7 @@ GameObject:
   - 61: {fileID: 6190114}
   - 114: {fileID: 11490114}
   - 212: {fileID: 21290114}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: GravityUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 490114}
   - 198: {fileID: 19890114}
   - 199: {fileID: 19990114}
-  m_Layer: 15
+  m_Layer: 11
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
