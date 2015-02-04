@@ -5,6 +5,23 @@ using Magicolo;
 
 public class FlashTrigger : MonoBehaviourExtended {
 
+	void Update() {
+//		const float distance = 50;
+//		Vector2 direction = transform.right;
+//		Vector2 size = new Vector2(70, 70);
+//		Vector2 center = transform.position - (Vector3)(direction * distance);
+//		LayerMask layerMask = new LayerMask().AddToMask("Destroyed").Inverse();
+//		RaycastHit2D[] hits = Physics2D.BoxCastAll(center, size, 0, direction, distance, layerMask);
+//		
+//		foreach (RaycastHit2D hit in hits) {
+//			SpriteRenderer sprite = hit.collider.GetComponentInChildren<SpriteRenderer>();
+//			
+//			if (sprite != null) {
+//				StartCoroutine(Flash(sprite));
+//			}
+//		}
+	}
+	
 	void OnTriggerEnter2D(Collider2D collision) {
 		SpriteRenderer sprite = collision.gameObject.GetComponentInChildren<SpriteRenderer>();
 		
