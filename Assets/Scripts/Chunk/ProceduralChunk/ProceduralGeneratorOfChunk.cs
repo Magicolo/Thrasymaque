@@ -31,7 +31,10 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		ChunkFlow chunkFlow = new ChunkFlow(this,null,chunkBag,random, 1, Vector3.zero, 0);
 		chunkFlows.Add(chunkFlow);
 		chunkFlow.loadNextChunk();
-		playersTransform.position = new Vector3(0,8,0);
+		int y = chunkFlow.lastChunk.entreanceY + 1;
+		playersTransform.position = new Vector3(0,y,0);
+		
+		chunkFlow.lastChunk.playerPassedThrought = true;
 	}
 
 	public void setCurrentChunk(Chunk chunk){
@@ -72,11 +75,11 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		
 		foreach (var chunkToRemove in chunksToRemove) {
 			if(chunkToRemove != null & chunkToRemove.gameObject != null){
-				if(chunkToRemove.chunkFlowPresent){
+				/*if(chunkToRemove.chunkFlowPresent){
 					Debug.Log("Remove old of" + chunkToRemove.name);
 					removeUnpassedChunksFlow(chunkToRemove);
 					
-				}
+				}*/
 				Object.Destroy(chunkToRemove.gameObject);
 			}
 			

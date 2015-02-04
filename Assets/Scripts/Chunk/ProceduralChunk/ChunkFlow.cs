@@ -33,16 +33,36 @@ public class ChunkFlow {
 		this.random = random;
 		this.nextChunkId = startingChunkId;
 		rotation = angle;
+		
+		makeStartChunk();
 	}
 	
 	public void update(){
-		if(proceduralGeneratorOfChunk.getChunkIdToGenerate() > nextChunkId){
-			loadNextChunk();
+		if(playerIsInThisFlow()){
+			if(proceduralGeneratorOfChunk.getChunkIdToGenerate() > nextChunkId){
+				loadNextChunk();
+			}
+		}else{
+			proceduralGeneratorOfChunk.chunkFlowsToRemove.Add(this);
 		}
+		
+	}
+
+	bool playerIsInThisFlow(){
+		Chunk previousChunk = lastChunk;
+		while(previousChunk != null){
+			if(previousChunk.playerPassedThrought){
+				return true;
+			}else{
+				previousChunk = previousChunk.lastChunk;
+			}
+		}
+		
+		return false;
 	}
 	
+	
 	public void loadNextChunk(){
-		
 		float nextrandom = (float)random.NextDouble();
 		Chunk newChunk = null;
 		if(nextrandom <= nextCornerChance){
@@ -53,6 +73,7 @@ public class ChunkFlow {
 			newChunk = makeStraightChunk();
 		}
 		
+		//TODO  A METTRE PARTOUT
 		if(newChunk != null){
 			newChunk.orientation = this.rotation;
 		}
@@ -102,6 +123,14 @@ public class ChunkFlow {
 		return target + movement;
 	}
 
+	Chunk makeStartChunk(){
+		GameObject nextChunkPrefab = chunkBag.getRandomStartChunk();
+		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab,nextChunkId);
+		nextChunkId++;
+		newChunk.orientation = this.rotation;
+		return newChunk;
+	}
+	
 	Chunk makeStraightChunk(){
 		GameObject nextChunkPrefab = chunkBag.getRandomChunk();
 		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab,nextChunkId);
@@ -121,6 +150,7 @@ public class ChunkFlow {
 		Chunk newChunk = newChunkGO.GetComponent<Chunk>();
 		if(lastChunk != null){
 			lastChunk.nextChunk = newChunk;
+			newChunk.lastChunk = lastChunk;
 		}
 		lastChunk = newChunk;
 		
