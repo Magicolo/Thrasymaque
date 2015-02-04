@@ -34,23 +34,14 @@ namespace Magicolo.EditorTools {
 			
 			EditorGUILayout.BeginHorizontal();
 			
-			EditorGUILayout.LabelField("Path: ", new GUIStyle("boldLabel"), GUILayout.Width(40));
-			
-			EditorGUILayout.BeginVertical();
-			
-			GUILayout.Space(2);
-			
-			if (CustomEditorBase.Button(path.ToGUIContent())) {
-				path = EditorUtility.OpenFolderPanel("Select Destination Folder", "Assets", "");
-				path = path.StartsWith(Application.dataPath) ? path.Substring(Application.dataPath.Length - 6) : "Assets";
-			}
-			
-			EditorGUILayout.EndVertical();
+			GUIStyle style = new GUIStyle("boldLabel");
+			EditorGUILayout.LabelField("Path: ".ToGUIContent(), style, GUILayout.Width("Path: ".GetWidth(style.font) + 13));
+			path = CustomEditorBase.FolderPathButton(path, Application.dataPath.Substring(0, Application.dataPath.Length - 6));
 			
 			GUILayout.Space(5);
 			
 			EditorGUILayout.EndHorizontal();
-		
+			
 			CustomEditorBase.Separator();
 		}
 		
@@ -117,6 +108,11 @@ namespace Magicolo.EditorTools {
 		}
 		
 		void GenerateLayer() {
+			if (string.IsNullOrEmpty(path)) {
+				Logger.LogError("Path can not be empty.");
+				return;
+			}
+			
 			if (string.IsNullOrEmpty(layer)) {
 				Logger.LogError("Layer name can not be empty.");
 				return;
@@ -146,6 +142,11 @@ namespace Magicolo.EditorTools {
 		}
 		
 		void GenerateStates() {
+			if (string.IsNullOrEmpty(path)) {
+				Logger.LogError("Path can not be empty.");
+				return;
+			}
+			
 			if (string.IsNullOrEmpty(layer)) {
 				Logger.LogError("Layer name can not be empty.");
 				return;

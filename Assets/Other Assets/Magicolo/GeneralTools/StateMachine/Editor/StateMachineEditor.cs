@@ -51,7 +51,7 @@ namespace Magicolo.GeneralTools {
 		}
 		
 		static Dictionary<Type, string> LayerTypeNameDict;
-		
+
 		public override void OnEnable() {
 			base.OnEnable();
 			
