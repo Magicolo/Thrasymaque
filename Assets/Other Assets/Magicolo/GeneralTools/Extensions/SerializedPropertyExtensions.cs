@@ -169,6 +169,10 @@ namespace Magicolo {
 			arrayProperty.serializedObject.ApplyModifiedProperties();
 		}
 		
+		public static GUIContent ToGUIContent(this SerializedProperty property){
+			return new GUIContent(property.displayName, property.tooltip);
+		}
+		
 		public static SerializedProperty GetParent(this SerializedProperty property) {
 			string path = property.propertyPath;
 			if (path.EndsWith("]")) {

@@ -8,16 +8,16 @@ public class FlashTrigger : MonoBehaviourExtended {
 	void OnTriggerEnter2D(Collider2D collision) {
 		SpriteRenderer sprite = collision.gameObject.GetComponentInChildren<SpriteRenderer>();
 		
-		if (sprite != null) {
+		if (sprite != null && sprite.gameObject.layer != 19) {
 			StartCoroutine(Flash(sprite));
 		}
 	}
 	
 	IEnumerator Flash(SpriteRenderer sprite) {
 		Color initColor = sprite.color;
-		
 		float distance = Vector3.Distance(sprite.transform.position, References.Runner.transform.position);
-		while (sprite != null && distance < 15) {
+		
+		while (sprite != null && sprite.gameObject.layer != 19 && distance < 15) {
 			float brightness = 0.2F;
 			float randomness = 1 - (distance / 40);
 			float r = initColor.r + Random.Range(-initColor.r, initColor.r) * randomness + brightness;
