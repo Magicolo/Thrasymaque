@@ -713,6 +713,7 @@ MonoBehaviour:
   currentChunkId: 0
   currentChunk: {fileID: 0}
   chunckInAdvanceOfPlayer: 5
+  chunckBackOfPlayer: 4
   seed: 13372
   chunkBag:
     linearChunkPrefab: []
@@ -720,6 +721,9 @@ MonoBehaviour:
   chunkFlowsToAdd: []
   chunkFlowsToRemove: []
   chunkFlows: []
+  chunksToAdd: []
+  chunksToRemove: []
+  chunks: []
 --- !u!4 &1744363490
 Transform:
   m_ObjectHideFlags: 0
