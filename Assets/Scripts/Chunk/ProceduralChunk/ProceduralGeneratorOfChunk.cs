@@ -28,7 +28,7 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	void Awake(){
 		random = new System.Random(seed);
 		chunkBag = new ChunkBag(random, levelName);
-		ChunkFlow chunkFlow = new ChunkFlow(this,chunkBag,random, 1, Vector3.zero, 0);
+		ChunkFlow chunkFlow = new ChunkFlow(this,null,chunkBag,random, 1, Vector3.zero, 0);
 		chunkFlows.Add(chunkFlow);
 		chunkFlow.loadNextChunk();
 		playersTransform.position = new Vector3(0,8,0);
@@ -72,8 +72,11 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		
 		foreach (var chunkToRemove in chunksToRemove) {
 			if(chunkToRemove != null & chunkToRemove.gameObject != null){
-				Debug.Log("Removing a flow");
-				this.chunkFlowsToRemove.Add(chunkToRemove.flow);
+				if(chunkToRemove.chunkFlowPresent){
+					Debug.Log("Remove old of" + chunkToRemove.name);
+					removeUnpassedChunksFlow(chunkToRemove);
+					
+				}
 				Object.Destroy(chunkToRemove.gameObject);
 			}
 			
@@ -86,7 +89,19 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		}
 		chunksToAdd.Clear();
 	}
-	
+
+	void removeUnpassedChunksFlow(Chunk chunkToRemove){
+		if(!chunkToRemove.playerPassedThrought){
+			if(chunkToRemove.nextChunk != null){
+				Debug.Log("YA UN NEXT");
+				if(chunkToRemove.chunkFlowPresent){
+					Debug.Log("Remove flow of" + chunkToRemove.name);
+					chunkFlowsToRemove.Add(chunkToRemove.flow);
+				}
+				removeUnpassedChunksFlow(chunkToRemove.nextChunk);
+			}
+		}
+	}
 	public int getChunkIdToGenerate(){
 		return this.chunckInAdvanceOfPlayer + currentChunkId;
 	}

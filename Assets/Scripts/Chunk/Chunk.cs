@@ -15,7 +15,10 @@ public class Chunk : MonoBehaviour {
 	
 	public float orientation;
 	
-	[Disable] public ChunkFlow flow;
+	[Disable] public ChunkFlow flow = null;
+	[Disable] public bool chunkFlowPresent = false;
+	[Disable] public Chunk nextChunk;
+	[Disable] public bool playerPassedThrought;
 	
 	[Disable] public bool isStraight = true;
 	
@@ -24,6 +27,7 @@ public class Chunk : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Player") {
 			proceduralGenerator.setCurrentChunk(this);
+			playerPassedThrought = true;
 		}
 	}
 }

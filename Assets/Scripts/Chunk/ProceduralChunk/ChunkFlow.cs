@@ -10,9 +10,10 @@ public class ChunkFlow {
 	public Vector3 direction;
 	public float rotation;
 	
-	public Vector3 lastRoomEndPosition;
-	public int lastRoomRightExitY;
+	[Disable] public Vector3 lastRoomEndPosition;
+	[Disable] public int lastRoomRightExitY;
 	[Disable] public int nextChunkId = 1;
+	[Disable] public Chunk lastChunk;
 	
 	[Disable]public ChunkBag chunkBag;
 	private ProceduralGeneratorOfChunk proceduralGeneratorOfChunk;
@@ -20,14 +21,15 @@ public class ChunkFlow {
 	
 	public System.Random random;
 	public float nextCornerChance = 0;
-	public float baseCornerChance = 0.1f;
-	public float baseCornerChanceIncremental = 0.1f;
+	public float baseCornerChance = 0.05f;
+	public float baseCornerChanceIncremental = 0.05f;
 
-	public ChunkFlow(ProceduralGeneratorOfChunk proceduralGeneratorOfChunk, ChunkBag chunkBag, System.Random random, int startingChunkId, Vector3 startingPosition, float angle){
+	public ChunkFlow(ProceduralGeneratorOfChunk proceduralGeneratorOfChunk, Chunk lastChunk, ChunkBag chunkBag, System.Random random, int startingChunkId, Vector3 startingPosition, float angle){
 		lastRoomEndPosition = startingPosition;
 		this.proceduralGeneratorOfChunk = proceduralGeneratorOfChunk;
 		generationParentTransform = proceduralGeneratorOfChunk.transform;
 		this.chunkBag = chunkBag;
+		this.lastChunk = lastChunk;
 		this.random = random;
 		this.nextChunkId = startingChunkId;
 		rotation = angle;
@@ -80,7 +82,6 @@ public class ChunkFlow {
 		}
 		
 		if(newChunk.rightExitY == -1){
-			Debug.Log("Dommage on tue");
 			proceduralGeneratorOfChunk.chunkFlowsToRemove.Add(this);
 		}
 		return newChunk;
@@ -89,8 +90,9 @@ public class ChunkFlow {
 	void makeFlow(Chunk chunk, Vector3 movement, float newAngle, int chunkId){
 		Vector3 startingPosition = moveRelative(lastRoomEndPosition, movement, rotation);
 		
-		ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk,chunkBag,random,chunkId,startingPosition,newAngle);
+		ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk,lastChunk,chunkBag,random,chunkId,startingPosition,newAngle);
 		chunk.flow = newFlow;
+		chunk.chunkFlowPresent = true;
 		proceduralGeneratorOfChunk.chunkFlowsToAdd.Add(newFlow);
 	}
 	
@@ -117,6 +119,11 @@ public class ChunkFlow {
 		GameObject newChunkGO = GameObjectExtend.createClone(prefab,"Chunk" + chunkId, generationParentTransform,lastRoomEndPosition);
 		newChunkGO.transform.Rotate(0,0, rotation);
 		Chunk newChunk = newChunkGO.GetComponent<Chunk>();
+		if(lastChunk != null){
+			lastChunk.nextChunk = newChunk;
+		}
+		lastChunk = newChunk;
+		
 		proceduralGeneratorOfChunk.chunksToAdd.Add(newChunk);
 		newChunk.chunkId = chunkId;
 		newChunk.proceduralGenerator = proceduralGeneratorOfChunk;
