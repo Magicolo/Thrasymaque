@@ -62,8 +62,8 @@ namespace Magicolo.AudioTools {
 			base.OnProjectWindowChanged();
 			
 			if (pureData != null && pureData.hierarchyManager != null) {
-				pureData.infoManager.UpdateInfos();
-				pureData.hierarchyManager.UpdateHierarchy();
+//				pureData.infoManager.UpdateInfos();
+//				pureData.hierarchyManager.UpdateHierarchy();
 			}
 		}
 
