@@ -25,7 +25,7 @@ public class Chunk : MonoBehaviour {
 	
 	[Disable] public bool startingChunk = false;
 	[Disable] public Vector2 checkPointLocation;
-	
+
 	public Color32 backgroundColor;
 	
 	
@@ -36,6 +36,7 @@ public class Chunk : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Player" && chunkId > proceduralGenerator.currentChunkId) {
 			proceduralGenerator.setCurrentChunk(this);
+			References.RunnerCamera.camera.backgroundColor = this.backgroundColor;
 			playerPassedThrought = true;
 			if(randomToGenerate != null){
 				GameData.RandomGenerator = randomToGenerate;

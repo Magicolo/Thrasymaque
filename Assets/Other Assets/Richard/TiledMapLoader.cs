@@ -47,7 +47,8 @@ public abstract class TiledMapLoader {
 		this.mapWidth  = this.parseInt(mapElement.Attribute("width").Value);
 		this.mapHeight = this.parseInt(mapElement.Attribute("height").Value);
 		if(mapElement.Attribute("backgroundcolor") != null){
-			debugLog(mapElement.Attribute("backgroundcolor").Value);
+			string colorInHex = mapElement.Attribute("backgroundcolor").Value.Substring(1);
+			this.backgroundColor = ColorUtils.HexToColor(colorInHex);
 		}
 		afterMapAttributesLoaded();
 	}

@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System.Diagnostics;
+using UnityEditor;
 using UnityEngine;
 using System.Collections;
 using System.IO;
@@ -21,7 +22,8 @@ public class ChuckLoaderEditor : EditorWindow {
 			var info = new DirectoryInfo(filePath);
 			var fileInfo = info.GetFiles("*.tmx");
 			int index = 0;
-			
+			Stopwatch stopWatch = new Stopwatch();
+			stopWatch.Start();
 			foreach (FileInfo file in fileInfo){
 				string chuckname = file.Name .Split(new char[]{'.'})[0];
 				
@@ -31,9 +33,9 @@ public class ChuckLoaderEditor : EditorWindow {
 				loader.loadFromFile(file.FullName);
 				makeGameObjectAsPrefab(chunkGameObject, chuckname);
 				index++;
-				Debug.Log("Yo oli on fait " + chuckname);
+				UnityEngine.Debug.Log("Yo oli on fait " + chuckname);
 			}
-			Debug.Log("Yo oli on a fini");
+			UnityEngine.Debug.Log("Yo oli on a fini en " + stopWatch.ElapsedMilliseconds/1000f + "s");
 		}
 	}
 
