@@ -61,6 +61,15 @@ public class ChunkFlow {
 		return false;
 	}
 	
+	public void loadFirstChunk(){
+		System.Random randomToGen = this.random.Clone<System.Random>();
+		
+		GameObject nextChunkPrefab = chunkBag.getRandomChunk(random);
+		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab,nextChunkId);
+		newChunk.orientation = this.rotation;
+		nextChunkId++;
+		
+	}
 	
 	public void loadNextChunk(){
 		float nextrandom = (float)random.NextDouble();
@@ -74,7 +83,7 @@ public class ChunkFlow {
 	}
 
 	Chunk makeCornerChunk(){
-		GameObject nextChunkPrefab = chunkBag.getRandomChunkFrom(chunkBag.cornerChunkPrefab);
+		GameObject nextChunkPrefab = chunkBag.getRandomChunkFrom(random, chunkBag.cornerChunkPrefab);
 		if(nextChunkPrefab == null){
 			return null;
 		}
@@ -119,7 +128,7 @@ public class ChunkFlow {
 	}
 
 	Chunk makeStartChunk(){
-		GameObject nextChunkPrefab = chunkBag.getRandomStartChunk();
+		GameObject nextChunkPrefab = chunkBag.getRandomStartChunk(random);
 		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab,nextChunkId);
 		nextChunkId++;
 		newChunk.orientation = this.rotation;
@@ -127,7 +136,7 @@ public class ChunkFlow {
 	}
 	
 	Chunk makeStraightChunk(){
-		GameObject nextChunkPrefab = chunkBag.getRandomChunk();
+		GameObject nextChunkPrefab = chunkBag.getRandomChunk(random);
 		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab,nextChunkId);
 		newChunk.orientation = this.rotation;
 		nextChunkId++;
