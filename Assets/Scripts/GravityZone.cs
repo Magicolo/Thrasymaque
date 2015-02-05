@@ -11,7 +11,8 @@ public class GravityZone : MonoBehaviourExtended {
 		Runner runner = collision.gameObject.GetComponent<Runner>();
 			
 		if (runner != null) {
-			runner.ChangeOrientation(targetRotation);
+			Chunk parentChunk = GetComponentInParent<Chunk>();
+			runner.ChangeOrientation(parentChunk.orientation + targetRotation);
 		}
 	}
 }
