@@ -16,8 +16,14 @@ public class AudioMaster : MonoBehaviour
 		}
 	}
 	
+	[Button("Test", "Test", NoPrefixLabel = true)] public bool test;
+	void Test()
+	{
+		PlayNextAudioClip();
+	}
+	
 	public static PureDataItem currentAudioClip;
-	public static int currentAudioClipIndex;
+	public static int currentAudioClipIndex = 1;
 	
 	const string audioClipPrefix = "raw_runner_voice-";
 	
