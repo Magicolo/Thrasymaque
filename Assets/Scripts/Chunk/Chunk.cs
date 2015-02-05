@@ -23,7 +23,8 @@ public class Chunk : MonoBehaviour {
 	
 	[Disable] public bool isStraight = true;
 	[Disable] public bool startingChunk = false;
-	
+	public System.Random randomToGenerate;
+
 	public ProceduralGeneratorOfChunk proceduralGenerator;
 	
 	void OnTriggerEnter2D(Collider2D other) {

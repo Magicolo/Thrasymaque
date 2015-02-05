@@ -26,7 +26,7 @@ public class ChuckLoaderEditor : EditorWindow {
 				string chuckname = file.Name .Split(new char[]{'.'})[0];
 				
 				GameObject chunkGameObject = new GameObject(chuckname);
-				ChunckLoader loader = new ChunckLoader(chunkGameObject);
+				ChunkLoader loader = new ChunkLoader(chunkGameObject);
 				
 				loader.loadFromFile(file.FullName);
 				makeGameObjectAsPrefab(chunkGameObject, chuckname);

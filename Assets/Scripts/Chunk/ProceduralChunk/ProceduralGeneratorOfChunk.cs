@@ -26,11 +26,18 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	public List<Chunk> chunks = new List<Chunk>();
 	
 	void Awake(){
+		
+	}
+	
+	public void StartGeneration(int seed, int startingChunkId){
+		currentChunkId = startingChunkId;
+		
 		random = new System.Random(seed);
-		chunkBag = new ChunkBag(random, levelName);
-		ChunkFlow chunkFlow = new ChunkFlow(this,null,chunkBag,random, 1, Vector3.zero, 0);
+		chunkBag = new ChunkBag(levelName);
+		
+		ChunkFlow chunkFlow = new ChunkFlow(this,null,chunkBag,random, currentChunkId, Vector3.zero, 0);
 		chunkFlows.Add(chunkFlow);
-		chunkFlow.loadNextChunk();
+		chunkFlow.loadFirstChunk();
 		int y = chunkFlow.lastChunk.entreanceY + 1;
 		playersTransform.position = new Vector3(0,y,0);
 		
