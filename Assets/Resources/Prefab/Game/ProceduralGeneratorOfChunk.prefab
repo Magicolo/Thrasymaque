@@ -43,14 +43,19 @@ MonoBehaviour:
   levelName: 
   currentChunkId: 0
   currentChunk: {fileID: 0}
-  chunckInAdvanceOfPlayer: 5
+  chunckInAdvanceOfPlayer: 3
+  chunckBackOfPlayer: 2
   seed: 13372
   chunkBag:
     linearChunkPrefab: []
     cornerChunkPrefab: []
+    startChunkPrefab: []
   chunkFlowsToAdd: []
   chunkFlowsToRemove: []
   chunkFlows: []
+  chunksToAdd: []
+  chunksToRemove: []
+  chunks: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
