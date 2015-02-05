@@ -208,6 +208,45 @@ MonoBehaviour:
     panLevel: .75
     pureData: {fileID: 1575119138}
   pureData: {fileID: 1575119138}
+--- !u!1 &44010005
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 44010007}
+  - 114: {fileID: 44010006}
+  m_Layer: 0
+  m_Name: State Machine Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &44010006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 44010005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2e188135969fa408ab2d796c612771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &44010007
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 44010005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &57443799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,8 +1432,8 @@ MonoBehaviour:
   levelName: Oli
   currentChunkId: 0
   currentChunk: {fileID: 0}
-  chunckInAdvanceOfPlayer: 5
-  chunckBackOfPlayer: 4
+  chunckInAdvanceOfPlayer: 2
+  chunckBackOfPlayer: 2
   seed: 1337
   chunkBag:
     linearChunkPrefab: []
@@ -3164,7 +3203,7 @@ MonoBehaviour:
     pureData: {fileID: 1575119138}
   editorHelper:
     selection:
-    - {fileID: 754220386}
+    - {fileID: 179242, guid: 7d33f93d84f036049a88d032fdeccdfe, type: 2}
     pureDataIcon: {fileID: 2800000, guid: 1f1f8b71fa69e14418bf3e49d9399524, type: 3}
     previewAudioSource: {fileID: 0}
     previewStopTime: 0
