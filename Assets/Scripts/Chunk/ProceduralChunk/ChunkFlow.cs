@@ -61,14 +61,14 @@ public class ChunkFlow {
 		return false;
 	}
 	
-	public void loadFirstChunk(){
+	public Chunk loadFirstChunk(){
 		System.Random randomToGen = this.random.Clone<System.Random>();
 		
 		GameObject nextChunkPrefab = chunkBag.getRandomChunk(random);
 		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab,nextChunkId);
 		newChunk.orientation = this.rotation;
 		nextChunkId++;
-		
+		return newChunk;
 	}
 	
 	public void loadNextChunk(){

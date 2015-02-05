@@ -22,7 +22,11 @@ public class Chunk : MonoBehaviour {
 	[Disable] public bool playerPassedThrought;
 	
 	[Disable] public bool isStraight = true;
+	
 	[Disable] public bool startingChunk = false;
+	[Disable] public Vector2 checkPointLocation;
+	
+	
 	public System.Random randomToGenerate;
 
 	public ProceduralGeneratorOfChunk proceduralGenerator;

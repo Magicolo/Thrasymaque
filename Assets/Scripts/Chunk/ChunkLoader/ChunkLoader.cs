@@ -44,6 +44,15 @@ public class ChunkLoader : TiledMapLoader {
 	protected override void addLayer(string layerName, int width, int height, Dictionary<string, string> properties){}
 	
 	protected override void addTile(int x, int y, int id){
+		
+		//SPECIAL CHEAP
+		if(id == 6){
+			chunk.startingChunk = true;
+			chunk.checkPointLocation = new Vector2(x,y);
+		}
+		
+		
+		
 		if(id > linker.prefabs.Count){
 			Debug.LogError("Il manque des prefab dans le linker."+ " : je ne connais pas id " + id + ". Quesque tu as fais OLI!");
 		}else if (id != 0){
@@ -62,24 +71,33 @@ public class ChunkLoader : TiledMapLoader {
 
 
 	protected override void loadMapProperty(Dictionary<string, string> properties){
-		this.chunk.entreanceY = this.chunk.height - Int32.Parse(properties["MaxY"]) - 1;
+		int leftEntreance = parseIn("MaxY", properties["MaxY"]);
+		this.chunk.entreanceY = this.chunk.height - leftEntreance - 1;
 		if(properties.ContainsKey("RightExitMaxY")){
-			this.chunk.rightExitY = this.chunk.height - Int32.Parse(properties["RightExitMaxY"]) - 1;
+			int rightExit = parseIn("RightExitMaxY", properties["RightExitMaxY"]) ;
+			this.chunk.rightExitY = this.chunk.height - rightExit - 1;
 		}
 		if(isValide("UpExitMaxX",properties)){
-			chunk.upExitX = Int32.Parse(properties["UpExitMaxX"]) ;
+			chunk.upExitX = parseIn("UpExitMaxX", properties["UpExitMaxX"]) ;
 			chunk.isStraight = false;
 		}
 		if(isValide("DownExitMaxX",properties)){
-			chunk.downExitX = Int32.Parse(properties["DownExitMaxX"]) ;
+			chunk.downExitX = parseIn("DownExitMaxX", properties["DownExitMaxX"]);
 			chunk.isStraight = false;
-		}
-		if(isValide("StartingChunk",properties)){
-			chunk.startingChunk = true;
 		}
 	}
 	
 	bool isValide(string key, Dictionary<string, string> properties){
 		return properties.ContainsKey(key) && properties[key].Length > 0 && !properties[key].Equals("-1");
+	}
+	
+	int parseIn(string property, string stringToParse){
+		try{
+			return Int32.Parse(stringToParse);
+		}catch(FormatException){
+			Debug.LogWarning("Nombre invalide dans " + parent.name + " propriété " + property);
+			return -1;
+		}
+		
 	}
 }

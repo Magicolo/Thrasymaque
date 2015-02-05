@@ -26,4 +26,8 @@ public class Runner : BaseObject {
 		transform.SetEulerAngles(orientation, "Z");
 		PureData.Send("Rotate");
 	}
+
+	public void die(){
+		Application.LoadLevel(0);
+	}
 }
