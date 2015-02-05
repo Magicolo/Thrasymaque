@@ -21,8 +21,8 @@ public class ChunkFlow {
 	
 	public System.Random random;
 	public float nextCornerChance = 0;
-	public float baseCornerChance = 0.05f;
-	public float baseCornerChanceIncremental = 0.05f;
+	public float baseCornerChance = 0.1f;
+	public float baseCornerChanceIncremental = 0.1f;
 
 	public ChunkFlow(ProceduralGeneratorOfChunk proceduralGeneratorOfChunk, Chunk lastChunk, ChunkBag chunkBag, System.Random random, int startingChunkId, Vector3 startingPosition, float angle){
 		lastRoomEndPosition = startingPosition;
