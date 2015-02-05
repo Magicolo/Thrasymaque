@@ -16,7 +16,6 @@ public class CheckpointActive : State {
 		Chunk parentChunk = GetComponentInParent<Chunk>();
 		
 		GameData.chunkId = parentChunk.chunkId;
-		References.Runner.GetState<RunnerRunning>().speed = Mathf.Max(References.Runner.GetState<RunnerRunning>().speed + 1, 55);
 		GameData.playerSpeed = References.Runner.GetState<RunnerRunning>().speed;
 		AudioMaster.PlayNextAudioClip();
 	}

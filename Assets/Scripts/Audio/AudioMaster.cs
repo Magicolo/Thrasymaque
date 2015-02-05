@@ -24,6 +24,7 @@ public class AudioMaster : MonoBehaviour
 	
 	public static PureDataItem currentAudioClip;
 	public static int currentAudioClipIndex = 1;
+	public static bool patchOpened;
 	
 	const string audioClipPrefix = "raw_runner_voice-";
 	
@@ -33,13 +34,27 @@ public class AudioMaster : MonoBehaviour
 			return;
 		}
 		
+		if (currentAudioClip != null){
+			currentAudioClip.Stop();
+		}
+		
 		currentAudioClipIndex += 1;
 		currentAudioClip = PureData.Play(audioClipPrefix + (currentAudioClipIndex < 10 ? "0" + currentAudioClipIndex : currentAudioClipIndex.ToString()), PureDataOption.Output("Voice"));
 	}
 	
 	void Awake()
 	{
-		PureData.OpenPatch("_Main");
-		PureData.Send("Tempo", tempo);
+		if (!patchOpened) {
+			PureData.OpenPatch("_Main");
+			PureData.Send("Tempo", tempo);
+			patchOpened = true;
+		}
+	}
+	
+	void OnDestroy(){
+		if (currentAudioClip != null){
+			currentAudioClip.Stop();
+			currentAudioClipIndex -= 1;
+		}
 	}
 }
