@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="left-down" width="30" height="25" tilewidth="32" tileheight="32" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="30" height="25" tilewidth="32" tileheight="32" backgroundcolor="#25a309" nextobjectid="1">
  <properties>
   <property name="MaxY" value="16"/>
   <property name="RightExitMaxY" value="16"/>

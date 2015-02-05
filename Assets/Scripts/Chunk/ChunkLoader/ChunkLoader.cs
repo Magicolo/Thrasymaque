@@ -31,6 +31,7 @@ public class ChunkLoader : TiledMapLoader {
 	protected override void afterMapAttributesLoaded(){
 		this.chunk.width = this.mapWidth;
 		this.chunk.height = this.mapHeight;
+		this.chunk.backgroundColor = this.backgroundColor;
 		
 		BoxCollider2D b2d = this.chunk.gameObject.AddComponent<BoxCollider2D>();
 		b2d.isTrigger = true;
