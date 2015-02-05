@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: PureDataSettings
   m_EditorClassIdentifier: 
   masterVolume: 1
-  maxVoices: 100
+  maxVoices: 10
   sampleRate: 44100
   patchesPath: Patches
   speedOfSound: 343
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be5b51822352f04a908d2b4de9815f7, type: 3}
   m_Name: Buses
   m_EditorClassIdentifier: 
-  mixerPath: E:/Projects/Unity/Thrasymaque/Thrasymaque/Assets/StreamingAssets/Patches/umixer~.pd
+  mixerPath: C:/Users/BananaMobile/Documents/Workshop/Unity/Thrasymaque/Assets/StreamingAssets/Patches/umixer~.pd
   buses:
   - name: Music
     volume: 1

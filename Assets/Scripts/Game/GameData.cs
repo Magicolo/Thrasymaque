@@ -4,7 +4,20 @@ using Magicolo;
 
 public static class GameData {
 
-	public static System.Random randomGenerator;
+	static System.Random randomGenerator;
+	public static System.Random RandomGenerator {
+		get {
+			if (randomGenerator == null){
+				randomGenerator = new System.Random(References.ProceduralGeneratorOfChunk.seed);
+			}
+			
+			return randomGenerator;
+		}
+		set {
+			randomGenerator = value;
+		}
+	}
+
 	public static int chunkId;
 	public static float playerSpeed;
 }
