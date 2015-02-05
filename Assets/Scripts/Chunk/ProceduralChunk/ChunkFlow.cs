@@ -21,8 +21,8 @@ public class ChunkFlow {
 	
 	public System.Random random;
 	public float nextCornerChance = 0;
-	public float baseCornerChance = 0.05f;
-	public float baseCornerChanceIncremental = 0.05f;
+	public float baseCornerChance = 0.1f;
+	public float baseCornerChanceIncremental = 0.1f;
 
 	public ChunkFlow(ProceduralGeneratorOfChunk proceduralGeneratorOfChunk, Chunk lastChunk, ChunkBag chunkBag, System.Random random, int startingChunkId, Vector3 startingPosition, float angle){
 		lastRoomEndPosition = startingPosition;
@@ -73,13 +73,22 @@ public class ChunkFlow {
 	
 	public void loadNextChunk(){
 		float nextrandom = (float)random.NextDouble();
-		if(nextrandom <= nextCornerChance){
-			nextCornerChance = baseCornerChance;
-			makeCornerChunk();
-		}else{
-			nextCornerChance += baseCornerChanceIncremental;
+		if(isPlaying()){
 			makeStraightChunk();
+		}else{
+			if(nextrandom <= nextCornerChance){
+				nextCornerChance = baseCornerChance;
+				makeCornerChunk();
+			}else{
+				nextCornerChance += baseCornerChanceIncremental;
+				makeStraightChunk();
+			}
 		}
+		
+	}
+	
+	bool isPlaying(){
+		return AudioMaster.currentAudioClip != null && AudioMaster.currentAudioClip.State == PureDataStates.Playing;
 	}
 
 	Chunk makeCornerChunk(){

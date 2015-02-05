@@ -35,6 +35,10 @@ public class Chunk : MonoBehaviour {
 		if (other.tag == "Player" && chunkId > proceduralGenerator.currentChunkId) {
 			proceduralGenerator.setCurrentChunk(this);
 			playerPassedThrought = true;
+			if(randomToGenerate != null){
+				GameData.RandomGenerator = randomToGenerate;
+				GameData.chunkId = chunkId;
+			}
 		}
 	}
 }
