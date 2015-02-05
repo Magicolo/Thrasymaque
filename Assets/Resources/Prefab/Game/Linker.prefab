@@ -60,6 +60,36 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 181864, guid: 0ce83c31c6e81d542ae6dc29abe07fa7, type: 2}
+  - {fileID: 193870, guid: 78d55cd7a419dbc46af90881934865ae, type: 2}
+  - {fileID: 101300, guid: dc8f0c8d08c8d4e4ba36ec0bbfd6ff37, type: 2}
+  - {fileID: 171374, guid: 4a13ee0e87c4f784c8dbbaa8808a5328, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

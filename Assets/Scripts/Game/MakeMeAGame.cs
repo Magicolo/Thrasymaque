@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [ExecuteInEditMode]
-public class CreateMeAGame : MonoBehaviour {
+public class MakeMeAGame : MonoBehaviour {
 
 	public bool hasBeenDone = false;
 	
@@ -12,6 +12,8 @@ public class CreateMeAGame : MonoBehaviour {
 		RunnerCamera rc = getMeOrCreate("Main Camera","Prefab/Main Camera").GetComponent<RunnerCamera>();
 		Runner ru = getMeOrCreate("Runner","Prefab/Runner").GetComponent<Runner>();
 		References gm = getMeOrCreate("GameManager","Prefab/GameManager").GetComponent<References>();
+		getMeOrCreate("PureData","Prefab/PureData").GetComponent<PureData>();
+		
 		
 		gm.runner = ru;
 		gm.runnerCamera = rc;
