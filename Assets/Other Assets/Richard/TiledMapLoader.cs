@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ public abstract class TiledMapLoader {
 	
 	protected int mapWidth;
 	protected int mapHeight;
+	protected Color32 backgroundColor = new Color32(0,0,0,0);
 	
 	protected Dictionary<Int32,Dictionary<String,String>> tilesetTiles;
 	
@@ -44,6 +46,9 @@ public abstract class TiledMapLoader {
 		XElement mapElement = document.Elements().First();
 		this.mapWidth  = this.parseInt(mapElement.Attribute("width").Value);
 		this.mapHeight = this.parseInt(mapElement.Attribute("height").Value);
+		if(mapElement.Attribute("backgroundcolor") != null){
+			debugLog(mapElement.Attribute("backgroundcolor").Value);
+		}
 		afterMapAttributesLoaded();
 	}
 	protected abstract void afterMapAttributesLoaded();

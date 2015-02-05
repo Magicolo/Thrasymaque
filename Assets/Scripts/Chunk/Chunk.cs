@@ -26,6 +26,8 @@ public class Chunk : MonoBehaviour {
 	[Disable] public bool startingChunk = false;
 	[Disable] public Vector2 checkPointLocation;
 	
+	public Color32 backgroundColor;
+	
 	
 	public System.Random randomToGenerate;
 
@@ -35,6 +37,10 @@ public class Chunk : MonoBehaviour {
 		if (other.tag == "Player" && chunkId > proceduralGenerator.currentChunkId) {
 			proceduralGenerator.setCurrentChunk(this);
 			playerPassedThrought = true;
+			if(randomToGenerate != null){
+				GameData.RandomGenerator = randomToGenerate;
+				GameData.chunkId = chunkId;
+			}
 		}
 	}
 }
