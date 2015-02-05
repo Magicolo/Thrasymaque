@@ -1436,6 +1436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempo: 120
+  test: 0
 --- !u!114 &963231154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2488,7 +2489,8 @@ MonoBehaviour:
     - {fileID: 11332154}
     pureData: {fileID: 963231154}
   editorHelper:
-    selection: []
+    selection:
+    - {fileID: 155122, guid: f5e32682151633048bf557f46b6ce74d, type: 2}
     pureDataIcon: {fileID: 2800000, guid: 1f1f8b71fa69e14418bf3e49d9399524, type: 3}
     previewAudioSource: {fileID: 0}
     previewStopTime: 8.83500004
@@ -6458,6 +6460,7 @@ MonoBehaviour:
   pressureSpeed: 10
   pressureThreshold: .300000012
   recoverSpeed: 2
+  killDistance: 10
   offset: {x: 0, y: 0, z: -50}
   lastPosition: {x: 0, y: 0, z: 0}
 --- !u!81 &1571489166
