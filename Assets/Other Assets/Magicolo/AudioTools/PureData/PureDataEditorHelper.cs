@@ -71,7 +71,7 @@ namespace Magicolo.AudioTools {
 			base.OnSelectionChanged();
 			
 			if (pureData != null && pureData.hierarchyManager != null && selection.Length == 1 && selection[0] == pureData.gameObject) {
-				pureData.hierarchyManager.UpdateHierarchy();
+//				pureData.hierarchyManager.UpdateHierarchy();
 			}
 		}
 		
