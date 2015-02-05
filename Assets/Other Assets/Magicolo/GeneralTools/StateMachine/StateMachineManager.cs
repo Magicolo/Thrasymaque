@@ -24,7 +24,6 @@ public class StateMachineManager : MonoBehaviourExtended {
     
 	readonly List<StateMachine> machines = new List<StateMachine>();
 	readonly List<GameObject> machineObjects = new List<GameObject>();
-
 	
 	public static void AddMachine(StateMachine machine) {
 		Instance.machines.Add(machine);
@@ -32,8 +31,10 @@ public class StateMachineManager : MonoBehaviourExtended {
 	}
 	
 	public static void RemoveMachine(StateMachine machine) {
-		Instance.machines.Remove(machine);
-		Instance.machineObjects.Remove(machine.gameObject);
+		if (instance != null) {
+			Instance.machines.Remove(machine);
+			Instance.machineObjects.Remove(machine.gameObject);
+		}
 	}
 	
 	void Awake() {

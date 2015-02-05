@@ -12,6 +12,10 @@ public class RunnerRunning : State {
     	get { return ((Runner)layer); }
     }
 	
+	public override void OnAwake(){
+		speed = GameData.playerSpeed;
+	}
+	
 	public override void OnFixedUpdate() {
 		velocity = rigidbody2D.velocity.Rotate(Layer.orientation);
 		velocity.x = speed;

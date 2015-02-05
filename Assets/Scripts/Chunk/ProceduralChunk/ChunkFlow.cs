@@ -73,13 +73,22 @@ public class ChunkFlow {
 	
 	public void loadNextChunk(){
 		float nextrandom = (float)random.NextDouble();
-		if(nextrandom <= nextCornerChance){
-			nextCornerChance = baseCornerChance;
-			makeCornerChunk();
-		}else{
-			nextCornerChance += baseCornerChanceIncremental;
+		if(isPlaying()){
 			makeStraightChunk();
+		}else{
+			if(nextrandom <= nextCornerChance){
+				nextCornerChance = baseCornerChance;
+				makeCornerChunk();
+			}else{
+				nextCornerChance += baseCornerChanceIncremental;
+				makeStraightChunk();
+			}
 		}
+		
+	}
+	
+	bool isPlaying(){
+		return AudioMaster.currentAudioClip != null && AudioMaster.currentAudioClip.State == PureDataStates.Playing;
 	}
 
 	Chunk makeCornerChunk(){
