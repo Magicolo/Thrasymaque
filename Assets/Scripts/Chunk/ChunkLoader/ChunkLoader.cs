@@ -22,13 +22,6 @@ public class ChunkLoader : TiledMapLoader {
 	}
 
 	void findOrCreateLinker(){
-		/*GameObject linkerObject = GameObject.Find("Linker");
-		if(linkerObject == null){
-			GameObject linkerPrefab = Resources.Load<GameObject>("Prefab/Game/Linker");
-			linkerObject = GameObjectExtend.createClone(linkerPrefab,"Linker", null ,Vector3.zero);
-		}
-		
-		this.linker = linkerObject.GetComponent<Linker>();*/
 		GameObject linkerPrefab = Resources.Load<GameObject>("Prefab/Game/Linker");
 		this.linker = linkerPrefab.GetComponent<Linker>();
 	}
