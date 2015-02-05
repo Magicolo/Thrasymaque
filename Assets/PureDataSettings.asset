@@ -63,3 +63,6 @@ MonoBehaviour:
   - name: SFX
     volume: 1
     pureData: {fileID: 0}
+  - name: Voice
+    volume: 1
+    pureData: {fileID: 0}

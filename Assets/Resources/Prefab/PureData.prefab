@@ -62,7 +62,7 @@ MonoBehaviour:
     references: []
     ids: 
     idCounter: 0
-    pureData: {fileID: 0}
+    pureData: {fileID: 11475428}
   generalSettings: {fileID: 11400000, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}
   bridge:
     sampleRate: 0
@@ -80,13 +80,13 @@ MonoBehaviour:
   itemManager:
     pureData: {fileID: 0}
   sourceManager:
-    containerPath: E:/Projects/Unity/Thrasymaque/Thrasymaque/Assets/StreamingAssets/Patches/Internal/uaudiosourcecontainer.pd
+    containerPath: C:/Users/BananaMobile/Documents/Workshop/Unity/Thrasymaque/Assets/StreamingAssets/Patches/Internal/uaudiosourcecontainer.pd
     pureData: {fileID: 11475428}
   infoManager:
     infos: []
     pureData: {fileID: 11475428}
   clipManager:
-    containerPath: E:/Projects/Unity/Thrasymaque/Thrasymaque/Assets/StreamingAssets/Patches/Internal/uaudioclipcontainer.pd
+    containerPath: C:/Users/BananaMobile/Documents/Workshop/Unity/Thrasymaque/Assets/StreamingAssets/Patches/Internal/uaudioclipcontainer.pd
     clips: []
     pureData: {fileID: 11475428}
   busManager: {fileID: 11471682, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}

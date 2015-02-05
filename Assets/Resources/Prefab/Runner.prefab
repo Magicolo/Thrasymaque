@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 11495636}
   machine: {fileID: 11495634}
-  speed: 50
+  speed: 25
   velocity: {x: 0, y: 0}
 --- !u!114 &11495642
 MonoBehaviour:

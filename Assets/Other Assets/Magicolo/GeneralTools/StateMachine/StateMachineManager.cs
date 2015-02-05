@@ -22,28 +22,22 @@ public class StateMachineManager : MonoBehaviourExtended {
 		}
 	}
     
-	static bool destroyed;
-	
 	readonly List<StateMachine> machines = new List<StateMachine>();
 	readonly List<GameObject> machineObjects = new List<GameObject>();
 
 	
 	public static void AddMachine(StateMachine machine) {
-		if (!destroyed) {
-			Instance.machines.Add(machine);
-			Instance.machineObjects.Add(machine.gameObject);
-		}
+		Instance.machines.Add(machine);
+		Instance.machineObjects.Add(machine.gameObject);
 	}
 	
 	public static void RemoveMachine(StateMachine machine) {
-		if (!destroyed) {
-			Instance.machines.Remove(machine);
-			Instance.machineObjects.Remove(machine.gameObject);
-		}
+		Instance.machines.Remove(machine);
+		Instance.machineObjects.Remove(machine.gameObject);
 	}
 	
 	void Awake() {
-		destroyed = false;
+		this.SetExecutionOrder(15);
 	}
 	
 	void Update() {
@@ -80,7 +74,7 @@ public class StateMachineManager : MonoBehaviourExtended {
 	}
 	
 	void OnDestroy() {
-		destroyed = true;
+		instance = null;
 	}
 }
 
