@@ -268,7 +268,7 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &840257431
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840257430}
@@ -294,7 +294,7 @@ MonoBehaviour:
   debug: 1
 --- !u!114 &840257432
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840257430}
@@ -307,7 +307,7 @@ MonoBehaviour:
   machine: {fileID: 840257438}
 --- !u!114 &840257433
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840257430}
@@ -323,7 +323,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
 --- !u!114 &840257434
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840257430}
@@ -343,7 +343,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 65}
 --- !u!114 &840257435
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840257430}
@@ -356,7 +356,7 @@ MonoBehaviour:
   machine: {fileID: 840257438}
 --- !u!114 &840257436
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840257430}
@@ -367,11 +367,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 840257431}
   machine: {fileID: 840257438}
-  speed: 50
+  speed: 30
   velocity: {x: 0, y: 0}
 --- !u!114 &840257437
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840257430}
@@ -601,7 +601,7 @@ MonoBehaviour:
     pureData: {fileID: 1575119138}
   editorHelper:
     selection:
-    - {fileID: 174626, guid: ed2ee219289683545981fc8089a72198, type: 2}
+    - {fileID: 754220386}
     pureDataIcon: {fileID: 2800000, guid: 1f1f8b71fa69e14418bf3e49d9399524, type: 3}
     previewAudioSource: {fileID: 0}
     previewStopTime: 0

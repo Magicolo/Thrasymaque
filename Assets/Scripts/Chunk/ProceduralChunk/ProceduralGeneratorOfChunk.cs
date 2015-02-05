@@ -37,9 +37,10 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		
 		ChunkFlow chunkFlow = new ChunkFlow(this,null,chunkBag,random, currentChunkId, Vector3.zero, 0);
 		chunkFlows.Add(chunkFlow);
-		chunkFlow.loadFirstChunk();
-		int y = chunkFlow.lastChunk.entreanceY + 1;
-		playersTransform.position = new Vector3(0,y,0);
+		Chunk newChunk = chunkFlow.loadFirstChunk();
+		Vector2 start = newChunk.checkPointLocation;
+		playersTransform.position = new Vector3(start.x - 2,start.y - 1,0);
+		References.Runner.rigidbody2D.velocity = Vector2.zero;
 		
 		chunkFlow.lastChunk.playerPassedThrought = true;
 	}

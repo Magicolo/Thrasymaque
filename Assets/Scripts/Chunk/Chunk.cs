@@ -22,13 +22,17 @@ public class Chunk : MonoBehaviour {
 	[Disable] public bool playerPassedThrought;
 	
 	[Disable] public bool isStraight = true;
+	
 	[Disable] public bool startingChunk = false;
+	[Disable] public Vector2 checkPointLocation;
+	
+	
 	public System.Random randomToGenerate;
 
 	public ProceduralGeneratorOfChunk proceduralGenerator;
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Player") {
+		if (other.tag == "Player" && chunkId > proceduralGenerator.currentChunkId) {
 			proceduralGenerator.setCurrentChunk(this);
 			playerPassedThrought = true;
 		}
