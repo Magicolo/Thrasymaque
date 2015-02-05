@@ -26,6 +26,8 @@ public class Chunk : MonoBehaviour {
 	[Disable] public bool startingChunk = false;
 	[Disable] public Vector2 checkPointLocation;
 	
+	public Color32 backgroundColor;
+	
 	
 	public System.Random randomToGenerate;
 
