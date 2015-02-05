@@ -32,7 +32,7 @@ public class Chunk : MonoBehaviour {
 	public ProceduralGeneratorOfChunk proceduralGenerator;
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Player") {
+		if (other.tag == "Player" && chunkId > proceduralGenerator.currentChunkId) {
 			proceduralGenerator.setCurrentChunk(this);
 			playerPassedThrought = true;
 		}
