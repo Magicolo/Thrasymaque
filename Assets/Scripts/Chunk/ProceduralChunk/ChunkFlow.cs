@@ -62,8 +62,6 @@ public class ChunkFlow {
 	}
 	
 	public Chunk loadFirstChunk(){
-		System.Random randomToGen = this.random.Clone<System.Random>();
-		
 		GameObject nextChunkPrefab = chunkBag.getRandomChunk(random);
 		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab,nextChunkId);
 		newChunk.orientation = this.rotation;
