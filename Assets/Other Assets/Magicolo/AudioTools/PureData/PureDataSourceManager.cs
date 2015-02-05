@@ -1,0 +1,121 @@
+﻿using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
+using System.Collections;
+using LibPDBinding;
+
+namespace Magicolo.AudioTools {
+	[System.Serializable]
+	public class PureDataSourceManager {
+
+		public string containerPath;
+		public PureData pureData;
+		
+		List<PureDataSource> activeSources;
+		List<PureDataSource> inactiveSources;
+		List<PureDataSource> sourcesToDeactivate;
+	
+		public PureDataSourceManager(PureData pureData) {
+			this.pureData = pureData;
+		}
+			
+		public void Initialize(PureData pureData) {
+			this.pureData = pureData;
+			
+			if (Application.isPlaying) {
+				InitializeSources();
+				pureData.communicator.Receive("uaudiosource_fadeout", FadeOutSourceReceiver, true);
+				pureData.communicator.Receive("uaudiosource_stop", StopSourceReceiver, true);
+			}
+		}
+
+		public void InitializeSources() {
+			activeSources = new List<PureDataSource>(); // Must be initialized here or some unknown origin error occurs.
+			inactiveSources = new List<PureDataSource>();
+			sourcesToDeactivate = new List<PureDataSource>();
+		
+			for (int i = 0; i < pureData.generalSettings.MaxVoices; i++) {
+				PureDataSource source = new PureDataSource(pureData);
+				pureData.idManager.SetUniqueId(source);
+				inactiveSources.Add(source);
+			}
+		}
+
+		public void Update() {
+			for (int i = sourcesToDeactivate.Count - 1; i >= 0; i--) {
+				PureDataSource source = sourcesToDeactivate.PopLast();
+				activeSources.Remove(source);
+				inactiveSources.Add(source);
+				pureData.clipManager.Deactivate(source.Clip);
+			}
+			
+			for (int i = activeSources.Count - 1; i >= 0; i--) {
+				activeSources[i].Update();
+			}
+		}
+		
+		public void UpdateSourceContainer() {
+			#if !UNITY_WEBPLAYER
+			if (string.IsNullOrEmpty(containerPath) || !File.Exists(containerPath)) {
+				containerPath = Application.dataPath + HelperFunctions.GetAssetPath("uaudiosourcecontainer.pd").GetRange("Assets".Length);
+			}
+			
+			if (!File.Exists(containerPath)) {
+				Logger.LogError("Can not find uaudiosourcecontainer.pd patch.");
+				return;
+			}
+			
+			List<string> text = new List<string>();
+			
+			text.Add("#N canvas 200 300 450 300 10;");
+			for (int i = 1; i <= pureData.generalSettings.MaxVoices; i++) {
+				text.Add(string.Format("#X obj 0 0 uaudiosource {0};", i));
+			}
+			
+			File.WriteAllLines(containerPath, text.ToArray());
+			#endif
+		}
+			
+		public void Activate(PureDataSource source) {
+			inactiveSources.Remove(source);
+			activeSources.Add(source);
+			
+			pureData.clipManager.Activate(source.Clip);
+		}
+					
+		public void Deactivate(PureDataSource source) {
+			sourcesToDeactivate.Add(source);
+		}
+		
+		public PureDataSource GetSource(string soundName, object source) {
+			PureDataSource audioSource = null;
+			
+			if (inactiveSources.Count > 0) {
+				audioSource = inactiveSources.PopLast();
+				audioSource.SetClip(pureData.clipManager.GetClip(soundName));
+				audioSource.SetSource(source);
+			}
+			else {
+				Logger.LogError("No available source was found.");
+			}
+			
+			return audioSource;
+		}
+	
+		public void StopAll(float delay) {
+			activeSources.ForEach(source => source.Stop(delay));
+		}
+		
+		public void StopAllImmediate() {
+			activeSources.ForEach(source => source.StopImmediate());
+		}
+		
+		public void FadeOutSourceReceiver(float sourceId) {
+			pureData.idManager.GetIdentifiableWithId<PureDataSource>((int)sourceId).Stop();
+		}
+		
+		public void StopSourceReceiver(float sourceId) {
+			pureData.idManager.GetIdentifiableWithId<PureDataSource>((int)sourceId).StopImmediate();
+		}
+	}
+}

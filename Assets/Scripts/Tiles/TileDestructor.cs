@@ -26,6 +26,8 @@ public class TileDestructor : MonoBehaviourExtended {
 		foreach (SpriteRenderer sprite in obj.GetComponentsInChildren<SpriteRenderer>()) {
 			StartCoroutine(FadeOutAlpha(sprite, 10));
 		}
+		
+		PureData.Send("Destroy");
 	}
 	
 	IEnumerator PlayDestructionParticleFX(GameObject parent) {

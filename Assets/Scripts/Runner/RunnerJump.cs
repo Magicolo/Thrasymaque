@@ -24,6 +24,8 @@ public class RunnerJump : State {
 		
 		velocity = rigidbody2D.velocity + new Vector2(0, jumpHeight * jumpMinHeight).Rotate(-jumpOrientation);
 		rigidbody2D.velocity = velocity;
+		
+		PureData.Send("Jump");
 	}
 	
 	public override void OnExit() {
