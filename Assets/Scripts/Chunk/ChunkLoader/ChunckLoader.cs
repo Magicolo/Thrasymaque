@@ -76,6 +76,9 @@ public class ChunckLoader : TiledMapLoader {
 			chunk.downExitX = Int32.Parse(properties["DownExitMaxX"]) ;
 			chunk.isStraight = false;
 		}
+		if(isValide("StartingChunk",properties)){
+			chunk.startingChunk = true;
+		}
 	}
 	
 	bool isValide(string key, Dictionary<string, string> properties){

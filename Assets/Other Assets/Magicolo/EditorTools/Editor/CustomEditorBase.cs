@@ -200,10 +200,7 @@ namespace Magicolo.EditorTools {
 			
 			EditorGUILayout.BeginHorizontal();
 			
-			float labelWidth = EditorGUIUtility.labelWidth;
-			EditorGUIUtility.labelWidth = Mathf.Max(labelWidth - 8, 120);
 			EditorGUILayout.PrefixLabel(label, style, style);
-			EditorGUIUtility.labelWidth = labelWidth;
 			
 			GUIStyle buttonStyle = new GUIStyle("TL SelectionButton");
 			buttonStyle.font = EditorStyles.miniFont;
@@ -279,12 +276,7 @@ namespace Magicolo.EditorTools {
 			
 			EditorGUILayout.BeginHorizontal();
 			
-			float labelWidth = EditorGUIUtility.labelWidth;
-			EditorGUIUtility.labelWidth = Mathf.Max(labelWidth - 8, 120);
 			EditorGUILayout.PrefixLabel(label, style, style);
-			EditorGUIUtility.labelWidth = labelWidth;
-			
-			EditorGUIUtility.labelWidth = labelWidth;
 			
 			GUIStyle buttonStyle = new GUIStyle("TL SelectionButton");
 			buttonStyle.font = EditorStyles.miniFont;

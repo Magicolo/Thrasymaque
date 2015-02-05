@@ -18,9 +18,11 @@ public class Chunk : MonoBehaviour {
 	[Disable] public ChunkFlow flow = null;
 	[Disable] public bool chunkFlowPresent = false;
 	[Disable] public Chunk nextChunk;
+	[Disable] public Chunk lastChunk;
 	[Disable] public bool playerPassedThrought;
 	
 	[Disable] public bool isStraight = true;
+	[Disable] public bool startingChunk = false;
 	
 	public ProceduralGeneratorOfChunk proceduralGenerator;
 	

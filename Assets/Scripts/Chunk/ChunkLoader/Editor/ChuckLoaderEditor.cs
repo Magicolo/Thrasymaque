@@ -40,10 +40,12 @@ public class ChuckLoaderEditor : EditorWindow {
 	void makeGameObjectAsPrefab(GameObject chunkGameObject, string chunkName){
 		Chunk chunk = chunkGameObject.GetComponent<Chunk>();
 		string rootFolder = "";
-		if(chunk.isStraight){
-			rootFolder = "Straight/";
-		}else{
+		if(!chunk.isStraight){
 			rootFolder = "Corner/";
+		}else if(chunk.startingChunk){
+			rootFolder = "Start/";
+		}else{
+			rootFolder = "Straight/";
 		}
 		PrefabUtility.CreatePrefab("Assets/Resources/Chunks/" + LevelName + "/" + rootFolder + chunkName+".prefab", chunkGameObject);
 		Object.DestroyImmediate(chunkGameObject);
@@ -53,7 +55,7 @@ public class ChuckLoaderEditor : EditorWindow {
 		GUILayout.BeginHorizontal ();
 		filePath = GUILayout.TextField (filePath);
 		if (GUILayout.Button ("Open Map File")) {
-			filePath = EditorUtility.OpenFolderPanel("Open Map File","Other Assets/Chunks","tmx");
+			filePath = EditorUtility.OpenFolderPanel("Open Map File","Other Assets/Chunks","");
 		}
 		GUILayout.EndHorizontal ();
 	}

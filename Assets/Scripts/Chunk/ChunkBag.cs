@@ -11,15 +11,18 @@ public class ChunkBag {
 	
 	public List<GameObject> linearChunkPrefab = new List<GameObject>();
 	public List<GameObject> cornerChunkPrefab = new List<GameObject>();
+	public List<GameObject> startChunkPrefab = new List<GameObject>();
 	
 	public ChunkBag(System.Random random, string levelName){
 		this.random = random;
-		loadChunksFrom("Chunks/"+ levelName + "/Straight",linearChunkPrefab);
-		loadChunksFrom("Chunks/"+ levelName + "/Corner",cornerChunkPrefab);
+		loadChunksFrom(levelName, "Straight",linearChunkPrefab);
+		loadChunksFrom(levelName, "Corner"	,cornerChunkPrefab);
+		loadChunksFrom(levelName, "Start"	,startChunkPrefab);
 	}
 	
 
-	void loadChunksFrom(string assetFolderName, List<GameObject> to){
+	void loadChunksFrom(string levelName, string FolderName, List<GameObject> to){
+		string assetFolderName = "Chunks/"+ levelName + "/" + FolderName;
 		GameObject[] chunksObjects = (GameObject[]) Resources.LoadAll<GameObject>(assetFolderName);
 		foreach (var obj in chunksObjects) {
 			to.Add(obj);
@@ -28,6 +31,10 @@ public class ChunkBag {
 	
 	public GameObject getRandomChunk(){
 		return getRandomChunkFrom(linearChunkPrefab);
+	}
+	
+	public GameObject getRandomStartChunk(){
+		return getRandomChunkFrom(startChunkPrefab);
 	}
 	
 	public GameObject getRandomChunkFrom(List<GameObject> list){

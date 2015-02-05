@@ -5,8 +5,17 @@ using Magicolo;
 
 public class TileDestructor : MonoBehaviourExtended {
 
-	void OnTriggerEnter2D(Collider2D collision) {
-		DestroyObject(collision.gameObject);
+	void Update() {
+		const float distance = 50;
+		Vector2 direction = transform.right;
+		Vector2 size = new Vector2(70, 70);
+		Vector2 center = transform.position - (Vector3)(direction * distance) * 1.5F;
+		LayerMask layerMask = new LayerMask().AddToMask("ToDestroy");
+		RaycastHit2D[] hits = Physics2D.BoxCastAll(center, size, 0, direction, distance, layerMask);
+		
+		foreach (RaycastHit2D hit in hits) {
+			DestroyObject(hit.collider.gameObject);
+		}
 	}
 	
 	void DestroyObject(GameObject obj) {
@@ -17,6 +26,8 @@ public class TileDestructor : MonoBehaviourExtended {
 		foreach (SpriteRenderer sprite in obj.GetComponentsInChildren<SpriteRenderer>()) {
 			StartCoroutine(FadeOutAlpha(sprite, 10));
 		}
+		
+		PureData.Send("Destroy");
 	}
 	
 	IEnumerator PlayDestructionParticleFX(GameObject parent) {

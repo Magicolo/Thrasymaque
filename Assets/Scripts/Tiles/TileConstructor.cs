@@ -5,8 +5,17 @@ using Magicolo;
 
 public class TileConstructor : MonoBehaviourExtended {
 
-	void OnTriggerEnter2D(Collider2D collision) {
-		ActivateObject(collision.gameObject);
+	void Update() {
+		const float distance = 50;
+		Vector2 direction = transform.right;
+		Vector2 size = new Vector2(70, 70);
+		Vector2 center = transform.position - (Vector3)(direction * distance);
+		LayerMask layerMask = new LayerMask().AddToMask("ToConstruct");
+		RaycastHit2D[] hits = Physics2D.BoxCastAll(center, size, 0, direction, distance, layerMask);
+		
+		foreach (RaycastHit2D hit in hits) {
+			ActivateObject(hit.collider.gameObject);
+		}
 	}
 	
 	void ActivateObject(GameObject obj) {
