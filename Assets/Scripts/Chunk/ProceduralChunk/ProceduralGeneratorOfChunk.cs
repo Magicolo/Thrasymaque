@@ -26,7 +26,7 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	public List<Chunk> chunks = new List<Chunk>();
 	
 	void Awake(){
-		
+		StartGeneration(new System.Random(seed),1);
 	}
 	
 	public void StartGeneration(System.Random random, int startingChunkId){
