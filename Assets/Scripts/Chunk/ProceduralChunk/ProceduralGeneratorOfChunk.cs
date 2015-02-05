@@ -29,10 +29,10 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		
 	}
 	
-	public void StartGeneration(int seed, int startingChunkId){
+	public void StartGeneration(System.Random random, int startingChunkId){
 		currentChunkId = startingChunkId;
 		
-		random = new System.Random(seed);
+		this.random = random;
 		chunkBag = new ChunkBag(levelName);
 		
 		ChunkFlow chunkFlow = new ChunkFlow(this,null,chunkBag,random, currentChunkId, Vector3.zero, 0);
