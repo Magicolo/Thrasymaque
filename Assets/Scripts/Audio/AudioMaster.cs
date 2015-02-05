@@ -16,12 +16,6 @@ public class AudioMaster : MonoBehaviour
 		}
 	}
 	
-	[Button("Test", "Test", NoPrefixLabel = true)] public bool test;
-	void Test()
-	{
-		PlayNextAudioClip();
-	}
-	
 	public static PureDataItem currentAudioClip;
 	public static int currentAudioClipIndex;
 	
@@ -37,7 +31,7 @@ public class AudioMaster : MonoBehaviour
 		currentAudioClip = PureData.Play(audioClipPrefix + (currentAudioClipIndex < 10 ? "0" + currentAudioClipIndex : currentAudioClipIndex.ToString()), PureDataOption.Output("Voice"));
 	}
 	
-	void Start()
+	void Awake()
 	{
 		PureData.OpenPatch("_Main");
 		PureData.Send("Tempo", tempo);
