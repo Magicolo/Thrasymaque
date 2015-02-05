@@ -3,14 +3,16 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class ChunckLoader : TiledMapLoader {
+public class ChunkLoader : TiledMapLoader {
 
 	public Chunk chunk;
 	public GameObject parent;
 	private Transform tilesParent;
 	public Linker linker;
 	
-	public ChunckLoader(GameObject parent){
+	public int suplementalChunkeheight = 10;
+	
+	public ChunkLoader(GameObject parent){
 		this.parent = parent;
 		this.chunk = parent.AddComponent<Chunk>();
 		this.chunk.gameObject.layer = LayerMask.NameToLayer("Chunk");
@@ -20,13 +22,15 @@ public class ChunckLoader : TiledMapLoader {
 	}
 
 	void findOrCreateLinker(){
-		GameObject linkerObject = GameObject.Find("Linker");
+		/*GameObject linkerObject = GameObject.Find("Linker");
 		if(linkerObject == null){
 			GameObject linkerPrefab = Resources.Load<GameObject>("Prefab/Game/Linker");
 			linkerObject = GameObjectExtend.createClone(linkerPrefab,"Linker", null ,Vector3.zero);
 		}
 		
-		this.linker = linkerObject.GetComponent<Linker>();
+		this.linker = linkerObject.GetComponent<Linker>();*/
+		GameObject linkerPrefab = Resources.Load<GameObject>("Prefab/Game/Linker");
+		this.linker = linkerPrefab.GetComponent<Linker>();
 	}
 	
 	protected override void afterAll(){}
@@ -37,8 +41,9 @@ public class ChunckLoader : TiledMapLoader {
 		
 		BoxCollider2D b2d = this.chunk.gameObject.AddComponent<BoxCollider2D>();
 		b2d.isTrigger = true;
-		b2d.center = new Vector2(this.chunk.width/2 - 0.5f,this.chunk.height/2 - 0.5f);
-		b2d.size = new Vector2(this.chunk.width,this.chunk.height);
+		float height = this.chunk.height + suplementalChunkeheight;
+		b2d.center 	= new Vector2(chunk.width/2 - 0.5f, height/2 - 0.5f);
+		b2d.size 	= new Vector2(chunk.width ,height);
 	}
 	
 	protected override void addObject(string objectGroupName, int x, int y, Dictionary<string, string> properties){}
