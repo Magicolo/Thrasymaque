@@ -14,9 +14,6 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour
 	public int chunckInAdvanceOfPlayer = 4;
 	public int chunckBackOfPlayer = 4;
 	
-	public int seed = 1337;
-	public System.Random random;
-	
 	public ChunkBag chunkBag;
 	public List<ChunkFlow> chunkFlowsToAdd = new List<ChunkFlow>();
 	public List<ChunkFlow> chunkFlowsToRemove = new List<ChunkFlow>();
@@ -31,14 +28,13 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour
 		StartGeneration(GameData.RandomGenerator, GameData.chunkId);
 	}
 	
-	public void StartGeneration(System.Random random, int startingChunkId)
+	public void StartGeneration(int seed, int startingChunkId)
 	{
 		currentChunkId = startingChunkId;
 		
-		this.random = random;
 		chunkBag = new ChunkBag(levelName);
 		
-		ChunkFlow chunkFlow = new ChunkFlow(this, null, chunkBag, random, currentChunkId, Vector3.zero, 0);
+		ChunkFlow chunkFlow = new ChunkFlow(this, null, chunkBag, seed, currentChunkId, Vector3.zero, 0);
 		chunkFlows.Add(chunkFlow);
 		Chunk newChunk = chunkFlow.loadFirstChunk();
 		Vector2 start = newChunk.checkPointLocation;

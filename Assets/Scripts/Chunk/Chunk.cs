@@ -29,7 +29,7 @@ public class Chunk : MonoBehaviour {
 	public Color32 backgroundColor;
 	
 	
-	public System.Random randomToGenerate;
+	public int randomToGenerate = -1;
 
 	public ProceduralGeneratorOfChunk proceduralGenerator;
 	
@@ -40,7 +40,8 @@ public class Chunk : MonoBehaviour {
 			CameraEffet ce = new CameraEffet(cam.backgroundColor, backgroundColor, cam, 2, References.EffectManager);
 			References.EffectManager.addEffect(ce);
 			playerPassedThrought = true;
-			if(randomToGenerate != null){
+			if(randomToGenerate != -1){
+				Debug.Log(randomToGenerate);
 				GameData.RandomGenerator = randomToGenerate;
 				GameData.chunkId = chunkId;
 			}

@@ -21,19 +21,21 @@ public class ChunkFlow
 	private ProceduralGeneratorOfChunk proceduralGeneratorOfChunk;
 	private Transform generationParentTransform;
 	
+	public int seed;
 	public System.Random random;
 	public float nextCornerChance = 0.5F;
 	public float baseCornerChance = 0.5f;
 	public float baseCornerChanceIncremental = 0.1f;
 
-	public ChunkFlow(ProceduralGeneratorOfChunk proceduralGeneratorOfChunk, Chunk lastChunk, ChunkBag chunkBag, System.Random random, int startingChunkId, Vector3 startingPosition, float angle)
+	public ChunkFlow(ProceduralGeneratorOfChunk proceduralGeneratorOfChunk, Chunk lastChunk, ChunkBag chunkBag, int seed, int startingChunkId, Vector3 startingPosition, float angle)
 	{
 		lastRoomEndPosition = startingPosition;
 		this.proceduralGeneratorOfChunk = proceduralGeneratorOfChunk;
 		generationParentTransform = proceduralGeneratorOfChunk.transform;
 		this.chunkBag = chunkBag;
 		this.lastChunk = lastChunk;
-		this.random = random;
+		this.seed = seed;
+		this.random = new System.Random(seed);
 		this.nextChunkId = startingChunkId;
 		rotation = angle;
 		
@@ -131,8 +133,7 @@ public class ChunkFlow
 	void makeFlow(Chunk chunk, Vector3 movement, float newAngle, int chunkId)
 	{
 		Vector3 startingPosition = moveRelative(lastRoomEndPosition, movement, rotation);
-		
-		ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk, lastChunk, chunkBag, random, chunkId, startingPosition, newAngle);
+		ChunkFlow newFlow = new ChunkFlow(proceduralGeneratorOfChunk, lastChunk, chunkBag, random.Next(), chunkId, startingPosition, newAngle);
 		chunk.flow = newFlow;
 		chunk.chunkFlowPresent = true;
 		proceduralGeneratorOfChunk.chunkFlowsToAdd.Add(newFlow);
@@ -145,13 +146,10 @@ public class ChunkFlow
 		return target + movement;
 	}
 
-	Chunk makeStartChunk()
-	{
-		System.Random chunkRandom = new System.Random();
-		chunkRandom.Copy(random);
+	Chunk makeStartChunk(){
 		GameObject nextChunkPrefab = chunkBag.getRandomStartChunk(random);
 		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab, nextChunkId, 1);
-		newChunk.randomToGenerate = chunkRandom;
+		newChunk.randomToGenerate = this.seed;
 		nextChunkId++;
 		newChunk.orientation = this.rotation;
 		return newChunk;
