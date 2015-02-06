@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 415352}
   - 114: {fileID: 11415352}
   - 114: {fileID: 11476756}
-  - 114: {fileID: 11419406}
+  - 114: {fileID: 11420872}
   m_Layer: 10
   m_Name: GameManager
   m_TagString: Untagged
@@ -47,8 +47,8 @@ MonoBehaviour:
   destructionParticleFX: {fileID: 185504, guid: 35c07301f9a299e4c8698a6a914f8574,
     type: 2}
   proceduralGeneratorOfChunk: {fileID: 0}
-  effectManager: {fileID: 11419406}
---- !u!114 &11419406
+  effectManager: {fileID: 11420872}
+--- !u!114 &11420872
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
