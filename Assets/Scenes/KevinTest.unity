@@ -74,3063 +74,70 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
---- !u!1 &61260495
+--- !u!1 &7609329
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 61260496}
-  - 114: {fileID: 61260497}
+  - 4: {fileID: 7609331}
+  - 114: {fileID: 7609330}
   m_Layer: 0
-  m_Name: raw_runner_voice-15
+  m_Name: ProceduralGeneratorOfChunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &61260496
+--- !u!114 &7609330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 7609329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea1b6cd8395abd46b608b82756e308b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playersTransform: {fileID: 643169883}
+  levelName: Oli
+  currentChunkId: 0
+  currentChunk: {fileID: 0}
+  chunckInAdvanceOfPlayer: 3
+  chunckBackOfPlayer: 2
+  chunkBag:
+    linearChunkPrefab: []
+    cornerChunkPrefab: []
+    startChunkPrefab: []
+  chunkFlowsToAdd: []
+  chunkFlowsToRemove: []
+  chunkFlows: []
+  chunksToAdd: []
+  chunksToRemove: []
+  chunks: []
+--- !u!4 &7609331
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 61260495}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 14
---- !u!114 &61260497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 61260495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-15
-    path: Audio/Voice/raw_runner_voice-15
-    samples: 800256
-    frequency: 44100
-    channels: 2
-    length: 18.1459999
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &76213779
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 76213780}
-  - 114: {fileID: 76213781}
-  m_Layer: 0
-  m_Name: raw_runner_voice-18
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &76213780
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 76213779}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 17
---- !u!114 &76213781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 76213779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-18
-    path: Audio/Voice/raw_runner_voice-18
-    samples: 741477
-    frequency: 44100
-    channels: 2
-    length: 16.8129997
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &121428075
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 121428076}
-  - 114: {fileID: 121428077}
-  m_Layer: 0
-  m_Name: raw_runner_voice-21
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &121428076
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 121428075}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 20
---- !u!114 &121428077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 121428075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-21
-    path: Audio/Voice/raw_runner_voice-21
-    samples: 429157
-    frequency: 44100
-    channels: 2
-    length: 9.73099995
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &348460547
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 348460548}
-  - 114: {fileID: 348460549}
-  m_Layer: 0
-  m_Name: raw_runner_voice-09
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &348460548
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 348460547}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 8
---- !u!114 &348460549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 348460547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-09
-    path: Audio/Voice/raw_runner_voice-09
-    samples: 892517
-    frequency: 44100
-    channels: 2
-    length: 20.2380009
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &354462606
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 354462609}
-  - 50: {fileID: 354462608}
-  - 114: {fileID: 354462607}
-  m_Layer: 18
-  m_Name: TileDestructor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &354462607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 354462606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56153d7bd8fd80541a22d713dd3d938f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!50 &354462608
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 354462606}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!4 &354462609
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 354462606}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.0999985, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 990172019}
-  m_RootOrder: 0
---- !u!1 &363301402
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 363301404}
-  - 114: {fileID: 363301403}
-  m_Layer: 0
-  m_Name: PureData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &363301403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 363301402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97e1b7762cb767e4ea711435162d305b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  listener:
-    transform: {fileID: 0}
-    position: {x: 0, y: 0, z: 0}
-    right: {x: 0, y: 0, z: 0}
-    pureData: {fileID: 0}
-  filterRead: {fileID: 0}
-  references:
-    references: []
-    ids: 
-    idCounter: 0
-    pureData: {fileID: 363301403}
-  generalSettings: {fileID: 11400000, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}
-  bridge:
-    sampleRate: 0
-    bufferSize: 0
-    bufferAmount: 0
-    initialized: 0
-    ticks: 0
-    pureData: {fileID: 0}
-  communicator:
-    pureData: {fileID: 0}
-  patchManager:
-    pureData: {fileID: 0}
-  idManager:
-    pureData: {fileID: 0}
-  itemManager:
-    pureData: {fileID: 0}
-  sourceManager:
-    containerPath: C:/Users/BananaMobile/Documents/Workshop/Unity/Thrasymaque/Assets/StreamingAssets/Patches/Internal/uaudiosourcecontainer.pd
-    pureData: {fileID: 363301403}
-  infoManager:
-    infos:
-    - name: raw_runner_voice-01
-      path: Audio/Voice/raw_runner_voice-01
-      samples: 395648
-      frequency: 44100
-      channels: 2
-      length: 8.97099972
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-02
-      path: Audio/Voice/raw_runner_voice-02
-      samples: 389632
-      frequency: 44100
-      channels: 2
-      length: 8.83500004
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-03
-      path: Audio/Voice/raw_runner_voice-03
-      samples: 349797
-      frequency: 44100
-      channels: 2
-      length: 7.93100023
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-04
-      path: Audio/Voice/raw_runner_voice-04
-      samples: 892746
-      frequency: 44100
-      channels: 2
-      length: 20.243
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-05
-      path: Audio/Voice/raw_runner_voice-05
-      samples: 428544
-      frequency: 44100
-      channels: 2
-      length: 9.71700001
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-06
-      path: Audio/Voice/raw_runner_voice-06
-      samples: 397413
-      frequency: 44100
-      channels: 2
-      length: 9.01099968
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-07
-      path: Audio/Voice/raw_runner_voice-07
-      samples: 505445
-      frequency: 44100
-      channels: 2
-      length: 11.4610004
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-08
-      path: Audio/Voice/raw_runner_voice-08
-      samples: 480768
-      frequency: 44100
-      channels: 2
-      length: 10.901
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-09
-      path: Audio/Voice/raw_runner_voice-09
-      samples: 892517
-      frequency: 44100
-      channels: 2
-      length: 20.2380009
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-10
-      path: Audio/Voice/raw_runner_voice-10
-      samples: 591461
-      frequency: 44100
-      channels: 2
-      length: 13.4110003
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-11
-      path: Audio/Voice/raw_runner_voice-11
-      samples: 642560
-      frequency: 44100
-      channels: 2
-      length: 14.5699997
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-12
-      path: Audio/Voice/raw_runner_voice-12
-      samples: 418917
-      frequency: 44100
-      channels: 2
-      length: 9.4989996
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-13
-      path: Audio/Voice/raw_runner_voice-13
-      samples: 573541
-      frequency: 44100
-      channels: 2
-      length: 13.0050001
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-14
-      path: Audio/Voice/raw_runner_voice-14
-      samples: 685568
-      frequency: 44100
-      channels: 2
-      length: 15.5450001
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-15
-      path: Audio/Voice/raw_runner_voice-15
-      samples: 800256
-      frequency: 44100
-      channels: 2
-      length: 18.1459999
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-16
-      path: Audio/Voice/raw_runner_voice-16
-      samples: 542821
-      frequency: 44100
-      channels: 2
-      length: 12.3079996
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-17
-      path: Audio/Voice/raw_runner_voice-17
-      samples: 532069
-      frequency: 44100
-      channels: 2
-      length: 12.0649996
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-18
-      path: Audio/Voice/raw_runner_voice-18
-      samples: 741477
-      frequency: 44100
-      channels: 2
-      length: 16.8129997
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-19
-      path: Audio/Voice/raw_runner_voice-19
-      samples: 470629
-      frequency: 44100
-      channels: 2
-      length: 10.6709995
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-20
-      path: Audio/Voice/raw_runner_voice-20
-      samples: 418405
-      frequency: 44100
-      channels: 2
-      length: 9.48700047
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-21
-      path: Audio/Voice/raw_runner_voice-21
-      samples: 429157
-      frequency: 44100
-      channels: 2
-      length: 9.73099995
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-22
-      path: Audio/Voice/raw_runner_voice-22
-      samples: 740965
-      frequency: 44100
-      channels: 2
-      length: 16.8010006
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-23
-      path: Audio/Voice/raw_runner_voice-23
-      samples: 595045
-      frequency: 44100
-      channels: 2
-      length: 13.493
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-24
-      path: Audio/Voice/raw_runner_voice-24
-      samples: 469605
-      frequency: 44100
-      channels: 2
-      length: 10.6479998
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-25
-      path: Audio/Voice/raw_runner_voice-25
-      samples: 809061
-      frequency: 44100
-      channels: 2
-      length: 18.3460007
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-26
-      path: Audio/Voice/raw_runner_voice-26
-      samples: 465920
-      frequency: 44100
-      channels: 2
-      length: 10.5649996
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-27
-      path: Audio/Voice/raw_runner_voice-27
-      samples: 476261
-      frequency: 44100
-      channels: 2
-      length: 10.7989998
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-28
-      path: Audio/Voice/raw_runner_voice-28
-      samples: 374373
-      frequency: 44100
-      channels: 2
-      length: 8.48900032
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-29
-      path: Audio/Voice/raw_runner_voice-29
-      samples: 779264
-      frequency: 44100
-      channels: 2
-      length: 17.6700001
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-30
-      path: Audio/Voice/raw_runner_voice-30
-      samples: 1085029
-      frequency: 44100
-      channels: 2
-      length: 24.6030006
-      loadOnAwake: 0
-      output: Master
-      isFixed: 1
-      playRangeStart: 0
-      playRangeEnd: 1
-      volume: 1
-      pitch: 1
-      randomVolume: 0
-      randomPitch: 0
-      fadeIn: 0
-      fadeOut: .00999999978
-      loop: 0
-      dopplerLevel: 1
-      volumeRolloffMode: 0
-      minDistance: 1
-      maxDistance: 500
-      panLevel: .75
-      pureData: {fileID: 363301403}
-    pureData: {fileID: 363301403}
-  clipManager:
-    containerPath: C:/Users/BananaMobile/Documents/Workshop/Unity/Thrasymaque/Assets/StreamingAssets/Patches/Internal/uaudioclipcontainer.pd
-    clips:
-    - name: raw_runner_voice-01
-      id: 0
-      path: Audio/Voice/raw_runner_voice-01
-      samples: 395648
-      frequency: 44100
-      channels: 2
-      length: 8.97099972
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-02
-      id: 0
-      path: Audio/Voice/raw_runner_voice-02
-      samples: 389632
-      frequency: 44100
-      channels: 2
-      length: 8.83500004
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-03
-      id: 0
-      path: Audio/Voice/raw_runner_voice-03
-      samples: 349797
-      frequency: 44100
-      channels: 2
-      length: 7.93100023
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-04
-      id: 0
-      path: Audio/Voice/raw_runner_voice-04
-      samples: 892746
-      frequency: 44100
-      channels: 2
-      length: 20.243
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-05
-      id: 0
-      path: Audio/Voice/raw_runner_voice-05
-      samples: 428544
-      frequency: 44100
-      channels: 2
-      length: 9.71700001
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-06
-      id: 0
-      path: Audio/Voice/raw_runner_voice-06
-      samples: 397413
-      frequency: 44100
-      channels: 2
-      length: 9.01099968
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-07
-      id: 0
-      path: Audio/Voice/raw_runner_voice-07
-      samples: 505445
-      frequency: 44100
-      channels: 2
-      length: 11.4610004
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-08
-      id: 0
-      path: Audio/Voice/raw_runner_voice-08
-      samples: 480768
-      frequency: 44100
-      channels: 2
-      length: 10.901
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-09
-      id: 0
-      path: Audio/Voice/raw_runner_voice-09
-      samples: 892517
-      frequency: 44100
-      channels: 2
-      length: 20.2380009
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-10
-      id: 0
-      path: Audio/Voice/raw_runner_voice-10
-      samples: 591461
-      frequency: 44100
-      channels: 2
-      length: 13.4110003
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-11
-      id: 0
-      path: Audio/Voice/raw_runner_voice-11
-      samples: 642560
-      frequency: 44100
-      channels: 2
-      length: 14.5699997
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-12
-      id: 0
-      path: Audio/Voice/raw_runner_voice-12
-      samples: 418917
-      frequency: 44100
-      channels: 2
-      length: 9.4989996
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-13
-      id: 0
-      path: Audio/Voice/raw_runner_voice-13
-      samples: 573541
-      frequency: 44100
-      channels: 2
-      length: 13.0050001
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-14
-      id: 0
-      path: Audio/Voice/raw_runner_voice-14
-      samples: 685568
-      frequency: 44100
-      channels: 2
-      length: 15.5450001
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-15
-      id: 0
-      path: Audio/Voice/raw_runner_voice-15
-      samples: 800256
-      frequency: 44100
-      channels: 2
-      length: 18.1459999
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-16
-      id: 0
-      path: Audio/Voice/raw_runner_voice-16
-      samples: 542821
-      frequency: 44100
-      channels: 2
-      length: 12.3079996
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-17
-      id: 0
-      path: Audio/Voice/raw_runner_voice-17
-      samples: 532069
-      frequency: 44100
-      channels: 2
-      length: 12.0649996
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-18
-      id: 0
-      path: Audio/Voice/raw_runner_voice-18
-      samples: 741477
-      frequency: 44100
-      channels: 2
-      length: 16.8129997
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-19
-      id: 0
-      path: Audio/Voice/raw_runner_voice-19
-      samples: 470629
-      frequency: 44100
-      channels: 2
-      length: 10.6709995
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-20
-      id: 0
-      path: Audio/Voice/raw_runner_voice-20
-      samples: 418405
-      frequency: 44100
-      channels: 2
-      length: 9.48700047
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-21
-      id: 0
-      path: Audio/Voice/raw_runner_voice-21
-      samples: 429157
-      frequency: 44100
-      channels: 2
-      length: 9.73099995
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-22
-      id: 0
-      path: Audio/Voice/raw_runner_voice-22
-      samples: 740965
-      frequency: 44100
-      channels: 2
-      length: 16.8010006
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-23
-      id: 0
-      path: Audio/Voice/raw_runner_voice-23
-      samples: 595045
-      frequency: 44100
-      channels: 2
-      length: 13.493
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-24
-      id: 0
-      path: Audio/Voice/raw_runner_voice-24
-      samples: 469605
-      frequency: 44100
-      channels: 2
-      length: 10.6479998
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-25
-      id: 0
-      path: Audio/Voice/raw_runner_voice-25
-      samples: 809061
-      frequency: 44100
-      channels: 2
-      length: 18.3460007
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-26
-      id: 0
-      path: Audio/Voice/raw_runner_voice-26
-      samples: 465920
-      frequency: 44100
-      channels: 2
-      length: 10.5649996
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-27
-      id: 0
-      path: Audio/Voice/raw_runner_voice-27
-      samples: 476261
-      frequency: 44100
-      channels: 2
-      length: 10.7989998
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-28
-      id: 0
-      path: Audio/Voice/raw_runner_voice-28
-      samples: 374373
-      frequency: 44100
-      channels: 2
-      length: 8.48900032
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-29
-      id: 0
-      path: Audio/Voice/raw_runner_voice-29
-      samples: 779264
-      frequency: 44100
-      channels: 2
-      length: 17.6700001
-      pureData: {fileID: 363301403}
-    - name: raw_runner_voice-30
-      id: 0
-      path: Audio/Voice/raw_runner_voice-30
-      samples: 1085029
-      frequency: 44100
-      channels: 2
-      length: 24.6030006
-      pureData: {fileID: 363301403}
-    pureData: {fileID: 363301403}
-  busManager: {fileID: 11471682, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}
-  spatializerManager: {fileID: 11471680, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}
-  containerManager: {fileID: 11471678, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}
-  hierarchyManager:
-    setups: []
-    currentClips: []
-    clips: []
-    children:
-    - {fileID: 414597763}
-    - {fileID: 778204620}
-    - {fileID: 835775892}
-    - {fileID: 781352090}
-    - {fileID: 1111707792}
-    - {fileID: 1155135634}
-    - {fileID: 1220292282}
-    - {fileID: 1183716555}
-    - {fileID: 348460547}
-    - {fileID: 952336902}
-    - {fileID: 1022985394}
-    - {fileID: 2130836321}
-    - {fileID: 1304407658}
-    - {fileID: 883457250}
-    - {fileID: 61260495}
-    - {fileID: 410780807}
-    - {fileID: 825638804}
-    - {fileID: 76213779}
-    - {fileID: 1188642995}
-    - {fileID: 629415090}
-    - {fileID: 121428075}
-    - {fileID: 1644246479}
-    - {fileID: 1606558384}
-    - {fileID: 1010867010}
-    - {fileID: 376531956}
-    - {fileID: 856917082}
-    - {fileID: 454317230}
-    - {fileID: 1774660966}
-    - {fileID: 2041065086}
-    - {fileID: 524258249}
-    - {fileID: 524258249}
-    folderStructure:
-    - {fileID: 781274553}
-    pureData: {fileID: 363301403}
-  editorHelper:
-    selection:
-    - {fileID: 100100000, guid: 177b78c6eef28044dbb64c4328897c87, type: 2}
-    pureDataIcon: {fileID: 2800000, guid: 1f1f8b71fa69e14418bf3e49d9399524, type: 3}
-    previewAudioSource: {fileID: 0}
-    previewStopTime: 0
-    pureData: {fileID: 363301403}
---- !u!4 &363301404
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 363301402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 781274554}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!1 &376531956
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 376531957}
-  - 114: {fileID: 376531958}
-  m_Layer: 0
-  m_Name: raw_runner_voice-25
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &376531957
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 376531956}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 24
---- !u!114 &376531958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 376531956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-25
-    path: Audio/Voice/raw_runner_voice-25
-    samples: 809061
-    frequency: 44100
-    channels: 2
-    length: 18.3460007
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &410780807
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 410780808}
-  - 114: {fileID: 410780809}
-  m_Layer: 0
-  m_Name: raw_runner_voice-16
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &410780808
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 410780807}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 15
---- !u!114 &410780809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 410780807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-16
-    path: Audio/Voice/raw_runner_voice-16
-    samples: 542821
-    frequency: 44100
-    channels: 2
-    length: 12.3079996
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &412422384
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 412422385}
-  - 50: {fileID: 412422387}
-  - 114: {fileID: 412422386}
-  m_Layer: 17
-  m_Name: TileConstructor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &412422385
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 412422384}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 990172019}
-  m_RootOrder: 1
---- !u!114 &412422386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 412422384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52ad770cb4bfbc247b0ab5783e8b34e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!50 &412422387
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 412422384}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!1 &414597763
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 414597764}
-  - 114: {fileID: 414597765}
-  m_Layer: 0
-  m_Name: raw_runner_voice-01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &414597764
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 414597763}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 0
---- !u!114 &414597765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 414597763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-01
-    path: Audio/Voice/raw_runner_voice-01
-    samples: 395648
-    frequency: 44100
-    channels: 2
-    length: 8.97099972
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &454317230
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 454317231}
-  - 114: {fileID: 454317232}
-  m_Layer: 0
-  m_Name: raw_runner_voice-27
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &454317231
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 454317230}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 26
---- !u!114 &454317232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 454317230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-27
-    path: Audio/Voice/raw_runner_voice-27
-    samples: 476261
-    frequency: 44100
-    channels: 2
-    length: 10.7989998
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &524258249
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 524258251}
-  - 114: {fileID: 524258250}
-  m_Layer: 0
-  m_Name: raw_runner_voice-30
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &524258250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 524258249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-30
-    path: Audio/Voice/raw_runner_voice-30
-    samples: 1085029
-    frequency: 44100
-    channels: 2
-    length: 24.6030006
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!4 &524258251
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 524258249}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 29
---- !u!1 &629415090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 629415091}
-  - 114: {fileID: 629415092}
-  m_Layer: 0
-  m_Name: raw_runner_voice-20
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &629415091
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 629415090}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 19
---- !u!114 &629415092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 629415090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-20
-    path: Audio/Voice/raw_runner_voice-20
-    samples: 418405
-    frequency: 44100
-    channels: 2
-    length: 9.48700047
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &736654151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 736654163}
-  - 212: {fileID: 736654162}
-  - 114: {fileID: 736654161}
-  - 58: {fileID: 736654160}
-  - 50: {fileID: 736654159}
-  - 114: {fileID: 736654158}
-  - 114: {fileID: 736654157}
-  - 114: {fileID: 736654156}
-  - 114: {fileID: 736654155}
-  - 114: {fileID: 736654154}
-  - 114: {fileID: 736654153}
-  - 114: {fileID: 736654152}
-  m_Layer: 10
-  m_Name: Runner
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &736654152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01f620097db5ab84593bb1a601494e6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 736654158}
-  machine: {fileID: 736654161}
-  glideDuration: .5
-  glideCounter: 0
-  velocity: {x: 0, y: 0}
---- !u!114 &736654153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c3ab1c36e512749a17b806553962e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 736654158}
-  machine: {fileID: 736654161}
---- !u!114 &736654154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f79cfb15c82fb0f4a8397a7689202e4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 736654158}
-  machine: {fileID: 736654161}
---- !u!114 &736654155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bac9ef78eed50c49836d846b91c3ccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 736654158}
-  machine: {fileID: 736654161}
-  jumpDuration: .150000006
-  jumpHeight: 3.45000005
-  jumpMinHeight: 14
-  jumpYPosition: -.485000074
-  jumpOrientation: 0
-  jumpCounter: -.00999996066
-  velocity: {x: 0, y: 65}
---- !u!114 &736654156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc8f48924ad853b4799cafba37385550, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 736654158}
-  machine: {fileID: 736654161}
-  speed: 25
-  velocity: {x: 0, y: 0}
---- !u!114 &736654157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce025f53a93605045b1ad275473a2303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 736654158}
-  machine: {fileID: 736654161}
---- !u!114 &736654158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653191d2779f56643b231e42657d4827, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  machine: {fileID: 736654161}
-  states:
-  - {fileID: 736654157}
-  - {fileID: 736654156}
-  - {fileID: 736654154}
-  - {fileID: 736654155}
-  - {fileID: 736654152}
-  - {fileID: 736654153}
-  currentStates:
-  - {fileID: 736654156}
-  - {fileID: 736654154}
-  orientation: 0
-  gravityStrength: 5
-  gravity: {x: 0, y: 0}
-  debug: 0
---- !u!50 &736654159
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 0
-  m_FixedAngle: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!58 &736654160
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: f2fd8a73d5d7657418aa5d691db1a66f, type: 2}
-  m_IsTrigger: 0
-  m_Radius: .479999989
-  m_Center: {x: 0, y: 0}
---- !u!114 &736654161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7208d05a13589c84fbf2b1d9c12cafe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers:
-  - {fileID: 736654158}
---- !u!212 &736654162
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 06fe172dd8f948a4c82d1abace4279a0, type: 3}
-  m_Color: {r: .199999928, g: 1, b: 0, a: 1}
---- !u!4 &736654163
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 736654151}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
---- !u!1 &778204620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 778204621}
-  - 114: {fileID: 778204622}
-  m_Layer: 0
-  m_Name: raw_runner_voice-02
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &778204621
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 778204620}
+  m_GameObject: {fileID: 7609329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 1
---- !u!114 &778204622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 778204620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-02
-    path: Audio/Voice/raw_runner_voice-02
-    samples: 389632
-    frequency: 44100
-    channels: 2
-    length: 8.83500004
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &781274553
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 781274554}
-  m_Layer: 0
-  m_Name: Audio/Voice
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &781274554
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 781274553}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 414597764}
-  - {fileID: 778204621}
-  - {fileID: 835775893}
-  - {fileID: 781352091}
-  - {fileID: 1111707793}
-  - {fileID: 1155135635}
-  - {fileID: 1220292283}
-  - {fileID: 1183716556}
-  - {fileID: 348460548}
-  - {fileID: 952336903}
-  - {fileID: 1022985395}
-  - {fileID: 2130836322}
-  - {fileID: 1304407659}
-  - {fileID: 883457251}
-  - {fileID: 61260496}
-  - {fileID: 410780808}
-  - {fileID: 825638805}
-  - {fileID: 76213780}
-  - {fileID: 1188642996}
-  - {fileID: 629415091}
-  - {fileID: 121428076}
-  - {fileID: 1644246480}
-  - {fileID: 1606558385}
-  - {fileID: 1010867011}
-  - {fileID: 376531957}
-  - {fileID: 856917083}
-  - {fileID: 454317231}
-  - {fileID: 1774660967}
-  - {fileID: 2041065087}
-  - {fileID: 524258251}
-  m_Father: {fileID: 363301404}
-  m_RootOrder: 0
---- !u!1 &781352090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 781352091}
-  - 114: {fileID: 781352092}
-  m_Layer: 0
-  m_Name: raw_runner_voice-04
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &781352091
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 781352090}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 3
---- !u!114 &781352092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 781352090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-04
-    path: Audio/Voice/raw_runner_voice-04
-    samples: 892746
-    frequency: 44100
-    channels: 2
-    length: 20.243
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &825638804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 825638805}
-  - 114: {fileID: 825638806}
-  m_Layer: 0
-  m_Name: raw_runner_voice-17
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &825638805
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 825638804}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 16
---- !u!114 &825638806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 825638804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-17
-    path: Audio/Voice/raw_runner_voice-17
-    samples: 532069
-    frequency: 44100
-    channels: 2
-    length: 12.0649996
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &835775892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 835775893}
-  - 114: {fileID: 835775894}
-  m_Layer: 0
-  m_Name: raw_runner_voice-03
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &835775893
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 835775892}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 2
---- !u!114 &835775894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 835775892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-03
-    path: Audio/Voice/raw_runner_voice-03
-    samples: 349797
-    frequency: 44100
-    channels: 2
-    length: 7.93100023
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &856917082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 856917083}
-  - 114: {fileID: 856917084}
-  m_Layer: 0
-  m_Name: raw_runner_voice-26
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &856917083
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 856917082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 25
---- !u!114 &856917084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 856917082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-26
-    path: Audio/Voice/raw_runner_voice-26
-    samples: 465920
-    frequency: 44100
-    channels: 2
-    length: 10.5649996
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &883457250
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 883457251}
-  - 114: {fileID: 883457252}
-  m_Layer: 0
-  m_Name: raw_runner_voice-14
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &883457251
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 883457250}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 13
---- !u!114 &883457252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 883457250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-14
-    path: Audio/Voice/raw_runner_voice-14
-    samples: 685568
-    frequency: 44100
-    channels: 2
-    length: 15.5450001
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &952336902
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 952336903}
-  - 114: {fileID: 952336904}
-  m_Layer: 0
-  m_Name: raw_runner_voice-10
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &952336903
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 952336902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 9
---- !u!114 &952336904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 952336902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-10
-    path: Audio/Voice/raw_runner_voice-10
-    samples: 591461
-    frequency: 44100
-    channels: 2
-    length: 13.4110003
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &990172018
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 990172019}
-  - 20: {fileID: 990172024}
-  - 92: {fileID: 990172023}
-  - 124: {fileID: 990172022}
-  - 81: {fileID: 990172021}
-  - 114: {fileID: 990172020}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &990172019
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 990172018}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -50}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 354462609}
-  - {fileID: 412422385}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!114 &990172020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 990172018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1d1b519c245e36478ba0147ba48f253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  translateSpeed: 10
-  rotateSpeed: 5
-  pressureSpeed: 10
-  pressureThreshold: .300000012
-  recoverSpeed: 2
-  killDistance: 10
-  offset: {x: 0, y: 0, z: -50}
-  lastPosition: {x: 0, y: 0, z: 0}
---- !u!81 &990172021
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 990172018}
-  m_Enabled: 1
---- !u!124 &990172022
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 990172018}
-  m_Enabled: 1
---- !u!92 &990172023
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 990172018}
-  m_Enabled: 1
---- !u!20 &990172024
-Camera:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 990172018}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 2
-  m_BackGroundColor: {r: .904411793, g: .366249442, b: .366249442, a: .0196078438}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: .300000012
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_HDR: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: .0219999999
---- !u!1 &1010867010
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1010867011}
-  - 114: {fileID: 1010867012}
-  m_Layer: 0
-  m_Name: raw_runner_voice-24
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1010867011
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1010867010}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 23
---- !u!114 &1010867012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1010867010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-24
-    path: Audio/Voice/raw_runner_voice-24
-    samples: 469605
-    frequency: 44100
-    channels: 2
-    length: 10.6479998
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1022985394
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1022985395}
-  - 114: {fileID: 1022985396}
-  m_Layer: 0
-  m_Name: raw_runner_voice-11
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1022985395
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1022985394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 10
---- !u!114 &1022985396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1022985394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-11
-    path: Audio/Voice/raw_runner_voice-11
-    samples: 642560
-    frequency: 44100
-    channels: 2
-    length: 14.5699997
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1111707792
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1111707793}
-  - 114: {fileID: 1111707794}
-  m_Layer: 0
-  m_Name: raw_runner_voice-05
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1111707793
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1111707792}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
   m_RootOrder: 4
---- !u!114 &1111707794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1111707792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-05
-    path: Audio/Voice/raw_runner_voice-05
-    samples: 428544
-    frequency: 44100
-    channels: 2
-    length: 9.71700001
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1155135634
+--- !u!1 &94546567
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1155135635}
-  - 114: {fileID: 1155135636}
-  m_Layer: 0
-  m_Name: raw_runner_voice-06
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1155135635
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1155135634}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 5
---- !u!114 &1155135636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1155135634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-06
-    path: Audio/Voice/raw_runner_voice-06
-    samples: 397413
-    frequency: 44100
-    channels: 2
-    length: 9.01099968
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1183716555
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1183716556}
-  - 114: {fileID: 1183716557}
-  m_Layer: 0
-  m_Name: raw_runner_voice-08
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1183716556
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1183716555}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 7
---- !u!114 &1183716557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1183716555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-08
-    path: Audio/Voice/raw_runner_voice-08
-    samples: 480768
-    frequency: 44100
-    channels: 2
-    length: 10.901
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1188642995
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1188642996}
-  - 114: {fileID: 1188642997}
+  - 4: {fileID: 94546568}
+  - 114: {fileID: 94546569}
   m_Layer: 0
   m_Name: raw_runner_voice-19
   m_TagString: Untagged
@@ -3138,24 +145,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1188642996
+--- !u!4 &94546568
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1188642995}
+  m_GameObject: {fileID: 94546567}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 781274554}
+  m_Father: {fileID: 1475273291}
   m_RootOrder: 18
---- !u!114 &1188642997
+--- !u!114 &94546569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1188642995}
+  m_GameObject: {fileID: 94546567}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
@@ -3187,92 +194,139 @@ MonoBehaviour:
     minDistance: 1
     maxDistance: 500
     panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1214886553
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 115352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-  m_PrefabInternal: {fileID: 2108429838}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1214886557}
-  - 114: {fileID: 1214886556}
-  - 114: {fileID: 1214886555}
-  - 114: {fileID: 1214886554}
-  m_Layer: 10
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1214886554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11420872, guid: 684416f8380ebc44189ee0b408f1e0f7,
-    type: 2}
-  m_PrefabInternal: {fileID: 2108429838}
-  m_GameObject: {fileID: 1214886553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d8a55469d05a714da0a9bbd2f5e7f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1214886555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11476756, guid: 684416f8380ebc44189ee0b408f1e0f7,
-    type: 2}
-  m_PrefabInternal: {fileID: 2108429838}
-  m_GameObject: {fileID: 1214886553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adc366201bfaaba4995f877f67294971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tempo: 120
-  test: 0
---- !u!114 &1214886556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11415352, guid: 684416f8380ebc44189ee0b408f1e0f7,
-    type: 2}
-  m_PrefabInternal: {fileID: 2108429838}
-  m_GameObject: {fileID: 1214886553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95109fe8934825e40a95825291fd5280, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  runner: {fileID: 736654158}
-  runnerCamera: {fileID: 990172020}
-  creationParticleFX: {fileID: 124646, guid: 2f07f0e2873817a4f9e6dd97b96127ec, type: 2}
-  destructionParticleFX: {fileID: 185504, guid: 35c07301f9a299e4c8698a6a914f8574,
-    type: 2}
-  proceduralGeneratorOfChunk: {fileID: 1535748917}
-  effectManager: {fileID: 1214886554}
---- !u!4 &1214886557
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-  m_PrefabInternal: {fileID: 2108429838}
-  m_GameObject: {fileID: 1214886553}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
---- !u!1 &1220292282
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &171806654
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1220292283}
-  - 114: {fileID: 1220292284}
+  - 4: {fileID: 171806655}
+  - 50: {fileID: 171806657}
+  - 114: {fileID: 171806656}
+  m_Layer: 17
+  m_Name: TileConstructor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &171806655
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171806654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 643169883}
+  m_RootOrder: 1
+--- !u!114 &171806656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171806654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ad770cb4bfbc247b0ab5783e8b34e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &171806657
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171806654}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!1 &318497465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 318497466}
+  - 114: {fileID: 318497467}
+  m_Layer: 0
+  m_Name: raw_runner_voice-01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &318497466
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318497465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 0
+--- !u!114 &318497467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318497465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-01
+    path: Audio/Voice/raw_runner_voice-01
+    samples: 395648
+    frequency: 44100
+    channels: 2
+    length: 8.97099972
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &437479890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 437479891}
+  - 114: {fileID: 437479892}
   m_Layer: 0
   m_Name: raw_runner_voice-07
   m_TagString: Untagged
@@ -3280,24 +334,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1220292283
+--- !u!4 &437479891
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1220292282}
+  m_GameObject: {fileID: 437479890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 781274554}
+  m_Father: {fileID: 1475273291}
   m_RootOrder: 6
---- !u!114 &1220292284
+--- !u!114 &437479892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1220292282}
+  m_GameObject: {fileID: 437479890}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
@@ -3329,464 +383,17 @@ MonoBehaviour:
     minDistance: 1
     maxDistance: 500
     panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1304407658
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &539681303
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1304407659}
-  - 114: {fileID: 1304407660}
-  m_Layer: 0
-  m_Name: raw_runner_voice-13
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1304407659
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1304407658}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 12
---- !u!114 &1304407660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1304407658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-13
-    path: Audio/Voice/raw_runner_voice-13
-    samples: 573541
-    frequency: 44100
-    channels: 2
-    length: 13.0050001
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1535748916
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1535748918}
-  - 114: {fileID: 1535748917}
-  m_Layer: 0
-  m_Name: ProceduralGeneratorOfChunk
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1535748917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1535748916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ea1b6cd8395abd46b608b82756e308b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playersTransform: {fileID: 990172019}
-  levelName: Oli
-  currentChunkId: 0
-  currentChunk: {fileID: 0}
-  chunckInAdvanceOfPlayer: 3
-  chunckBackOfPlayer: 2
-  seed: 13372
-  chunkBag:
-    linearChunkPrefab: []
-    cornerChunkPrefab: []
-    startChunkPrefab: []
-  chunkFlowsToAdd: []
-  chunkFlowsToRemove: []
-  chunkFlows: []
-  chunksToAdd: []
-  chunksToRemove: []
-  chunks: []
---- !u!4 &1535748918
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1535748916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
---- !u!1 &1606558384
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1606558385}
-  - 114: {fileID: 1606558386}
-  m_Layer: 0
-  m_Name: raw_runner_voice-23
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1606558385
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1606558384}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 22
---- !u!114 &1606558386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1606558384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-23
-    path: Audio/Voice/raw_runner_voice-23
-    samples: 595045
-    frequency: 44100
-    channels: 2
-    length: 13.493
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1644246479
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1644246480}
-  - 114: {fileID: 1644246481}
-  m_Layer: 0
-  m_Name: raw_runner_voice-22
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1644246480
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1644246479}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 21
---- !u!114 &1644246481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1644246479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-22
-    path: Audio/Voice/raw_runner_voice-22
-    samples: 740965
-    frequency: 44100
-    channels: 2
-    length: 16.8010006
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &1774660966
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1774660967}
-  - 114: {fileID: 1774660968}
-  m_Layer: 0
-  m_Name: raw_runner_voice-28
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1774660967
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1774660966}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 27
---- !u!114 &1774660968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1774660966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-28
-    path: Audio/Voice/raw_runner_voice-28
-    samples: 374373
-    frequency: 44100
-    channels: 2
-    length: 8.48900032
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1 &2041065086
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2041065087}
-  - 114: {fileID: 2041065088}
-  m_Layer: 0
-  m_Name: raw_runner_voice-29
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2041065087
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2041065086}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 781274554}
-  m_RootOrder: 28
---- !u!114 &2041065088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2041065086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spatialSettingsShowing: 1
-  clipInfoShowing: 1
-  info:
-    name: raw_runner_voice-29
-    path: Audio/Voice/raw_runner_voice-29
-    samples: 779264
-    frequency: 44100
-    channels: 2
-    length: 17.6700001
-    loadOnAwake: 0
-    output: Master
-    isFixed: 1
-    playRangeStart: 0
-    playRangeEnd: 1
-    volume: 1
-    pitch: 1
-    randomVolume: 0
-    randomPitch: 0
-    fadeIn: 0
-    fadeOut: .00999999978
-    loop: 0
-    dopplerLevel: 1
-    volumeRolloffMode: 0
-    minDistance: 1
-    maxDistance: 500
-    panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
---- !u!1001 &2108429838
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: runner
-      value: 
-      objectReference: {fileID: 736654158}
-    - target: {fileID: 11415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: runnerCamera
-      value: 
-      objectReference: {fileID: 990172020}
-    - target: {fileID: 11415352, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-      propertyPath: proceduralGeneratorOfChunk
-      value: 
-      objectReference: {fileID: 1535748917}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 684416f8380ebc44189ee0b408f1e0f7, type: 2}
-  m_RootGameObject: {fileID: 1214886553}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
---- !u!1 &2130836321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2130836322}
-  - 114: {fileID: 2130836323}
+  - 4: {fileID: 539681304}
+  - 114: {fileID: 539681305}
   m_Layer: 0
   m_Name: raw_runner_voice-12
   m_TagString: Untagged
@@ -3794,24 +401,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2130836322
+--- !u!4 &539681304
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2130836321}
+  m_GameObject: {fileID: 539681303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 781274554}
+  m_Father: {fileID: 1475273291}
   m_RootOrder: 11
---- !u!114 &2130836323
+--- !u!114 &539681305
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2130836321}
+  m_GameObject: {fileID: 539681303}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
@@ -3843,5 +450,3337 @@ MonoBehaviour:
     minDistance: 1
     maxDistance: 500
     panLevel: .75
-    pureData: {fileID: 363301403}
-  pureData: {fileID: 363301403}
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &602878385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 602878386}
+  - 114: {fileID: 602878387}
+  m_Layer: 0
+  m_Name: raw_runner_voice-02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &602878386
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 602878385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 1
+--- !u!114 &602878387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 602878385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-02
+    path: Audio/Voice/raw_runner_voice-02
+    samples: 389632
+    frequency: 44100
+    channels: 2
+    length: 8.83500004
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &603805486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 603805487}
+  - 114: {fileID: 603805488}
+  m_Layer: 0
+  m_Name: raw_runner_voice-21
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &603805487
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603805486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 20
+--- !u!114 &603805488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603805486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-21
+    path: Audio/Voice/raw_runner_voice-21
+    samples: 429157
+    frequency: 44100
+    channels: 2
+    length: 9.73099995
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &641548092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 641548093}
+  - 114: {fileID: 641548094}
+  m_Layer: 0
+  m_Name: raw_runner_voice-08
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641548093
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 641548092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 7
+--- !u!114 &641548094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 641548092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-08
+    path: Audio/Voice/raw_runner_voice-08
+    samples: 480768
+    frequency: 44100
+    channels: 2
+    length: 10.901
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &643169882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 643169883}
+  - 20: {fileID: 643169888}
+  - 92: {fileID: 643169887}
+  - 124: {fileID: 643169886}
+  - 81: {fileID: 643169885}
+  - 114: {fileID: 643169884}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &643169883
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643169882}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 780527056}
+  - {fileID: 171806655}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+--- !u!114 &643169884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643169882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d1b519c245e36478ba0147ba48f253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  translateSpeed: 10
+  rotateSpeed: 5
+  pressureSpeed: 10
+  pressureThreshold: .300000012
+  recoverSpeed: 2
+  killDistance: 10
+  offset: {x: 0, y: 0, z: -50}
+  lastPosition: {x: 0, y: 0, z: 0}
+--- !u!81 &643169885
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643169882}
+  m_Enabled: 1
+--- !u!124 &643169886
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643169882}
+  m_Enabled: 1
+--- !u!92 &643169887
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643169882}
+  m_Enabled: 1
+--- !u!20 &643169888
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643169882}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: .904411793, g: .366249442, b: .366249442, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_HDR: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: .0219999999
+--- !u!1 &780527055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 780527056}
+  - 50: {fileID: 780527058}
+  - 114: {fileID: 780527057}
+  m_Layer: 18
+  m_Name: TileDestructor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &780527056
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780527055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -44.0999985, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 643169883}
+  m_RootOrder: 0
+--- !u!114 &780527057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780527055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56153d7bd8fd80541a22d713dd3d938f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &780527058
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780527055}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!1 &835245942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 835245943}
+  - 114: {fileID: 835245944}
+  m_Layer: 0
+  m_Name: raw_runner_voice-18
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &835245943
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835245942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 17
+--- !u!114 &835245944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 835245942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-18
+    path: Audio/Voice/raw_runner_voice-18
+    samples: 741477
+    frequency: 44100
+    channels: 2
+    length: 16.8129997
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &976453380
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 976453392}
+  - 212: {fileID: 976453391}
+  - 114: {fileID: 976453390}
+  - 58: {fileID: 976453389}
+  - 50: {fileID: 976453388}
+  - 114: {fileID: 976453387}
+  - 114: {fileID: 976453386}
+  - 114: {fileID: 976453385}
+  - 114: {fileID: 976453384}
+  - 114: {fileID: 976453383}
+  - 114: {fileID: 976453382}
+  - 114: {fileID: 976453381}
+  m_Layer: 10
+  m_Name: Runner
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &976453381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01f620097db5ab84593bb1a601494e6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 976453387}
+  machine: {fileID: 976453390}
+  glideDuration: .5
+  glideCounter: 0
+  velocity: {x: 0, y: 0}
+--- !u!114 &976453382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c3ab1c36e512749a17b806553962e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 976453387}
+  machine: {fileID: 976453390}
+--- !u!114 &976453383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79cfb15c82fb0f4a8397a7689202e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 976453387}
+  machine: {fileID: 976453390}
+--- !u!114 &976453384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bac9ef78eed50c49836d846b91c3ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 976453387}
+  machine: {fileID: 976453390}
+  jumpDuration: .150000006
+  jumpHeight: 3.45000005
+  jumpMinHeight: 14
+  jumpYPosition: -.485000074
+  jumpOrientation: 0
+  jumpCounter: -.00999996066
+  velocity: {x: 0, y: 65}
+--- !u!114 &976453385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc8f48924ad853b4799cafba37385550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 976453387}
+  machine: {fileID: 976453390}
+  speed: 25
+  velocity: {x: 0, y: 0}
+--- !u!114 &976453386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce025f53a93605045b1ad275473a2303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 976453387}
+  machine: {fileID: 976453390}
+--- !u!114 &976453387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653191d2779f56643b231e42657d4827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machine: {fileID: 976453390}
+  states:
+  - {fileID: 976453386}
+  - {fileID: 976453385}
+  - {fileID: 976453383}
+  - {fileID: 976453384}
+  - {fileID: 976453381}
+  - {fileID: 976453382}
+  currentStates:
+  - {fileID: 976453385}
+  - {fileID: 976453383}
+  orientation: 0
+  gravityStrength: 5
+  gravity: {x: 0, y: 0}
+  debug: 0
+--- !u!50 &976453388
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!58 &976453389
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_Material: {fileID: 6200000, guid: f2fd8a73d5d7657418aa5d691db1a66f, type: 2}
+  m_IsTrigger: 0
+  m_Radius: .479999989
+  m_Center: {x: 0, y: 0}
+--- !u!114 &976453390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7208d05a13589c84fbf2b1d9c12cafe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - {fileID: 976453387}
+--- !u!212 &976453391
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 06fe172dd8f948a4c82d1abace4279a0, type: 3}
+  m_Color: {r: .199999928, g: 1, b: 0, a: 1}
+--- !u!4 &976453392
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976453380}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!1 &1020510042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1020510043}
+  - 114: {fileID: 1020510044}
+  m_Layer: 0
+  m_Name: raw_runner_voice-05
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1020510043
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1020510042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 4
+--- !u!114 &1020510044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1020510042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-05
+    path: Audio/Voice/raw_runner_voice-05
+    samples: 428544
+    frequency: 44100
+    channels: 2
+    length: 9.71700001
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1034274929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1034274930}
+  - 114: {fileID: 1034274931}
+  m_Layer: 0
+  m_Name: raw_runner_voice-22
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1034274930
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034274929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 21
+--- !u!114 &1034274931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034274929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-22
+    path: Audio/Voice/raw_runner_voice-22
+    samples: 740965
+    frequency: 44100
+    channels: 2
+    length: 16.8010006
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1058702841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1058702842}
+  - 114: {fileID: 1058702843}
+  m_Layer: 0
+  m_Name: raw_runner_voice-04
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058702842
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058702841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 3
+--- !u!114 &1058702843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058702841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-04
+    path: Audio/Voice/raw_runner_voice-04
+    samples: 892746
+    frequency: 44100
+    channels: 2
+    length: 20.243
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1087893689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1087893690}
+  - 114: {fileID: 1087893691}
+  m_Layer: 0
+  m_Name: raw_runner_voice-06
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087893690
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087893689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 5
+--- !u!114 &1087893691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1087893689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-06
+    path: Audio/Voice/raw_runner_voice-06
+    samples: 397413
+    frequency: 44100
+    channels: 2
+    length: 9.01099968
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1124718083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1124718084}
+  - 114: {fileID: 1124718085}
+  m_Layer: 0
+  m_Name: raw_runner_voice-16
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1124718084
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124718083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 15
+--- !u!114 &1124718085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124718083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-16
+    path: Audio/Voice/raw_runner_voice-16
+    samples: 542821
+    frequency: 44100
+    channels: 2
+    length: 12.3079996
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1163625936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1163625937}
+  - 114: {fileID: 1163625938}
+  m_Layer: 0
+  m_Name: raw_runner_voice-25
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1163625937
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163625936}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 24
+--- !u!114 &1163625938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1163625936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-25
+    path: Audio/Voice/raw_runner_voice-25
+    samples: 809061
+    frequency: 44100
+    channels: 2
+    length: 18.3460007
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1164204652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1164204653}
+  - 114: {fileID: 1164204654}
+  m_Layer: 0
+  m_Name: raw_runner_voice-24
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1164204653
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1164204652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 23
+--- !u!114 &1164204654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1164204652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-24
+    path: Audio/Voice/raw_runner_voice-24
+    samples: 469605
+    frequency: 44100
+    channels: 2
+    length: 10.6479998
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1185439918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1185439919}
+  - 114: {fileID: 1185439920}
+  m_Layer: 0
+  m_Name: raw_runner_voice-11
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1185439919
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185439918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 10
+--- !u!114 &1185439920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1185439918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-11
+    path: Audio/Voice/raw_runner_voice-11
+    samples: 642560
+    frequency: 44100
+    channels: 2
+    length: 14.5699997
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1232695767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1232695768}
+  - 114: {fileID: 1232695769}
+  m_Layer: 0
+  m_Name: raw_runner_voice-09
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1232695768
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232695767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 8
+--- !u!114 &1232695769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232695767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-09
+    path: Audio/Voice/raw_runner_voice-09
+    samples: 892517
+    frequency: 44100
+    channels: 2
+    length: 20.2380009
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1243197714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1243197716}
+  - 114: {fileID: 1243197715}
+  m_Layer: 0
+  m_Name: raw_runner_voice-28
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1243197715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243197714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-28
+    path: Audio/Voice/raw_runner_voice-28
+    samples: 374373
+    frequency: 44100
+    channels: 2
+    length: 8.48900032
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!4 &1243197716
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243197714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 27
+--- !u!1 &1255150961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1255150962}
+  - 114: {fileID: 1255150963}
+  m_Layer: 0
+  m_Name: raw_runner_voice-10
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1255150962
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255150961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 9
+--- !u!114 &1255150963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1255150961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-10
+    path: Audio/Voice/raw_runner_voice-10
+    samples: 591461
+    frequency: 44100
+    channels: 2
+    length: 13.4110003
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1360561204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1360561205}
+  - 114: {fileID: 1360561206}
+  m_Layer: 0
+  m_Name: raw_runner_voice-30
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1360561205
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1360561204}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 29
+--- !u!114 &1360561206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1360561204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-30
+    path: Audio/Voice/raw_runner_voice-30
+    samples: 1085029
+    frequency: 44100
+    channels: 2
+    length: 24.6030006
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1442572054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1442572056}
+  - 114: {fileID: 1442572055}
+  m_Layer: 0
+  m_Name: PureData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1442572055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1442572054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e1b7762cb767e4ea711435162d305b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listener:
+    transform: {fileID: 0}
+    position: {x: 0, y: 0, z: 0}
+    right: {x: 0, y: 0, z: 0}
+    pureData: {fileID: 0}
+  filterRead: {fileID: 0}
+  references:
+    references: []
+    ids: 
+    idCounter: 0
+    pureData: {fileID: 1442572055}
+  generalSettings: {fileID: 11400000, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}
+  bridge:
+    sampleRate: 0
+    bufferSize: 0
+    bufferAmount: 0
+    initialized: 0
+    ticks: 0
+    pureData: {fileID: 0}
+  communicator:
+    pureData: {fileID: 0}
+  patchManager:
+    pureData: {fileID: 0}
+  idManager:
+    pureData: {fileID: 0}
+  itemManager:
+    pureData: {fileID: 0}
+  sourceManager:
+    containerPath: C:/Users/BananaMobile/Documents/Workshop/Unity/Thrasymaque/Assets/StreamingAssets/Patches/Internal/uaudiosourcecontainer.pd
+    pureData: {fileID: 1442572055}
+  infoManager:
+    infos:
+    - name: raw_runner_voice-01
+      path: Audio/Voice/raw_runner_voice-01
+      samples: 395648
+      frequency: 44100
+      channels: 2
+      length: 8.97099972
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-02
+      path: Audio/Voice/raw_runner_voice-02
+      samples: 389632
+      frequency: 44100
+      channels: 2
+      length: 8.83500004
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-03
+      path: Audio/Voice/raw_runner_voice-03
+      samples: 349797
+      frequency: 44100
+      channels: 2
+      length: 7.93100023
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-04
+      path: Audio/Voice/raw_runner_voice-04
+      samples: 892746
+      frequency: 44100
+      channels: 2
+      length: 20.243
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-05
+      path: Audio/Voice/raw_runner_voice-05
+      samples: 428544
+      frequency: 44100
+      channels: 2
+      length: 9.71700001
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-06
+      path: Audio/Voice/raw_runner_voice-06
+      samples: 397413
+      frequency: 44100
+      channels: 2
+      length: 9.01099968
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-07
+      path: Audio/Voice/raw_runner_voice-07
+      samples: 505445
+      frequency: 44100
+      channels: 2
+      length: 11.4610004
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-08
+      path: Audio/Voice/raw_runner_voice-08
+      samples: 480768
+      frequency: 44100
+      channels: 2
+      length: 10.901
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-09
+      path: Audio/Voice/raw_runner_voice-09
+      samples: 892517
+      frequency: 44100
+      channels: 2
+      length: 20.2380009
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-10
+      path: Audio/Voice/raw_runner_voice-10
+      samples: 591461
+      frequency: 44100
+      channels: 2
+      length: 13.4110003
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-11
+      path: Audio/Voice/raw_runner_voice-11
+      samples: 642560
+      frequency: 44100
+      channels: 2
+      length: 14.5699997
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-12
+      path: Audio/Voice/raw_runner_voice-12
+      samples: 418917
+      frequency: 44100
+      channels: 2
+      length: 9.4989996
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-13
+      path: Audio/Voice/raw_runner_voice-13
+      samples: 573541
+      frequency: 44100
+      channels: 2
+      length: 13.0050001
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-14
+      path: Audio/Voice/raw_runner_voice-14
+      samples: 685568
+      frequency: 44100
+      channels: 2
+      length: 15.5450001
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-15
+      path: Audio/Voice/raw_runner_voice-15
+      samples: 800256
+      frequency: 44100
+      channels: 2
+      length: 18.1459999
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-16
+      path: Audio/Voice/raw_runner_voice-16
+      samples: 542821
+      frequency: 44100
+      channels: 2
+      length: 12.3079996
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-17
+      path: Audio/Voice/raw_runner_voice-17
+      samples: 532069
+      frequency: 44100
+      channels: 2
+      length: 12.0649996
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-18
+      path: Audio/Voice/raw_runner_voice-18
+      samples: 741477
+      frequency: 44100
+      channels: 2
+      length: 16.8129997
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-19
+      path: Audio/Voice/raw_runner_voice-19
+      samples: 470629
+      frequency: 44100
+      channels: 2
+      length: 10.6709995
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-20
+      path: Audio/Voice/raw_runner_voice-20
+      samples: 418405
+      frequency: 44100
+      channels: 2
+      length: 9.48700047
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-21
+      path: Audio/Voice/raw_runner_voice-21
+      samples: 429157
+      frequency: 44100
+      channels: 2
+      length: 9.73099995
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-22
+      path: Audio/Voice/raw_runner_voice-22
+      samples: 740965
+      frequency: 44100
+      channels: 2
+      length: 16.8010006
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-23
+      path: Audio/Voice/raw_runner_voice-23
+      samples: 595045
+      frequency: 44100
+      channels: 2
+      length: 13.493
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-24
+      path: Audio/Voice/raw_runner_voice-24
+      samples: 469605
+      frequency: 44100
+      channels: 2
+      length: 10.6479998
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-25
+      path: Audio/Voice/raw_runner_voice-25
+      samples: 809061
+      frequency: 44100
+      channels: 2
+      length: 18.3460007
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-26
+      path: Audio/Voice/raw_runner_voice-26
+      samples: 465920
+      frequency: 44100
+      channels: 2
+      length: 10.5649996
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-27
+      path: Audio/Voice/raw_runner_voice-27
+      samples: 476261
+      frequency: 44100
+      channels: 2
+      length: 10.7989998
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-28
+      path: Audio/Voice/raw_runner_voice-28
+      samples: 374373
+      frequency: 44100
+      channels: 2
+      length: 8.48900032
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-29
+      path: Audio/Voice/raw_runner_voice-29
+      samples: 779264
+      frequency: 44100
+      channels: 2
+      length: 17.6700001
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-30
+      path: Audio/Voice/raw_runner_voice-30
+      samples: 1085029
+      frequency: 44100
+      channels: 2
+      length: 24.6030006
+      loadOnAwake: 0
+      output: Master
+      isFixed: 1
+      playRangeStart: 0
+      playRangeEnd: 1
+      volume: 1
+      pitch: 1
+      randomVolume: 0
+      randomPitch: 0
+      fadeIn: 0
+      fadeOut: .00999999978
+      loop: 0
+      dopplerLevel: 1
+      volumeRolloffMode: 0
+      minDistance: 1
+      maxDistance: 500
+      panLevel: .75
+      pureData: {fileID: 1442572055}
+    pureData: {fileID: 1442572055}
+  clipManager:
+    containerPath: C:/Users/BananaMobile/Documents/Workshop/Unity/Thrasymaque/Assets/StreamingAssets/Patches/Internal/uaudioclipcontainer.pd
+    clips:
+    - name: raw_runner_voice-01
+      id: 0
+      path: Audio/Voice/raw_runner_voice-01
+      samples: 395648
+      frequency: 44100
+      channels: 2
+      length: 8.97099972
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-02
+      id: 0
+      path: Audio/Voice/raw_runner_voice-02
+      samples: 389632
+      frequency: 44100
+      channels: 2
+      length: 8.83500004
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-03
+      id: 0
+      path: Audio/Voice/raw_runner_voice-03
+      samples: 349797
+      frequency: 44100
+      channels: 2
+      length: 7.93100023
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-04
+      id: 0
+      path: Audio/Voice/raw_runner_voice-04
+      samples: 892746
+      frequency: 44100
+      channels: 2
+      length: 20.243
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-05
+      id: 0
+      path: Audio/Voice/raw_runner_voice-05
+      samples: 428544
+      frequency: 44100
+      channels: 2
+      length: 9.71700001
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-06
+      id: 0
+      path: Audio/Voice/raw_runner_voice-06
+      samples: 397413
+      frequency: 44100
+      channels: 2
+      length: 9.01099968
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-07
+      id: 0
+      path: Audio/Voice/raw_runner_voice-07
+      samples: 505445
+      frequency: 44100
+      channels: 2
+      length: 11.4610004
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-08
+      id: 0
+      path: Audio/Voice/raw_runner_voice-08
+      samples: 480768
+      frequency: 44100
+      channels: 2
+      length: 10.901
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-09
+      id: 0
+      path: Audio/Voice/raw_runner_voice-09
+      samples: 892517
+      frequency: 44100
+      channels: 2
+      length: 20.2380009
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-10
+      id: 0
+      path: Audio/Voice/raw_runner_voice-10
+      samples: 591461
+      frequency: 44100
+      channels: 2
+      length: 13.4110003
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-11
+      id: 0
+      path: Audio/Voice/raw_runner_voice-11
+      samples: 642560
+      frequency: 44100
+      channels: 2
+      length: 14.5699997
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-12
+      id: 0
+      path: Audio/Voice/raw_runner_voice-12
+      samples: 418917
+      frequency: 44100
+      channels: 2
+      length: 9.4989996
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-13
+      id: 0
+      path: Audio/Voice/raw_runner_voice-13
+      samples: 573541
+      frequency: 44100
+      channels: 2
+      length: 13.0050001
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-14
+      id: 0
+      path: Audio/Voice/raw_runner_voice-14
+      samples: 685568
+      frequency: 44100
+      channels: 2
+      length: 15.5450001
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-15
+      id: 0
+      path: Audio/Voice/raw_runner_voice-15
+      samples: 800256
+      frequency: 44100
+      channels: 2
+      length: 18.1459999
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-16
+      id: 0
+      path: Audio/Voice/raw_runner_voice-16
+      samples: 542821
+      frequency: 44100
+      channels: 2
+      length: 12.3079996
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-17
+      id: 0
+      path: Audio/Voice/raw_runner_voice-17
+      samples: 532069
+      frequency: 44100
+      channels: 2
+      length: 12.0649996
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-18
+      id: 0
+      path: Audio/Voice/raw_runner_voice-18
+      samples: 741477
+      frequency: 44100
+      channels: 2
+      length: 16.8129997
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-19
+      id: 0
+      path: Audio/Voice/raw_runner_voice-19
+      samples: 470629
+      frequency: 44100
+      channels: 2
+      length: 10.6709995
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-20
+      id: 0
+      path: Audio/Voice/raw_runner_voice-20
+      samples: 418405
+      frequency: 44100
+      channels: 2
+      length: 9.48700047
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-21
+      id: 0
+      path: Audio/Voice/raw_runner_voice-21
+      samples: 429157
+      frequency: 44100
+      channels: 2
+      length: 9.73099995
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-22
+      id: 0
+      path: Audio/Voice/raw_runner_voice-22
+      samples: 740965
+      frequency: 44100
+      channels: 2
+      length: 16.8010006
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-23
+      id: 0
+      path: Audio/Voice/raw_runner_voice-23
+      samples: 595045
+      frequency: 44100
+      channels: 2
+      length: 13.493
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-24
+      id: 0
+      path: Audio/Voice/raw_runner_voice-24
+      samples: 469605
+      frequency: 44100
+      channels: 2
+      length: 10.6479998
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-25
+      id: 0
+      path: Audio/Voice/raw_runner_voice-25
+      samples: 809061
+      frequency: 44100
+      channels: 2
+      length: 18.3460007
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-26
+      id: 0
+      path: Audio/Voice/raw_runner_voice-26
+      samples: 465920
+      frequency: 44100
+      channels: 2
+      length: 10.5649996
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-27
+      id: 0
+      path: Audio/Voice/raw_runner_voice-27
+      samples: 476261
+      frequency: 44100
+      channels: 2
+      length: 10.7989998
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-28
+      id: 0
+      path: Audio/Voice/raw_runner_voice-28
+      samples: 374373
+      frequency: 44100
+      channels: 2
+      length: 8.48900032
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-29
+      id: 0
+      path: Audio/Voice/raw_runner_voice-29
+      samples: 779264
+      frequency: 44100
+      channels: 2
+      length: 17.6700001
+      pureData: {fileID: 1442572055}
+    - name: raw_runner_voice-30
+      id: 0
+      path: Audio/Voice/raw_runner_voice-30
+      samples: 1085029
+      frequency: 44100
+      channels: 2
+      length: 24.6030006
+      pureData: {fileID: 1442572055}
+    pureData: {fileID: 1442572055}
+  busManager: {fileID: 11471682, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}
+  spatializerManager: {fileID: 11471680, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}
+  containerManager: {fileID: 11471678, guid: b115685f940f6f043a9b6b3b0625908a, type: 2}
+  hierarchyManager:
+    setups: []
+    currentClips: []
+    clips: []
+    children:
+    - {fileID: 318497465}
+    - {fileID: 602878385}
+    - {fileID: 1920111326}
+    - {fileID: 1058702841}
+    - {fileID: 1020510042}
+    - {fileID: 1087893689}
+    - {fileID: 437479890}
+    - {fileID: 641548092}
+    - {fileID: 1232695767}
+    - {fileID: 1255150961}
+    - {fileID: 1185439918}
+    - {fileID: 539681303}
+    - {fileID: 1452406415}
+    - {fileID: 1738347725}
+    - {fileID: 1943583426}
+    - {fileID: 1124718083}
+    - {fileID: 1797193576}
+    - {fileID: 835245942}
+    - {fileID: 94546567}
+    - {fileID: 1972434040}
+    - {fileID: 603805486}
+    - {fileID: 1034274929}
+    - {fileID: 1888537619}
+    - {fileID: 1164204652}
+    - {fileID: 1163625936}
+    - {fileID: 2011546836}
+    - {fileID: 1489637196}
+    - {fileID: 1243197714}
+    - {fileID: 2012970027}
+    - {fileID: 1360561204}
+    - {fileID: 1360561204}
+    folderStructure:
+    - {fileID: 1475273290}
+    pureData: {fileID: 1442572055}
+  editorHelper:
+    selection: []
+    pureDataIcon: {fileID: 2800000, guid: 1f1f8b71fa69e14418bf3e49d9399524, type: 3}
+    previewAudioSource: {fileID: 0}
+    previewStopTime: 0
+    pureData: {fileID: 1442572055}
+--- !u!4 &1442572056
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1442572054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1475273291}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!1 &1452406415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1452406416}
+  - 114: {fileID: 1452406417}
+  m_Layer: 0
+  m_Name: raw_runner_voice-13
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1452406416
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452406415}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 12
+--- !u!114 &1452406417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1452406415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-13
+    path: Audio/Voice/raw_runner_voice-13
+    samples: 573541
+    frequency: 44100
+    channels: 2
+    length: 13.0050001
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1475273290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1475273291}
+  m_Layer: 0
+  m_Name: Audio/Voice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1475273291
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1475273290}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 318497466}
+  - {fileID: 602878386}
+  - {fileID: 1920111327}
+  - {fileID: 1058702842}
+  - {fileID: 1020510043}
+  - {fileID: 1087893690}
+  - {fileID: 437479891}
+  - {fileID: 641548093}
+  - {fileID: 1232695768}
+  - {fileID: 1255150962}
+  - {fileID: 1185439919}
+  - {fileID: 539681304}
+  - {fileID: 1452406416}
+  - {fileID: 1738347726}
+  - {fileID: 1943583427}
+  - {fileID: 1124718084}
+  - {fileID: 1797193577}
+  - {fileID: 835245943}
+  - {fileID: 94546568}
+  - {fileID: 1972434041}
+  - {fileID: 603805487}
+  - {fileID: 1034274930}
+  - {fileID: 1888537620}
+  - {fileID: 1164204653}
+  - {fileID: 1163625937}
+  - {fileID: 2011546837}
+  - {fileID: 1489637197}
+  - {fileID: 1243197716}
+  - {fileID: 2012970028}
+  - {fileID: 1360561205}
+  m_Father: {fileID: 1442572056}
+  m_RootOrder: 0
+--- !u!1 &1489637196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1489637197}
+  - 114: {fileID: 1489637198}
+  m_Layer: 0
+  m_Name: raw_runner_voice-27
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1489637197
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489637196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 26
+--- !u!114 &1489637198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489637196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-27
+    path: Audio/Voice/raw_runner_voice-27
+    samples: 476261
+    frequency: 44100
+    channels: 2
+    length: 10.7989998
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1726362148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1726362152}
+  - 114: {fileID: 1726362151}
+  - 114: {fileID: 1726362150}
+  - 114: {fileID: 1726362149}
+  m_Layer: 10
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1726362149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726362148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8a55469d05a714da0a9bbd2f5e7f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1726362150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726362148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc366201bfaaba4995f877f67294971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempo: 120
+  test: 0
+--- !u!114 &1726362151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726362148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95109fe8934825e40a95825291fd5280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runner: {fileID: 976453387}
+  runnerCamera: {fileID: 643169884}
+  creationParticleFX: {fileID: 124646, guid: 2f07f0e2873817a4f9e6dd97b96127ec, type: 2}
+  destructionParticleFX: {fileID: 185504, guid: 35c07301f9a299e4c8698a6a914f8574,
+    type: 2}
+  proceduralGeneratorOfChunk: {fileID: 7609330}
+  effectManager: {fileID: 1726362149}
+--- !u!4 &1726362152
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726362148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+--- !u!1 &1738347725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1738347726}
+  - 114: {fileID: 1738347727}
+  m_Layer: 0
+  m_Name: raw_runner_voice-14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1738347726
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738347725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 13
+--- !u!114 &1738347727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738347725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-14
+    path: Audio/Voice/raw_runner_voice-14
+    samples: 685568
+    frequency: 44100
+    channels: 2
+    length: 15.5450001
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1797193576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1797193577}
+  - 114: {fileID: 1797193578}
+  m_Layer: 0
+  m_Name: raw_runner_voice-17
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1797193577
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797193576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 16
+--- !u!114 &1797193578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797193576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-17
+    path: Audio/Voice/raw_runner_voice-17
+    samples: 532069
+    frequency: 44100
+    channels: 2
+    length: 12.0649996
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1888537619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1888537620}
+  - 114: {fileID: 1888537621}
+  m_Layer: 0
+  m_Name: raw_runner_voice-23
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1888537620
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888537619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 22
+--- !u!114 &1888537621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888537619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-23
+    path: Audio/Voice/raw_runner_voice-23
+    samples: 595045
+    frequency: 44100
+    channels: 2
+    length: 13.493
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1920111326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1920111327}
+  - 114: {fileID: 1920111328}
+  m_Layer: 0
+  m_Name: raw_runner_voice-03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1920111327
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920111326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 2
+--- !u!114 &1920111328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920111326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-03
+    path: Audio/Voice/raw_runner_voice-03
+    samples: 349797
+    frequency: 44100
+    channels: 2
+    length: 7.93100023
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1943583426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1943583427}
+  - 114: {fileID: 1943583428}
+  m_Layer: 0
+  m_Name: raw_runner_voice-15
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1943583427
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943583426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 14
+--- !u!114 &1943583428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943583426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-15
+    path: Audio/Voice/raw_runner_voice-15
+    samples: 800256
+    frequency: 44100
+    channels: 2
+    length: 18.1459999
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &1972434040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1972434041}
+  - 114: {fileID: 1972434042}
+  m_Layer: 0
+  m_Name: raw_runner_voice-20
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1972434041
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972434040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 19
+--- !u!114 &1972434042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972434040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-20
+    path: Audio/Voice/raw_runner_voice-20
+    samples: 418405
+    frequency: 44100
+    channels: 2
+    length: 9.48700047
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &2011546836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2011546837}
+  - 114: {fileID: 2011546838}
+  m_Layer: 0
+  m_Name: raw_runner_voice-26
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2011546837
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011546836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 25
+--- !u!114 &2011546838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011546836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-26
+    path: Audio/Voice/raw_runner_voice-26
+    samples: 465920
+    frequency: 44100
+    channels: 2
+    length: 10.5649996
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
+--- !u!1 &2012970027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2012970028}
+  - 114: {fileID: 2012970029}
+  m_Layer: 0
+  m_Name: raw_runner_voice-29
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2012970028
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2012970027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1475273291}
+  m_RootOrder: 28
+--- !u!114 &2012970029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2012970027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec1bb90930969648a1e6cc81bcae6f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spatialSettingsShowing: 1
+  clipInfoShowing: 1
+  info:
+    name: raw_runner_voice-29
+    path: Audio/Voice/raw_runner_voice-29
+    samples: 779264
+    frequency: 44100
+    channels: 2
+    length: 17.6700001
+    loadOnAwake: 0
+    output: Master
+    isFixed: 1
+    playRangeStart: 0
+    playRangeEnd: 1
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    fadeIn: 0
+    fadeOut: .00999999978
+    loop: 0
+    dopplerLevel: 1
+    volumeRolloffMode: 0
+    minDistance: 1
+    maxDistance: 500
+    panLevel: .75
+    pureData: {fileID: 1442572055}
+  pureData: {fileID: 1442572055}
