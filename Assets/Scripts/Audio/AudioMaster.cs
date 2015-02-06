@@ -34,8 +34,9 @@ public class AudioMaster : MonoBehaviour
 			return;
 		}
 		
-		if (currentAudioClip != null){
+		if (currentAudioClip != null) {
 			currentAudioClip.Stop();
+			currentAudioClip = null;
 		}
 		
 		currentAudioClipIndex += 1;
@@ -51,9 +52,11 @@ public class AudioMaster : MonoBehaviour
 		}
 	}
 	
-	void OnDestroy(){
-		if (currentAudioClip != null){
+	void OnDestroy()
+	{
+		if (currentAudioClip != null) {
 			currentAudioClip.Stop();
+			currentAudioClip = null;
 			currentAudioClipIndex -= 1;
 		}
 	}

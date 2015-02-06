@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Collections;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using System.Collections.Generic;
 using Magicolo;
@@ -157,9 +158,8 @@ public class ChunkFlow {
 		movement = movement.Rotate(rotation, Vector3.back);
 		lastRoomEndPosition += movement;
 		
-		GameObject newChunkGO = GameObjectExtend.createClone(prefab,"Chunk" + chunkId, generationParentTransform,lastRoomEndPosition);
-		newChunkGO.transform.Rotate(0,0, rotation);
-		Chunk newChunk = newChunkGO.GetComponent<Chunk>();
+		
+		Chunk newChunk = createChunk(prefab, chunkId);
 		if(lastChunk != null){
 			lastChunk.nextChunk = newChunk;
 			newChunk.lastChunk = lastChunk;
@@ -175,5 +175,18 @@ public class ChunkFlow {
 		lastRoomEndPosition += movementX;
 		lastRoomRightExitY = prefabChunk.rightExitY;
 		return newChunk;
+	}
+	
+	Chunk createChunk(GameObject prefab, int chunkId){
+//		GameObject newChunkGO = GameObjectExtend.createClone(prefab,"Chunk" + chunkId, generationParentTransform, lastRoomEndPosition);
+		GameObject newChunkGO = new GameObject("Chunk" + chunkId);
+		newChunkGO.transform.parent = generationParentTransform;
+		newChunkGO.transform.position = lastRoomEndPosition;
+		newChunkGO.transform.Rotate(0,0, rotation);
+		Chunk newChunk = newChunkGO.GetComponent<Chunk>();
+	}
+	
+	IEnumerator createTiles(GameObject prefab, GameObject parent){
+		
 	}
 }
