@@ -54,6 +54,14 @@ public class References : MonoBehaviourExtended {
 			return Instance.proceduralGeneratorOfChunk;
 		}
 	}
+	
+	
+	public EffetManager effectManager;
+	public static EffetManager EffectManager {
+		get {
+			return Instance.effectManager;
+		}
+	}
     
 }
 
