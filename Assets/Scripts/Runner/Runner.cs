@@ -28,6 +28,6 @@ public class Runner : BaseObject {
 	}
 
 	public void die(){
-		Application.LoadLevel(0);
+		Application.LoadLevel(1);
 	}
 }
