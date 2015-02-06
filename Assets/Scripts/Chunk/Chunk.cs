@@ -44,4 +44,35 @@ public class Chunk : MonoBehaviour {
 			}
 		}
 	}
+	
+	public void copyTo(Chunk chunk){
+		chunk.chunkId = this.chunkId;
+	
+		chunk.width = this.width;
+		chunk.height = this.height;
+		chunk.entreanceY = this.entreanceY;
+		
+		chunk.rightExitY = this.rightExitY;
+		chunk.upExitX = this.upExitX;
+		chunk.downExitX = this.downExitX;
+		
+		chunk.orientation = this.orientation;
+		
+		chunk.flow = this.flow;
+		chunk.chunkFlowPresent = this.chunkFlowPresent;
+		chunk.nextChunk = this.nextChunk;
+		chunk.lastChunk = this.lastChunk;
+		chunk.playerPassedThrought = this.playerPassedThrought;
+		
+		chunk.isStraight = this.isStraight;
+		
+		chunk.startingChunk = this.startingChunk;
+		chunk.checkPointLocation = this.checkPointLocation;
+	
+		chunk.backgroundColor = this.backgroundColor;
+		
+		chunk.randomToGenerate = this.randomToGenerate;
+	
+		chunk.proceduralGenerator = this.proceduralGenerator;
+	}
 }
