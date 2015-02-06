@@ -36,7 +36,9 @@ public class Chunk : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Player" && chunkId > proceduralGenerator.currentChunkId) {
 			proceduralGenerator.setCurrentChunk(this);
-			References.RunnerCamera.camera.backgroundColor = this.backgroundColor;
+			Camera cam = References.RunnerCamera.camera;
+			CameraEffet ce = new CameraEffet(cam.backgroundColor, backgroundColor, cam, 2, References.EffectManager);
+			References.EffectManager.addEffect(ce);
 			playerPassedThrought = true;
 			if(randomToGenerate != null){
 				GameData.RandomGenerator = randomToGenerate;
