@@ -118,7 +118,7 @@ MonoBehaviour:
   orientation: 0
   gravityStrength: 5
   gravity: {x: 0, y: 0}
-  debug: 1
+  debug: 0
 --- !u!114 &11495638
 MonoBehaviour:
   m_ObjectHideFlags: 1
