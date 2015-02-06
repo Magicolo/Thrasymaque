@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using Magicolo;
 
-public class ProceduralGeneratorOfChunk : MonoBehaviour {
+public class ProceduralGeneratorOfChunk : MonoBehaviour
+{
 
 	public Transform playersTransform;
 	
@@ -25,44 +26,44 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 	public List<Chunk> chunksToRemove = new List<Chunk>();
 	public List<Chunk> chunks = new List<Chunk>();
 	
-	void Awake(){
-		if(GameData.RandomGenerator != null){
-			StartGeneration(GameData.RandomGenerator, GameData.chunkId);
-		}else{
-			StartGeneration(new System.Random(seed),1);
-		}
-		
+	void Awake()
+	{
+		StartGeneration(GameData.RandomGenerator, GameData.chunkId);
 	}
 	
-	public void StartGeneration(System.Random random, int startingChunkId){
+	public void StartGeneration(System.Random random, int startingChunkId)
+	{
 		currentChunkId = startingChunkId;
 		
 		this.random = random;
 		chunkBag = new ChunkBag(levelName);
 		
-		ChunkFlow chunkFlow = new ChunkFlow(this,null,chunkBag,random, currentChunkId, Vector3.zero, 0);
+		ChunkFlow chunkFlow = new ChunkFlow(this, null, chunkBag, random, currentChunkId, Vector3.zero, 0);
 		chunkFlows.Add(chunkFlow);
 		Chunk newChunk = chunkFlow.loadFirstChunk();
 		Vector2 start = newChunk.checkPointLocation;
-		playersTransform.position = new Vector3(start.x - 2,start.y - 1,0);
+		playersTransform.position = new Vector3(start.x - 2, start.y - 1, 0);
 		References.Runner.rigidbody2D.velocity = Vector2.zero;
 		
 		chunkFlow.lastChunk.playerPassedThrought = true;
 	}
 
-	public void setCurrentChunk(Chunk chunk){
-		if(chunk.chunkId > this.currentChunkId){
+	public void setCurrentChunk(Chunk chunk)
+	{
+		if (chunk.chunkId > this.currentChunkId) {
 			currentChunk = chunk;
 			currentChunkId = chunk.chunkId;
 		}
 		
 	}
 
-	void Start () {
+	void Start()
+	{
 		
 	}
 	
-	void Update () {
+	void Update()
+	{
 		foreach (var chunk in chunkFlows) {
 			chunk.update();
 		}
@@ -81,13 +82,13 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		
 		
 		foreach (var chunk in chunks) {
-			if(chunk.chunkId + chunckBackOfPlayer < currentChunkId){
+			if (chunk.chunkId + chunckBackOfPlayer < currentChunkId) {
 				chunksToRemove.Add(chunk);
 			}
 		}
 		
 		foreach (var chunkToRemove in chunksToRemove) {
-			if(chunkToRemove != null & chunkToRemove.gameObject != null){
+			if (chunkToRemove != null & chunkToRemove.gameObject != null) {
 				/*if(chunkToRemove.chunkFlowPresent){
 					Debug.Log("Remove old of" + chunkToRemove.name);
 					removeUnpassedChunksFlow(chunkToRemove);
@@ -106,11 +107,12 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 		chunksToAdd.Clear();
 	}
 
-	void removeUnpassedChunksFlow(Chunk chunkToRemove){
-		if(!chunkToRemove.playerPassedThrought){
-			if(chunkToRemove.nextChunk != null){
+	void removeUnpassedChunksFlow(Chunk chunkToRemove)
+	{
+		if (!chunkToRemove.playerPassedThrought) {
+			if (chunkToRemove.nextChunk != null) {
 				Debug.Log("YA UN NEXT");
-				if(chunkToRemove.chunkFlowPresent){
+				if (chunkToRemove.chunkFlowPresent) {
 					Debug.Log("Remove flow of" + chunkToRemove.name);
 					chunkFlowsToRemove.Add(chunkToRemove.flow);
 				}
@@ -118,7 +120,8 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour {
 			}
 		}
 	}
-	public int getChunkIdToGenerate(){
+	public int getChunkIdToGenerate()
+	{
 		return this.chunckInAdvanceOfPlayer + currentChunkId;
 	}
 }

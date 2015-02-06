@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 443c080ac7cc746de93300e5a4cfd38a, type: 3}
   m_Name: DartsMenuData
   m_EditorClassIdentifier: 
-  panelSprite: {fileID: 21300000, guid: 6858abb4516aae344881bf286b3aac33, type: 3}
-  buttonSprite: {fileID: 21300000, guid: 9a32a6cc2cb803443983d45d4a513506, type: 3}
+  panelSprite: {fileID: 21300000, guid: 5b91466a66d7cc84ab4cfa0933636594, type: 3}
+  buttonSprite: {fileID: 21300000, guid: a1dc94942ec2c9f49b143021ab97cee1, type: 3}
   panelColor: {r: 1, g: 1, b: 1, a: 1}
   useToggableMenu: 1
   useLockedLevels: 1

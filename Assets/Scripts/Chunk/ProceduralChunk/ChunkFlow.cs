@@ -22,8 +22,8 @@ public class ChunkFlow
 	private Transform generationParentTransform;
 	
 	public System.Random random;
-	public float nextCornerChance = 0;
-	public float baseCornerChance = 0.1f;
+	public float nextCornerChance = 0.5F;
+	public float baseCornerChance = 0.5f;
 	public float baseCornerChanceIncremental = 0.1f;
 
 	public ChunkFlow(ProceduralGeneratorOfChunk proceduralGeneratorOfChunk, Chunk lastChunk, ChunkBag chunkBag, System.Random random, int startingChunkId, Vector3 startingPosition, float angle)
@@ -69,7 +69,7 @@ public class ChunkFlow
 	public Chunk loadFirstChunk()
 	{
 		GameObject nextChunkPrefab = chunkBag.getRandomChunk(random);
-		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab, nextChunkId, 10000);
+		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab, nextChunkId, 1);
 		newChunk.orientation = this.rotation;
 		nextChunkId++;
 		return newChunk;
@@ -104,7 +104,7 @@ public class ChunkFlow
 			return null;
 		}
 		
-		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab, nextChunkId, 10);
+		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab, nextChunkId, 0.1F);
 		newChunk.orientation = this.rotation;
 		nextChunkId++;
 		
@@ -147,8 +147,11 @@ public class ChunkFlow
 
 	Chunk makeStartChunk()
 	{
+		System.Random chunkRandom = new System.Random();
+		chunkRandom.Copy(random);
 		GameObject nextChunkPrefab = chunkBag.getRandomStartChunk(random);
-		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab, nextChunkId, 1000);
+		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab, nextChunkId, 1);
+		newChunk.randomToGenerate = chunkRandom;
 		nextChunkId++;
 		newChunk.orientation = this.rotation;
 		return newChunk;
@@ -157,13 +160,13 @@ public class ChunkFlow
 	Chunk makeStraightChunk()
 	{
 		GameObject nextChunkPrefab = chunkBag.getRandomChunk(random);
-		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab, nextChunkId, 10);
+		Chunk newChunk = createAndPlaceNewChunk(nextChunkPrefab, nextChunkId, 0.1F);
 		newChunk.orientation = this.rotation;
 		nextChunkId++;
 		return newChunk;
 	}
 
-	Chunk createAndPlaceNewChunk(GameObject prefab, int chunkId, int tilesPerFrame)
+	Chunk createAndPlaceNewChunk(GameObject prefab, int chunkId, float loadSpeed)
 	{
 		Chunk prefabChunk = prefab.GetComponent<Chunk>();
 		int yDifference = this.lastRoomRightExitY - prefabChunk.entreanceY;
@@ -172,7 +175,7 @@ public class ChunkFlow
 		lastRoomEndPosition += movement;
 		
 		
-		Chunk newChunk = createChunk(prefab, chunkId, tilesPerFrame);
+		Chunk newChunk = createChunk(prefab, chunkId, loadSpeed);
 		if (lastChunk != null) {
 			lastChunk.nextChunk = newChunk;
 			newChunk.lastChunk = lastChunk;
@@ -190,7 +193,7 @@ public class ChunkFlow
 		return newChunk;
 	}
 	
-	Chunk createChunk(GameObject prefab, int chunkId, int tilesPerFrame)
+	Chunk createChunk(GameObject prefab, int chunkId, float loadSpeed)
 	{
 		GameObject newChunkGO = new GameObject("Chunk" + chunkId);
 		newChunkGO.transform.parent = generationParentTransform;
@@ -207,20 +210,22 @@ public class ChunkFlow
 		newChunkCollider.center = prefabCollider.center;
 		newChunkCollider.size = prefabCollider.size;
 		
-		proceduralGeneratorOfChunk.StartCoroutine(createTiles(prefab, newChunkGO, tilesPerFrame));
+		proceduralGeneratorOfChunk.StartCoroutine(createTiles(prefab, newChunkGO, loadSpeed));
 		
 		return newChunk;
 	}
 	
-	IEnumerator createTiles(GameObject prefab, GameObject parent, int tilesPerFrame)
+	IEnumerator createTiles(GameObject prefab, GameObject parent, float loadSpeed)
 	{
+		GameObject prefabTiles = prefab.GetChild(0);
 		int counter = 0;
+		int tilesPerFrame = (int)(prefabTiles.GetChildCount() * loadSpeed);
 		
 		GameObject newTilesGO = new GameObject("Tiles");
 		newTilesGO.transform.parent = parent.transform;
 		newTilesGO.transform.Reset();
 		
-		foreach (GameObject child in prefab.GetChild(0).GetChildren()) {
+		foreach (GameObject child in prefabTiles.GetChildren()) {
 			GameObject newChild = Object.Instantiate(child, child.transform.position, Quaternion.Euler(0, 0, rotation)) as GameObject;
 			newChild.transform.parent = newTilesGO.transform;
 			newChild.transform.localPosition = child.transform.localPosition;

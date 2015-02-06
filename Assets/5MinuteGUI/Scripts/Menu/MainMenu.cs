@@ -70,5 +70,10 @@ namespace FMG
 
 
 		}
+		
+		public void LoadGame()
+		{
+			Application.LoadLevel(1);
+		}
 	}
 }
