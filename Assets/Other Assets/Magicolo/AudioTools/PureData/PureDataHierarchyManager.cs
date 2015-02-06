@@ -28,7 +28,7 @@ namespace Magicolo.AudioTools {
 					pureData.DestroyChildren();
 				}
 			}
-			UpdateHierarchy();
+//			UpdateHierarchy();
 		}
 		
 		public void UpdateHierarchy() {

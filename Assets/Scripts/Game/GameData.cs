@@ -20,4 +20,5 @@ public static class GameData {
 
 	public static int chunkId;
 	public static float playerSpeed = 25;
+	public static int audioClipIndex;
 }

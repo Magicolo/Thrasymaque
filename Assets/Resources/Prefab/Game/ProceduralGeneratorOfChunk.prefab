@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersTransform: {fileID: 0}
-  levelName: 
+  levelName: Oli
   currentChunkId: 0
   currentChunk: {fileID: 0}
   chunckInAdvanceOfPlayer: 3
