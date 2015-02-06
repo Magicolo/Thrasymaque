@@ -41,8 +41,7 @@ public class Chunk : MonoBehaviour {
 			References.EffectManager.addEffect(ce);
 			playerPassedThrought = true;
 			if(randomToGenerate != -1){
-				Debug.Log(randomToGenerate);
-				GameData.RandomGenerator = randomToGenerate;
+				GameData.seed = randomToGenerate;
 				GameData.chunkId = chunkId;
 			}
 		}

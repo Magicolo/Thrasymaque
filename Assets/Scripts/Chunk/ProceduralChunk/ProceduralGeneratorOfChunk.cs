@@ -25,7 +25,7 @@ public class ProceduralGeneratorOfChunk : MonoBehaviour
 	
 	void Awake()
 	{
-		StartGeneration(GameData.RandomGenerator, GameData.chunkId);
+		StartGeneration(GameData.seed, GameData.chunkId);
 	}
 	
 	public void StartGeneration(int seed, int startingChunkId)

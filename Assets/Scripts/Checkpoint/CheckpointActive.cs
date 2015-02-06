@@ -17,7 +17,10 @@ public class CheckpointActive : State {
 		
 		GameData.chunkId = parentChunk.chunkId;
 		GameData.playerSpeed = References.Runner.GetState<RunnerRunning>().speed;
-		AudioMaster.PlayNextAudioClip();
+		if(AudioMaster.currentAudioClip != null && AudioMaster.currentAudioClip.State == PureDataStates.Playing){
+			AudioMaster.PlayNextAudioClip();
+		}
+		
 	}
 	
 	public override void OnExit() {

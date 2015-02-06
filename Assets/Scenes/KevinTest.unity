@@ -909,7 +909,7 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &976453381
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976453380}
@@ -925,7 +925,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
 --- !u!114 &976453382
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976453380}
@@ -938,7 +938,7 @@ MonoBehaviour:
   machine: {fileID: 976453390}
 --- !u!114 &976453383
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976453380}
@@ -951,7 +951,7 @@ MonoBehaviour:
   machine: {fileID: 976453390}
 --- !u!114 &976453384
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976453380}
@@ -971,7 +971,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 65}
 --- !u!114 &976453385
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976453380}
@@ -986,7 +986,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
 --- !u!114 &976453386
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976453380}
@@ -999,7 +999,7 @@ MonoBehaviour:
   machine: {fileID: 976453390}
 --- !u!114 &976453387
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 976453380}
@@ -2967,7 +2967,8 @@ MonoBehaviour:
     - {fileID: 1475273290}
     pureData: {fileID: 1442572055}
   editorHelper:
-    selection: []
+    selection:
+    - {fileID: 102900000, guid: 4f31d156397254bfa8f05b0b24ce74f9, type: 3}
     pureDataIcon: {fileID: 2800000, guid: 1f1f8b71fa69e14418bf3e49d9399524, type: 3}
     previewAudioSource: {fileID: 0}
     previewStopTime: 0
@@ -3187,6 +3188,7 @@ GameObject:
   - 114: {fileID: 1726362151}
   - 114: {fileID: 1726362150}
   - 114: {fileID: 1726362149}
+  - 114: {fileID: 1726362153}
   m_Layer: 10
   m_Name: GameManager
   m_TagString: Untagged
@@ -3248,6 +3250,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1726362153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726362148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 449f4b0e6771ce0438445ece1afc5d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1738347725
 GameObject:
   m_ObjectHideFlags: 0

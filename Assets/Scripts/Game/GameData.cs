@@ -4,10 +4,7 @@ using Magicolo;
 
 public static class GameData {
 
-	public static int RandomGenerator {
-		get;
-		set;
-	}
+	public static int seed = Random.seed;
 
 	public static int chunkId;
 	public static float playerSpeed = 25;
