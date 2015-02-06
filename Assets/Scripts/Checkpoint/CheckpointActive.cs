@@ -8,19 +8,17 @@ public class CheckpointActive : State {
 	public float oscillationFrequency = 20;
 	public float oscillationAmplitude = 0.5F;
 	
-    Checkpoint Layer {
-    	get { return ((Checkpoint)layer); }
-    }
+	Checkpoint Layer {
+		get { return ((Checkpoint)layer); }
+	}
 	
 	public override void OnEnter() {
 		Chunk parentChunk = GetComponentInParent<Chunk>();
 		
 		GameData.chunkId = parentChunk.chunkId;
 		GameData.playerSpeed = References.Runner.GetState<RunnerRunning>().speed;
-		if(AudioMaster.currentAudioClip != null && AudioMaster.currentAudioClip.State == PureDataStates.Playing){
-			AudioMaster.PlayNextAudioClip();
-		}
 		
+		AudioMaster.PlayNextAudioClip();
 	}
 	
 	public override void OnExit() {

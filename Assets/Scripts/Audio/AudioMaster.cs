@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AudioMaster : MonoBehaviour
-{
+public class AudioMaster : MonoBehaviour {
 
 	[SerializeField, PropertyField]
 	float tempo = 120;
@@ -17,8 +16,7 @@ public class AudioMaster : MonoBehaviour
 	}
 	
 	[Button("Test", "Test", NoPrefixLabel = true)] public bool test;
-	void Test()
-	{
+	void Test() {
 		PlayNextAudioClip();
 	}
 	
@@ -28,23 +26,23 @@ public class AudioMaster : MonoBehaviour
 	
 	const string audioClipPrefix = "raw_runner_voice-";
 	
-	public static void PlayNextAudioClip()
-	{
+	public static void PlayNextAudioClip() {
 		if (currentAudioClipIndex > 29) {
 			return;
 		}
 		
-		if (currentAudioClip != null) {
+		if (currentAudioClip != null && currentAudioClip.State == PureDataStates.Stopped) {
 			currentAudioClip.Stop();
 			currentAudioClip = null;
 		}
 		
-		currentAudioClipIndex += 1;
-		currentAudioClip = PureData.Play(audioClipPrefix + (currentAudioClipIndex < 10 ? "0" + currentAudioClipIndex : currentAudioClipIndex.ToString()), PureDataOption.Output("Voice"));
+		if (currentAudioClip == null) {
+			currentAudioClipIndex += 1;
+			currentAudioClip = PureData.Play(audioClipPrefix + (currentAudioClipIndex < 10 ? "0" + currentAudioClipIndex : currentAudioClipIndex.ToString()), PureDataOption.Output("Voice"));
+		}
 	}
 	
-	void Awake()
-	{
+	void Awake() {
 		if (!patchOpened) {
 			PureData.OpenPatch("_Main");
 			PureData.Send("Tempo", tempo);
@@ -52,8 +50,7 @@ public class AudioMaster : MonoBehaviour
 		}
 	}
 	
-	void OnDestroy()
-	{
+	void OnDestroy() {
 		if (currentAudioClip != null) {
 			currentAudioClip.Stop();
 			currentAudioClip = null;
